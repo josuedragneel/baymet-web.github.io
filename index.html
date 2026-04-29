@@ -285,7 +285,7 @@
     .soc:hover { background:var(--gl);color:#fff; }
 
     /* =============================================  RESPONSIVE  ============================================= */
-     nav .btn{display:none;} .hamburger{display:flex;} }
+     nav .btn{display:none;} .hamburger{display:flex;}
 
 
     .mon-inner-grid {
@@ -639,7 +639,270 @@
       .team-grid { grid-template-columns: repeat(2,1fr); gap: 8px; }
     }
 
+
+    /* ===================================================
+       PRE-TEST SECTION
+    =================================================== */
+    #pretest { background: #080f14; color: #e2e8f0; }
+    #pretest .wrap { max-width: 1140px; }
+
+    .pt-intro { max-width: 700px; margin-bottom: 48px; }
+    .pt-intro .lead { color: rgba(255,255,255,.6); }
+
+    /* KPI strip */
+    .pt-kpi-strip {
+      display: flex; gap: 14px; flex-wrap: wrap; margin-bottom: 40px;
+    }
+    .pt-kpi {
+      background: #0e1a24;
+      border: 1px solid #1c3347;
+      border-radius: 14px;
+      padding: 14px 22px;
+      min-width: 130px;
+      position: relative; overflow: hidden;
+    }
+    .pt-kpi::before {
+      content: ''; position: absolute; top: 0; left: 0; right: 0; height: 2px;
+      background: var(--kpi-accent, #4CAF50); border-radius: 2px 2px 0 0;
+    }
+    .pt-kpi-label {
+      font-family: var(--ffh); font-size: .65rem; font-weight: 700;
+      letter-spacing: .1em; text-transform: uppercase; color: #64748b;
+    }
+    .pt-kpi-value {
+      font-family: var(--ffh); font-size: 1.6rem; font-weight: 900;
+      color: var(--kpi-accent, #4CAF50); margin-top: 4px; line-height: 1;
+    }
+    .pt-kpi-value sub { font-size: .8rem; color: #64748b; font-weight: 400; }
+
+    /* Tab bar */
+    .pt-tabs {
+      display: flex; gap: 4px; margin-bottom: 0;
+      border-bottom: 1px solid #1c3347;
+      flex-wrap: wrap;
+    }
+    .pt-tab {
+      padding: 10px 20px; border-radius: 10px 10px 0 0;
+      border: none; background: transparent;
+      color: #64748b; font-family: var(--ffh); font-size: .82rem;
+      font-weight: 700; cursor: pointer;
+      transition: var(--t); position: relative; bottom: -1px;
+    }
+    .pt-tab:hover { color: #e2e8f0; background: #0e1a24; }
+    .pt-tab.pt-active {
+      color: var(--gl); background: #0e1a24;
+      border: 1px solid #1c3347; border-bottom: 1px solid #0e1a24;
+    }
+
+    /* Panels */
+    .pt-panel { display: none; padding: 32px 0 0; }
+    .pt-panel.pt-active { display: block; }
+
+    .pt-panel-title {
+      font-family: var(--ffh); font-size: 1.1rem; font-weight: 900;
+      color: #f8fafc; margin-bottom: 4px;
+    }
+    .pt-panel-desc { font-size: .85rem; color: #64748b; margin-bottom: 24px; }
+
+    /* Chart wrapper */
+    .pt-chart-box {
+      background: #0e1a24; border: 1px solid #1c3347;
+      border-radius: 16px; padding: 24px; margin-bottom: 24px;
+    }
+    .pt-chart-box canvas { max-height: 340px; }
+
+    /* Question grid */
+    .pt-q-grid {
+      display: grid; grid-template-columns: repeat(auto-fill, minmax(260px,1fr));
+      gap: 10px;
+    }
+    .pt-q-card {
+      background: #0e1a24; border: 1px solid #1c3347;
+      border-left: 3px solid var(--tc, #4CAF50);
+      border-radius: 12px; padding: 12px 14px;
+      display: flex; align-items: center; gap: 12px;
+    }
+    .pt-q-badge {
+      min-width: 48px; height: 48px; border-radius: 10px;
+      display: flex; flex-direction: column; align-items: center; justify-content: center;
+      font-family: var(--ffh); font-size: 1.05rem; font-weight: 900;
+    }
+    .pt-q-label { font-size: .8rem; font-weight: 700; color: #e2e8f0; }
+    .pt-q-sub   { font-size: .72rem; color: #64748b; margin-top: 2px; }
+
+    /* Student grid */
+    .pt-student-grid {
+      display: grid; grid-template-columns: repeat(auto-fill, minmax(210px,1fr));
+      gap: 12px; margin-top: 20px;
+    }
+    .pt-student-card {
+      background: #0e1a24; border: 1px solid #1c3347;
+      border-radius: 14px; padding: 16px;
+    }
+    .pt-sname {
+      font-family: var(--ffh); font-weight: 700; font-size: .85rem;
+      color: #e2e8f0; margin-bottom: 10px;
+    }
+    .pt-bar-bg { background: #1e3349; border-radius: 6px; height: 8px; overflow: hidden; margin-bottom: 8px; }
+    .pt-bar-fill { height: 100%; border-radius: 6px; transition: width 1s cubic-bezier(.22,1,.36,1); }
+    .pt-srow { display: flex; justify-content: space-between; align-items: center; }
+    .pt-sscore { font-family: monospace; font-size: .78rem; color: #64748b; }
+    .pt-spct { font-family: var(--ffh); font-size: 1rem; font-weight: 900; }
+    .pt-warn { font-size: .7rem; color: #f59e0b; margin-top: 4px; display: block; }
+
+    /* Distribution */
+    .pt-dist-row { display: flex; gap: 14px; flex-wrap: wrap; margin: 20px 0; }
+    .pt-dist-card {
+      flex: 1; min-width: 110px;
+      background: #0e1a24; border: 1px solid #1c3347;
+      border-top: 3px solid var(--dc, #4CAF50);
+      border-radius: 14px; padding: 18px 14px; text-align: center;
+    }
+    .pt-dist-num { font-family: var(--ffh); font-size: 2.2rem; font-weight: 900; }
+    .pt-dist-range { font-size: .82rem; color: #64748b; margin-top: 4px; }
+    .pt-dist-pct   { font-size: .72rem; color: #475569; margin-top: 2px; }
+
+    /* Tema list */
+    .pt-two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 28px; align-items: start; }
+    .pt-tema-list { display: flex; flex-direction: column; gap: 12px; }
+    .pt-tema-row {
+      background: #0e1a24; border: 1px solid #1c3347;
+      border-radius: 12px; padding: 14px 16px;
+    }
+    .pt-tema-hdr { display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px; }
+    .pt-tema-name { font-family: var(--ffh); font-size: .85rem; font-weight: 700; }
+    .pt-tema-score { font-family: var(--ffh); font-size: 1.1rem; font-weight: 900; }
+    .pt-tema-bar-bg { background: #1e3349; border-radius: 4px; height: 6px; overflow: hidden; }
+    .pt-tema-bar-fill { height: 100%; border-radius: 4px; transition: width 1.2s cubic-bezier(.22,1,.36,1); }
+    .pt-tema-qs { font-size: .72rem; color: #475569; margin-top: 6px; }
+
+    /* Insights */
+    .pt-insights { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin-top: 24px; }
+    .pt-insight {
+      border-radius: 14px; padding: 18px 20px; border: 1px solid;
+    }
+    .pt-insight.good { background: #0a1f12; border-color: #166534; }
+    .pt-insight.bad  { background: #1a0a0a; border-color: #7f1d1d; }
+    .pt-insight-title {
+      font-family: var(--ffh); font-size: .72rem; font-weight: 700;
+      letter-spacing: .08em; text-transform: uppercase; margin-bottom: 10px;
+    }
+    .pt-insight.good .pt-insight-title { color: #22c55e; }
+    .pt-insight.bad  .pt-insight-title  { color: #ef4444; }
+    .pt-insight ul { padding-left: 16px; font-size: .85rem; line-height: 1.8; }
+    .pt-insight.good ul { color: #86efac; }
+    .pt-insight.bad  ul { color: #fca5a5; }
+    .pt-insight b { color: #fff; }
+
+    /* Table */
+    .pt-table-scroll { overflow-x: auto; margin-top: 8px; border-radius: 12px; }
+    .pt-table { border-collapse: collapse; width: 100%; min-width: 860px; font-size: .78rem; }
+    .pt-table thead th {
+      padding: 10px 8px; text-align: center;
+      font-family: var(--ffh); font-weight: 700; letter-spacing: .04em;
+      border-bottom: 1px solid #1c3347;
+      background: #080f14; font-size: .7rem; color: #94a3b8;
+    }
+    .pt-table thead th:first-child {
+      text-align: left; padding-left: 14px; min-width: 150px;
+      position: sticky; left: 0; background: #080f14; z-index: 5; color: #475569;
+    }
+    .pt-table tbody tr { border-bottom: 1px solid #0c1822; transition: background .15s; }
+    .pt-table tbody tr:hover { background: #132030; }
+    .pt-table tbody td { padding: 7px 5px; text-align: center; }
+    .pt-table tbody td:first-child {
+      text-align: left; padding-left: 14px; font-weight: 700;
+      background: #080f14; position: sticky; left: 0;
+      border-right: 1px solid #1c3347; color: #e2e8f0;
+    }
+    .pt-cell-ok  { color: #4ade80; font-size: .95rem; background: #0a1f12 !important; }
+    .pt-cell-no  { color: #f87171; font-size: .95rem; background: #1a0a0a !important; }
+    .pt-cell-mis { color: #334155; font-size: .85rem; }
+    .pt-pct-pill {
+      display: inline-block; padding: 3px 10px; border-radius: 20px;
+      font-family: var(--ffh); font-size: .75rem; font-weight: 800;
+    }
+    .pt-table tfoot td {
+      padding: 9px 5px; text-align: center; font-weight: 700;
+      border-top: 2px solid #1c3347;
+      font-size: .72rem; color: #475569;
+    }
+    .pt-table tfoot td:first-child {
+      text-align: left; padding-left: 14px;
+      font-family: var(--ffh); font-size: .7rem; letter-spacing: .06em;
+      background: #080f14; position: sticky; left: 0; color: #64748b;
+    }
+    .pt-note { margin-top: 14px; font-size: .78rem; color: #475569; line-height: 1.6; }
+
+    @media (max-width: 700px) {
+      .pt-two-col { grid-template-columns: 1fr; }
+      .pt-insights { grid-template-columns: 1fr; }
+      .pt-kpi { min-width: 100px; padding: 12px 14px; }
+    }
+
+
+    /* ===== POST-TEST & COMPARISON ===== */
+    .cmp-grid { display:grid; grid-template-columns:1fr 1fr; gap:20px; margin-bottom:32px; }
+    .cmp-card {
+      background:#0e1a24; border:1px solid #1c3347;
+      border-radius:16px; padding:24px 22px;
+      position:relative; overflow:hidden;
+    }
+    .cmp-card::before {
+      content:''; position:absolute; top:0; left:0; right:0; height:3px;
+      background:var(--cc, #4CAF50);
+    }
+    .cmp-label {
+      font-family:var(--ffh); font-size:.7rem; font-weight:700;
+      letter-spacing:.12em; text-transform:uppercase;
+      color:rgba(255,255,255,.4); margin-bottom:8px;
+    }
+    .cmp-score {
+      font-family:var(--ffh); font-size:3rem; font-weight:900;
+      line-height:1; color:var(--cc, #4CAF50);
+    }
+    .cmp-sub { font-size:.82rem; color:#475569; margin-top:4px; }
+    .cmp-delta {
+      display:inline-flex; align-items:center; gap:6px;
+      background:rgba(34,197,94,.1); border:1px solid rgba(34,197,94,.25);
+      border-radius:50px; padding:6px 16px; margin-top:12px;
+      font-family:var(--ffh); font-size:.9rem; font-weight:900; color:#22c55e;
+    }
+    .cmp-delta.neg { background:rgba(239,68,68,.1); border-color:rgba(239,68,68,.25); color:#ef4444; }
+
+    .pt-tab.pre  { border-top:2px solid #64748b; }
+    .pt-tab.post { border-top:2px solid #22c55e; }
+    .pt-tab.cmp  { border-top:2px solid #f59e0b; }
+
+    .cmp-bar-row {
+      display:flex; align-items:center; gap:10px;
+      padding:10px 14px; background:#0e1a24;
+      border:1px solid #1c3347; border-radius:10px; margin-bottom:8px;
+    }
+    .cmp-bar-label { font-size:.78rem; color:#94a3b8; width:30px; flex-shrink:0; font-family:var(--ffh); font-weight:700; }
+    .cmp-bars { flex:1; display:flex; flex-direction:column; gap:4px; }
+    .cmp-bar-bg { background:#1e3349; border-radius:4px; height:7px; overflow:hidden; }
+    .cmp-bar-pre  { height:100%; border-radius:4px; background:#64748b; transition:width 1.2s cubic-bezier(.22,1,.36,1); }
+    .cmp-bar-post { height:100%; border-radius:4px; background:#22c55e; transition:width 1.2s cubic-bezier(.22,1,.36,1); }
+    .cmp-pcts { display:flex; gap:6px; font-size:.72rem; font-family:monospace; }
+    .cmp-pct-pre  { color:#94a3b8; }
+    .cmp-pct-post { color:#22c55e; font-weight:700; }
+    .cmp-arrow { font-size:.75rem; }
+    .cmp-arrow.up   { color:#22c55e; }
+    .cmp-arrow.down { color:#ef4444; }
+    .cmp-arrow.eq   { color:#475569; }
+
+    .cmp-legend { display:flex; gap:16px; margin-bottom:16px; flex-wrap:wrap; }
+    .cmp-leg-item { display:flex; align-items:center; gap:7px; font-size:.78rem; color:#94a3b8; }
+    .cmp-leg-dot  { width:10px; height:10px; border-radius:2px; }
+
+    @media(max-width:640px){
+      .cmp-grid { grid-template-columns:1fr 1fr; gap:12px; }
+      .cmp-score { font-size:2.2rem; }
+    }
+
   </style>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js"></script>
 </head>
 <body>
 
@@ -651,6 +914,7 @@
     <a href="#metodologia" onclick="cM()">Metodología</a>
     <a href="#impacto"  onclick="cM()">Impacto</a>
     <a href="#monitoreo" onclick="cM()">Datos Reales</a>
+    <a href="#pretest" onclick="cM()">Pre-test</a>
     <a href="#equipo"   onclick="cM()">Equipo</a>
     <a href="#cta" class="btn btn-g" onclick="cM()">Contacto</a>
   </div>
@@ -666,6 +930,7 @@
         <li><a href="#metodologia">Metodología</a></li>
         <li><a href="#impacto">Impacto</a></li>
         <li><a href="#monitoreo">Datos</a></li>
+        <li><a href="#pretest">Pre-test</a></li>
         <li><a href="#equipo">Equipo</a></li>
       </ul>
       <a href="https://mail.google.com/mail/?view=cm&to=infobaymet@gmail.com" target="_blank" rel="noopener" class="btn btn-g" style="padding:10px 22px;font-size:.8rem;">Contáctanos</a>
@@ -1269,6 +1534,131 @@
     </div>
   </section>
 
+
+
+  <!-- ========== PRE-TEST & POST-TEST ========== -->
+  <section id="pretest">
+    <div class="wrap">
+      <div class="pt-intro rev">
+        <span class="eye" style="color:rgba(34,197,94,.7)">Resultados · Antes y Después de los Talleres</span>
+        <h2 style="color:#f8fafc;">Pre-test <span style="color:#475569">vs</span> <span class="ac">Post-test</span></h2>
+        <p class="lead">CEBG Loma del Naranjo · Medición diagnóstica antes de los talleres BAYMET y evaluación final después. Los resultados muestran el impacto real del programa educativo.</p>
+      </div>
+
+      <!-- Comparison KPI cards -->
+      <div class="cmp-grid rev" style="transition-delay:.1s">
+        <div class="cmp-card" style="--cc:#64748b">
+          <div class="cmp-label">📋 Pre-test · Antes del programa</div>
+          <div class="cmp-score">63%</div>
+          <div class="cmp-sub">Promedio grupo · 13 estudiantes · 15 preguntas</div>
+        </div>
+        <div class="cmp-card" style="--cc:#22c55e">
+          <div class="cmp-label">🎓 Post-test · Después del programa</div>
+          <div class="cmp-score" id="pt2AvgDisplay">—</div>
+          <div class="cmp-sub">Promedio grupo · 12 estudiantes · 15 preguntas</div>
+          <div class="cmp-delta" id="pt2Delta">Cargando...</div>
+        </div>
+      </div>
+
+      <!-- KPI strip -->
+      <div class="pt-kpi-strip" id="ptKpis"></div>
+
+      <!-- Tabs -->
+      <div class="pt-tabs">
+        <button class="pt-tab pt-active pre"  onclick="ptTab('preguntas',this)">📊 Pre-test</button>
+        <button class="pt-tab post"            onclick="ptTab('posttest',this)">🎓 Post-test</button>
+        <button class="pt-tab cmp"             onclick="ptTab('comparacion',this)">⚡ Comparación</button>
+        <button class="pt-tab"                 onclick="ptTab('estudiantes',this)">👤 Estudiantes Pre</button>
+        <button class="pt-tab"                 onclick="ptTab('temas',this)">🗂 Por Tema</button>
+        <button class="pt-tab"                 onclick="ptTab('tabla',this)">📋 Tabla Pre</button>
+      </div>
+
+      <!-- Panel: PRE-TEST por pregunta -->
+      <div class="pt-panel pt-active" id="ptP-preguntas">
+        <div class="pt-panel-title">Pre-test — % correctas por pregunta (antes del taller)</div>
+        <p class="pt-panel-desc">Verde ≥75% · Amarillo 50–74% · Rojo &lt;50%</p>
+        <div class="pt-chart-box"><canvas id="ptChartQ"></canvas></div>
+        <div class="pt-q-grid" id="ptQGrid"></div>
+      </div>
+
+      <!-- Panel: POST-TEST -->
+      <div class="pt-panel" id="ptP-posttest">
+        <div class="pt-panel-title">Post-test — % correctas por pregunta (después del taller)</div>
+        <p class="pt-panel-desc">12 estudiantes · Evaluación final del programa BAYMET</p>
+        <div class="pt-chart-box"><canvas id="ptChartPost"></canvas></div>
+        <div class="pt-student-grid" id="ptPost2Students"></div>
+      </div>
+
+      <!-- Panel: COMPARACIÓN -->
+      <div class="pt-panel" id="ptP-comparacion">
+        <div class="pt-panel-title">⚡ Pre-test vs Post-test — Cambio por pregunta</div>
+        <p class="pt-panel-desc">Comparación directa del aprendizaje en cada tema</p>
+        <div class="cmp-legend">
+          <div class="cmp-leg-item"><div class="cmp-leg-dot" style="background:#64748b"></div>Pre-test</div>
+          <div class="cmp-leg-item"><div class="cmp-leg-dot" style="background:#22c55e"></div>Post-test</div>
+        </div>
+        <div class="pt-chart-box"><canvas id="ptChartCmp"></canvas></div>
+        <div id="ptCmpBars"></div>
+        <div class="pt-insights" style="margin-top:20px">
+          <div class="pt-insight good">
+            <div class="pt-insight-title">📈 Mayor mejora tras talleres</div>
+            <ul id="ptGains"></ul>
+          </div>
+          <div class="pt-insight bad">
+            <div class="pt-insight-title">📌 Áreas que requieren refuerzo</div>
+            <ul id="ptNeeds"></ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- Panel: Estudiantes Pre -->
+      <div class="pt-panel" id="ptP-estudiantes">
+        <div class="pt-panel-title">Pre-test — Puntaje por estudiante</div>
+        <p class="pt-panel-desc">Ordenados por puntaje descendente</p>
+        <div class="pt-chart-box"><canvas id="ptChartS"></canvas></div>
+        <div class="pt-dist-row" id="ptDist"></div>
+        <div class="pt-student-grid" id="ptStudents"></div>
+      </div>
+
+      <!-- Panel: Temas -->
+      <div class="pt-panel" id="ptP-temas">
+        <div class="pt-panel-title">Desempeño por bloque temático</div>
+        <p class="pt-panel-desc">Pre-test vs Post-test por área del taller BAYMET</p>
+        <div class="pt-two-col">
+          <div class="pt-chart-box"><canvas id="ptChartT"></canvas></div>
+          <div class="pt-tema-list" id="ptTemas"></div>
+        </div>
+        <div class="pt-insights">
+          <div class="pt-insight good">
+            <div class="pt-insight-title">✅ Fortalezas Pre-test</div>
+            <ul>
+              <li>Q12 — Reducción de metano: <b>100%</b></li>
+              <li>Q2 y Q10 — Conceptos climáticos: <b>85%</b></li>
+              <li>Q1 y Q3 — Educación ambiental: <b>77%</b></li>
+            </ul>
+          </div>
+          <div class="pt-insight bad">
+            <div class="pt-insight-title">⚠ Áreas reforzadas en talleres</div>
+            <ul>
+              <li>Q14 — Uso del biogás: 8% → <b>ver post-test</b></li>
+              <li>Q7 — Metano en represas: 36% → <b>ver post-test</b></li>
+              <li>Q4 — Efecto Invernadero: 46% → <b>ver post-test</b></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- Panel: Tabla completa pre -->
+      <div class="pt-panel" id="ptP-tabla">
+        <div class="pt-panel-title">Tabla completa Pre-test</div>
+        <p class="pt-panel-desc">✓ = correcta · ✗ = incorrecta · — = sin datos</p>
+        <div class="pt-table-scroll"><table class="pt-table" id="ptTable"></table></div>
+        <p class="pt-note">⚠ Datos faltantes: Q6–Q9 de Elías Lino · Q7–Q9 de Daybelis Quintero · Q14–Q15 de Estefani Codeño.</p>
+      </div>
+    </div>
+  </section>
+
+
   <!-- ========== ENERGÍA ========== -->
   <section id="energia">
     <div class="wrap">
@@ -1549,6 +1939,281 @@
       { threshold: 0.1 }
     );
     document.querySelectorAll('.rev').forEach(el => io.observe(el));
+
+
+
+  /* ===== PRE-TEST & POST-TEST DATA & CHARTS ===== */
+  (function(){
+    const PT_STUDENTS = [
+      { name:"Octavio Abad",       scores:[0,0,0,0,1,1,0,1,1,1,1,1,0,0,1], note:"" },
+      { name:"Yislath Bustamante", scores:[1,1,1,1,1,0,1,1,0,1,1,1,1,1,0], note:"" },
+      { name:"Yulissa Vásquez",    scores:[0,1,1,1,1,0,1,1,1,0,0,1,1,0,1], note:"" },
+      { name:"Sara Flores",        scores:[1,1,1,1,1,1,1,0,0,1,1,1,1,0,1], note:"" },
+      { name:"Mailin Reyes",       scores:[1,1,1,1,0,1,0,0,0,1,1,1,1,0,1], note:"" },
+      { name:"Elías Lino",         scores:[1,1,1,0,1,0,0,0,0,1,0,1,1,0,0], note:"Q6–9 sin escanear" },
+      { name:"Nathaly Vega",       scores:[1,1,1,1,0,1,0,0,1,1,1,1,1,0,1], note:"" },
+      { name:"Gabriela Mendoza",   scores:[1,1,0,1,0,0,1,0,1,0,1,1,0,0,0], note:"" },
+      { name:"Abel Arenas",        scores:[1,1,1,0,0,1,0,0,0,1,0,1,0,0,0], note:"" },
+      { name:"Daybelis Quintero",  scores:[0,1,1,0,1,0,0,0,0,1,1,1,0,0,0], note:"Q7–9 ilegibles" },
+      { name:"Estefani Codeño",    scores:[1,1,1,0,1,1,0,1,0,1,1,1,0,0,0], note:"Q14–15 sin escanear" },
+      { name:"Hilary Rodríguez",   scores:[1,1,1,0,0,1,0,1,1,1,0,1,0,0,0], note:"" },
+      { name:"Parcial Pimentel",   scores:[1,0,0,0,0,1,0,1,1,1,1,1,1,0,1], note:"" },
+    ];
+    const PT2_STUDENTS = [
+      { name:"Abel Arenas",        scores:[1,1,0,1,1,1,1,1,1,0,1,1,0,1,1] },
+      { name:"Elías Lino",         scores:[1,1,0,1,1,1,1,1,1,1,1,1,1,1,1] },
+      { name:"Hilary Rodríguez",   scores:[1,1,1,1,1,1,1,1,1,1,1,1,1,1,1] },
+      { name:"Sara Flores",        scores:[0,1,1,0,1,1,1,1,1,0,1,1,1,0,1] },
+      { name:"Parcial Pimentel",   scores:[1,1,0,1,1,1,0,1,1,1,1,1,1,0,1] },
+      { name:"Nathaly Vega",       scores:[0,1,1,0,1,1,1,0,1,0,1,1,1,1,1] },
+      { name:"Yislath Bustamante", scores:[1,1,1,1,1,1,1,1,1,1,1,1,1,1,1] },
+      { name:"Daybelis Quintero",  scores:[1,1,1,1,1,1,1,1,1,1,1,1,1,1,1] },
+      { name:"Yulissa Vásquez",    scores:[1,1,1,1,0,1,1,1,1,0,1,1,1,1,1] },
+      { name:"Estefani Codeño",    scores:[1,1,1,1,1,1,1,0,1,1,1,1,1,1,1] },
+      { name:"Mailin Reyes",       scores:[1,1,1,1,1,1,1,1,1,1,1,1,1,1,1] },
+      { name:"Octavio Abad",       scores:[1,1,1,1,1,1,1,1,1,1,1,1,1,1,1] },
+    ];
+    const PT_QS = [
+      {id:1, tema:"Ed. Ambiental",    label:"Q1",  text:"Diferencia tiempo/clima"},
+      {id:2, tema:"Ed. Ambiental",    label:"Q2",  text:"Calentamiento global"},
+      {id:3, tema:"Ed. Ambiental",    label:"Q3",  text:"¿Qué incluye la biosfera?"},
+      {id:4, tema:"GEI Básico",       label:"Q4",  text:"Función Efecto Invernadero"},
+      {id:5, tema:"GEI Básico",       label:"Q5",  text:"¿Cuál es un GEI?"},
+      {id:6, tema:"GEI Básico",       label:"Q6",  text:"Mayor potencial calentamiento"},
+      {id:7, tema:"Metano Represa",   label:"Q7",  text:"Metano en represas"},
+      {id:8, tema:"Metano Represa",   label:"Q8",  text:"Embalses tropicales"},
+      {id:9, tema:"Metano Represa",   label:"Q9",  text:"Época de mayores emisiones"},
+      {id:10,tema:"Cambio Climático", label:"Q10", text:"Consecuencias temperatura"},
+      {id:11,tema:"Cambio Climático", label:"Q11", text:"¿Qué significa mitigar?"},
+      {id:12,tema:"Soluciones",       label:"Q12", text:"Reducir metano en agua"},
+      {id:13,tema:"Soluciones",       label:"Q13", text:"¿Qué es un biodigestor?"},
+      {id:14,tema:"Soluciones",       label:"Q14", text:"Uso principal del biogás"},
+      {id:15,tema:"Soluciones",       label:"Q15", text:"¿Para qué contenedor hermético?"},
+    ];
+    const PT_MISSING = {5:[5],6:[5,9],7:[5,9],8:[5,9],13:[10],14:[10]};
+    const PT_TEMA_COLORS = {
+      "Ed. Ambiental":"#4ade80","GEI Básico":"#38bdf8",
+      "Metano Represa":"#fb923c","Cambio Climático":"#a78bfa","Soluciones":"#2dd4bf"
+    };
+    const PT_TEMAS = ["Ed. Ambiental","GEI Básico","Metano Represa","Cambio Climático","Soluciones"];
+
+    function ptColor(p){ return p>=75?"#22c55e":p>=50?"#eab308":"#ef4444"; }
+
+    // PRE stats
+    const qStats = PT_QS.map((q,qi)=>{
+      const excl=PT_MISSING[qi]||[]; let correct=0,total=0;
+      PT_STUDENTS.forEach((s,si)=>{ if(excl.includes(si))return; total++; correct+=s.scores[qi]; });
+      return {...q,correct,total,pct:Math.round(correct/total*100)};
+    });
+    const sStats = PT_STUDENTS.map(s=>({...s,total:s.scores.reduce((a,b)=>a+b,0),pct:Math.round(s.scores.reduce((a,b)=>a+b,0)/15*100)}));
+    const grpAvg = Math.round(sStats.reduce((a,s)=>a+s.pct,0)/sStats.length);
+
+    // POST stats
+    const q2Stats = PT_QS.map((q,qi)=>{
+      const correct=PT2_STUDENTS.reduce((a,s)=>a+s.scores[qi],0);
+      return {...q,correct,total:PT2_STUDENTS.length,pct:Math.round(correct/PT2_STUDENTS.length*100)};
+    });
+    const s2Stats = PT2_STUDENTS.map(s=>({...s,total:s.scores.reduce((a,b)=>a+b,0),pct:Math.round(s.scores.reduce((a,b)=>a+b,0)/15*100)}));
+    const grp2Avg = Math.round(s2Stats.reduce((a,s)=>a+s.pct,0)/s2Stats.length);
+    const delta = grp2Avg - grpAvg;
+
+    // Update comparison cards
+    document.getElementById("pt2AvgDisplay").textContent = grp2Avg+"%";
+    const deltaEl = document.getElementById("pt2Delta");
+    deltaEl.textContent = (delta>=0?"+":"")+delta+"% vs Pre-test";
+    if(delta<0){ deltaEl.classList.add("neg"); }
+
+    // KPIs
+    const kpis=[
+      {label:"Pre-test prom.",  value:grpAvg+"%",  sub:"",    accent:"#64748b"},
+      {label:"Post-test prom.", value:grp2Avg+"%", sub:"",    accent:ptColor(grp2Avg)},
+      {label:"Mejora",          value:(delta>=0?"+":"")+delta+"%", sub:"puntos", accent:delta>=0?"#22c55e":"#ef4444"},
+      {label:"Aprobados post ≥75%", value:s2Stats.filter(s=>s.pct>=75).length, sub:"/"+s2Stats.length, accent:"#22c55e"},
+      {label:"Mejor pregunta post",  value:q2Stats.sort((a,b)=>b.pct-a.pct)[0].label, sub:q2Stats.sort((a,b)=>b.pct-a.pct)[0].pct+"%", accent:"#22c55e"},
+      {label:"Estudiantes post", value:PT2_STUDENTS.length, sub:"", accent:"#38bdf8"},
+    ];
+    document.getElementById("ptKpis").innerHTML=kpis.map(k=>
+      `<div class="pt-kpi" style="--kpi-accent:${k.accent}">
+        <div class="pt-kpi-label">${k.label}</div>
+        <div class="pt-kpi-value">${k.value}<sub>${k.sub}</sub></div>
+      </div>`).join("");
+
+    // Chart Q PRE
+    new Chart(document.getElementById("ptChartQ"),{type:"bar",data:{
+      labels:qStats.map(q=>q.label),
+      datasets:[{label:"% Pre-test",data:qStats.map(q=>q.pct),
+        backgroundColor:qStats.map(q=>ptColor(q.pct)+"cc"),
+        borderColor:qStats.map(q=>ptColor(q.pct)),borderWidth:1,borderRadius:6}]},
+      options:{responsive:true,plugins:{legend:{display:false},
+        tooltip:{backgroundColor:"#0e1a24",borderColor:"#1c3347",borderWidth:1,titleColor:"#94a3b8",bodyColor:"#f1f5f9",
+          callbacks:{title:([i])=>`${qStats[i.dataIndex].label}: ${qStats[i.dataIndex].text}`,
+            label:(i)=>{const q=qStats[i.dataIndex];return[`${q.pct}% correctas (${q.correct}/${q.total})`,`Tema: ${q.tema}`];}}}},
+      scales:{x:{grid:{color:"#1c3347"},ticks:{color:"#94a3b8",font:{size:11}}},
+        y:{min:0,max:100,grid:{color:"#1c3347"},ticks:{color:"#64748b",callback:v=>v+"%"}}}}});
+
+    // Q Grid PRE
+    document.getElementById("ptQGrid").innerHTML=qStats.map(q=>
+      `<div class="pt-q-card" style="--tc:${PT_TEMA_COLORS[q.tema]}">
+        <div class="pt-q-badge" style="background:${ptColor(q.pct)}22;color:${ptColor(q.pct)}">${q.pct}%</div>
+        <div><div class="pt-q-label">${q.label}: ${q.text}</div>
+        <div class="pt-q-sub">${q.tema} · ${q.correct}/${q.total}</div></div>
+      </div>`).join("");
+
+    // Chart POST
+    new Chart(document.getElementById("ptChartPost"),{type:"bar",data:{
+      labels:q2Stats.map(q=>q.label),
+      datasets:[{label:"% Post-test",data:q2Stats.map(q=>q.pct),
+        backgroundColor:q2Stats.map(q=>ptColor(q.pct)+"cc"),
+        borderColor:q2Stats.map(q=>ptColor(q.pct)),borderWidth:1,borderRadius:6}]},
+      options:{responsive:true,plugins:{legend:{display:false},
+        tooltip:{backgroundColor:"#0e1a24",borderColor:"#1c3347",borderWidth:1,titleColor:"#94a3b8",bodyColor:"#f1f5f9",
+          callbacks:{label:(i)=>{const q=q2Stats[i.dataIndex];return `${q.pct}% correctas (${q.correct}/${q.total})`;}}}},
+      scales:{x:{grid:{color:"#1c3347"},ticks:{color:"#94a3b8",font:{size:11}}},
+        y:{min:0,max:100,grid:{color:"#1c3347"},ticks:{color:"#64748b",callback:v=>v+"%"}}}}});
+
+    // Post student cards
+    const sorted2=[...s2Stats].sort((a,b)=>b.pct-a.pct);
+    document.getElementById("ptPost2Students").innerHTML=sorted2.map(s=>
+      `<div class="pt-student-card">
+        <div class="pt-sname">${s.name}</div>
+        <div class="pt-bar-bg"><div class="pt-bar-fill" style="width:${s.pct}%;background:${ptColor(s.pct)}"></div></div>
+        <div class="pt-srow"><span class="pt-sscore">${s.total}/15</span>
+        <span class="pt-spct" style="color:${ptColor(s.pct)}">${s.pct}%</span></div>
+      </div>`).join("");
+
+    // Chart COMPARACIÓN (grouped bar)
+    new Chart(document.getElementById("ptChartCmp"),{type:"bar",data:{
+      labels:PT_QS.map(q=>q.label),
+      datasets:[
+        {label:"Pre-test",data:qStats.map(q=>q.pct),backgroundColor:"rgba(100,116,139,.7)",borderColor:"#64748b",borderWidth:1,borderRadius:4},
+        {label:"Post-test",data:q2Stats.map(q=>q.pct),backgroundColor:"rgba(34,197,94,.7)",borderColor:"#22c55e",borderWidth:1,borderRadius:4}
+      ]},
+      options:{responsive:true,plugins:{
+        legend:{labels:{color:"#94a3b8",font:{size:11}}},
+        tooltip:{backgroundColor:"#0e1a24",borderColor:"#1c3347",borderWidth:1,bodyColor:"#f1f5f9"}},
+      scales:{x:{grid:{color:"#1c3347"},ticks:{color:"#94a3b8",font:{size:11}}},
+        y:{min:0,max:100,grid:{color:"#1c3347"},ticks:{color:"#64748b",callback:v=>v+"%"}}}}});
+
+    // Comparison bars per question
+    const cmpBarsEl = document.getElementById("ptCmpBars");
+    const deltas = qStats.map((q,i)=>({...q,post:q2Stats[i].pct,delta:q2Stats[i].pct-q.pct}));
+    cmpBarsEl.innerHTML = deltas.map(d=>{
+      const arr = d.delta>0?"▲ +"+d.delta+"%":d.delta<0?"▼ "+d.delta+"%":"= sin cambio";
+      const cls = d.delta>0?"up":d.delta<0?"down":"eq";
+      return `<div class="cmp-bar-row">
+        <div class="cmp-bar-label">${d.label}</div>
+        <div style="flex:1">
+          <div style="font-size:.72rem;color:#64748b;margin-bottom:3px">${d.text}</div>
+          <div class="cmp-bars">
+            <div class="cmp-bar-bg"><div class="cmp-bar-pre"  style="width:${d.pct}%"></div></div>
+            <div class="cmp-bar-bg"><div class="cmp-bar-post" style="width:${d.post}%"></div></div>
+          </div>
+        </div>
+        <div class="cmp-pcts">
+          <span class="cmp-pct-pre">${d.pct}%</span>
+          <span>→</span>
+          <span class="cmp-pct-post">${d.post}%</span>
+        </div>
+        <div class="cmp-arrow ${cls}">${arr}</div>
+      </div>`;}).join("");
+
+    // Gains & needs
+    const sorted_deltas=[...deltas].sort((a,b)=>b.delta-a.delta);
+    document.getElementById("ptGains").innerHTML=sorted_deltas.slice(0,4).map(d=>
+      `<li>${d.label} — ${d.text}: <b>${d.pct}% → ${d.post}%</b> (+${d.delta}%)</li>`).join("");
+    document.getElementById("ptNeeds").innerHTML=sorted_deltas.slice(-3).reverse().map(d=>
+      `<li>${d.label} — ${d.text}: <b>${d.post}%</b> ${d.delta<0?"⬇"+d.delta+"%":""}</li>`).join("");
+
+    // Students PRE
+    const sorted=[...sStats].sort((a,b)=>b.pct-a.pct);
+    new Chart(document.getElementById("ptChartS"),{type:"bar",data:{
+      labels:sorted.map(s=>s.name.split(" ")[0]),
+      datasets:[{label:"% Pre-test",data:sorted.map(s=>s.pct),
+        backgroundColor:sorted.map(s=>ptColor(s.pct)+"bb"),
+        borderColor:sorted.map(s=>ptColor(s.pct)),borderWidth:1,borderRadius:6}]},
+      options:{responsive:true,plugins:{legend:{display:false},
+        tooltip:{backgroundColor:"#0e1a24",borderColor:"#1c3347",borderWidth:1,titleColor:"#94a3b8",bodyColor:"#f1f5f9",
+          callbacks:{title:([i])=>sorted[i.dataIndex].name,
+            label:(i)=>{const s=sorted[i.dataIndex];return[`${s.total}/15 — ${s.pct}%`,s.note?`⚠ ${s.note}`:""].filter(Boolean);}}}},
+      scales:{x:{grid:{color:"#1c3347"},ticks:{color:"#94a3b8",font:{size:11}}},
+        y:{min:0,max:100,grid:{color:"#1c3347"},ticks:{color:"#64748b",callback:v=>v+"%"}}}}});
+
+    [{label:"0–39%",min:0,max:39,color:"#ef4444"},{label:"40–59%",min:40,max:59,color:"#eab308"},
+     {label:"60–74%",min:60,max:74,color:"#38bdf8"},{label:"75–100%",min:75,max:100,color:"#22c55e"}]
+    .forEach(r=>{ const c=sStats.filter(s=>s.pct>=r.min&&s.pct<=r.max).length;
+      document.getElementById("ptDist").innerHTML+=
+        `<div class="pt-dist-card" style="--dc:${r.color}">
+          <div class="pt-dist-num" style="color:${r.color}">${c}</div>
+          <div class="pt-dist-range">${r.label}</div>
+          <div class="pt-dist-pct">${Math.round(c/sStats.length*100)}%</div></div>`;});
+
+    document.getElementById("ptStudents").innerHTML=sorted.map(s=>
+      `<div class="pt-student-card">
+        <div class="pt-sname">${s.name}</div>
+        <div class="pt-bar-bg"><div class="pt-bar-fill" style="width:${s.pct}%;background:${ptColor(s.pct)}"></div></div>
+        <div class="pt-srow"><span class="pt-sscore">${s.total}/15</span>
+        <span class="pt-spct" style="color:${ptColor(s.pct)}">${s.pct}%</span></div>
+        ${s.note?`<span class="pt-warn">⚠ ${s.note}</span>`:""}
+      </div>`).join("");
+
+    // Temas radar PRE vs POST
+    const temaAvgs1 = PT_TEMAS.map(t=>{const qs=qStats.filter(q=>q.tema===t);return Math.round(qs.reduce((a,q)=>a+q.pct,0)/qs.length);});
+    const temaAvgs2 = PT_TEMAS.map(t=>{const qs=q2Stats.filter(q=>q.tema===t);return Math.round(qs.reduce((a,q)=>a+q.pct,0)/qs.length);});
+    new Chart(document.getElementById("ptChartT"),{type:"radar",data:{
+      labels:PT_TEMAS.map(t=>t.replace(" ","·")),
+      datasets:[
+        {label:"Pre-test",data:temaAvgs1,backgroundColor:"rgba(100,116,139,.12)",borderColor:"#64748b",borderWidth:2,pointBackgroundColor:"#64748b",pointRadius:4},
+        {label:"Post-test",data:temaAvgs2,backgroundColor:"rgba(34,197,94,.12)",borderColor:"#22c55e",borderWidth:2,pointBackgroundColor:"#22c55e",pointRadius:4}
+      ]},
+      options:{responsive:true,plugins:{legend:{labels:{color:"#94a3b8",font:{size:11}}}},
+      scales:{r:{min:0,max:100,grid:{color:"#1c3347"},angleLines:{color:"#1c3347"},
+        ticks:{backdropColor:"transparent",color:"#475569",font:{size:10},stepSize:25},
+        pointLabels:{color:"#94a3b8",font:{size:11,weight:"600"}}}}}});
+
+    document.getElementById("ptTemas").innerHTML=PT_TEMAS.map((t,i)=>{
+      const avg1=temaAvgs1[i],avg2=temaAvgs2[i],d=avg2-avg1;
+      return `<div class="pt-tema-row">
+        <div class="pt-tema-hdr">
+          <span class="pt-tema-name" style="color:${PT_TEMA_COLORS[t]}">${t}</span>
+          <span style="font-size:.8rem;color:#475569">${avg1}% → <span style="color:${ptColor(avg2)};font-weight:900">${avg2}%</span>
+          <span style="color:${d>=0?"#22c55e":"#ef4444"};font-size:.75rem"> ${d>=0?"+":""}${d}%</span></span>
+        </div>
+        <div class="pt-tema-bar-bg"><div class="pt-tema-bar-fill" style="width:${avg2}%;background:${ptColor(avg2)}"></div></div>
+        <div class="pt-tema-qs">${qStats.filter(q=>q.tema===t).map(q=>q.label).join(", ")}</div>
+      </div>`;}).join("");
+
+    // Table PRE
+    const tbl=document.getElementById("ptTable");
+    tbl.innerHTML=`<thead><tr>
+      <th style="text-align:left;padding-left:14px;color:#475569">ESTUDIANTE</th>
+      ${PT_QS.map(q=>`<th style="color:${PT_TEMA_COLORS[q.tema]}" title="${q.tema}: ${q.text}">${q.label}</th>`).join("")}
+      <th>TOTAL</th><th>%</th></tr></thead>`;
+    const tbody=document.createElement("tbody");
+    sStats.forEach((s,si)=>{
+      const tr=document.createElement("tr");
+      tr.innerHTML=`<td>${s.name}${s.note?` <span style="color:#f59e0b;font-size:.7rem">⚠</span>`:""}</td>
+        ${s.scores.map((sc,qi)=>{
+          const excl=(PT_MISSING[qi]||[]).includes(si);
+          if(excl)return`<td class="pt-cell-mis">—</td>`;
+          return sc?`<td class="pt-cell-ok">✓</td>`:`<td class="pt-cell-no">✗</td>`;
+        }).join("")}
+        <td style="font-family:var(--ffh);font-weight:900;color:${ptColor(s.pct)}">${s.total}</td>
+        <td><span class="pt-pct-pill" style="background:${ptColor(s.pct)}22;color:${ptColor(s.pct)}">${s.pct}%</span></td>`;
+      tbody.appendChild(tr);
+    });
+    const tfoot=document.createElement("tfoot");
+    tfoot.innerHTML=`<tr><td>% CORRECTO</td>
+      ${qStats.map(q=>`<td style="color:${ptColor(q.pct)}">${q.pct}%</td>`).join("")}
+      <td>—</td><td><span class="pt-pct-pill" style="background:${ptColor(grpAvg)}22;color:${ptColor(grpAvg)}">${grpAvg}%</span></td></tr>`;
+    tbl.appendChild(tbody); tbl.appendChild(tfoot);
+
+    window.ptTab=function(id,btn){
+      document.querySelectorAll(".pt-panel").forEach(p=>p.classList.remove("pt-active"));
+      document.querySelectorAll(".pt-tab").forEach(b=>b.classList.remove("pt-active"));
+      document.getElementById("ptP-"+id).classList.add("pt-active");
+      btn.classList.add("pt-active");
+    };
+  })();
 
 
     /* Team: flip panel left when near right edge; tap on mobile */
