@@ -18,9 +18,9 @@
       --b:   #1B3C73;
       --bm:  #2a54a8;
       --w:   #FFFFFF;
-      --gr:  #F5F5F5;
-      --gt:  #5a6372;
-      --dk:  #0d1117;
+      --gr:  #f0f2f5;
+      --gt:  #3d4656;
+      --dk:  #0a0f1e;
       --ffh: 'Montserrat', sans-serif;
       --ffb: 'Source Sans 3', sans-serif;
       --r:   14px;
@@ -51,10 +51,11 @@
       color:var(--gl); margin-bottom:14px;
     }
     .s-dark .eye,.s-green .eye,.s-blue .eye { color:rgba(255,255,255,.55); }
+    #cta .eye { color:#ffffff; }
 
     h2 { font-family:var(--ffh); font-size:clamp(1.85rem,4vw,2.85rem); font-weight:900; line-height:1.18; margin-bottom:18px; }
-    .lead { font-size:1.08rem; line-height:1.8; color:var(--gt); max-width:640px; }
-    .s-dark .lead,.s-green .lead,.s-blue .lead { color:rgba(255,255,255,.75); }
+    .lead { font-size:1.08rem; line-height:1.8; color:#2d3748; max-width:640px; }
+    .s-dark .lead,.s-green .lead,.s-blue .lead { color:rgba(255,255,255,.9); }
     .ac  { color:var(--gl); }
     .acb { color:#70a8ff; }
 
@@ -68,8 +69,8 @@
     .btn-b:hover  { background:var(--bm); transform:translateY(-3px); box-shadow:0 10px 28px rgba(27,60,115,.4); }
 
     /* REVEAL */
-    .rev { opacity:0; transform:translateY(32px); transition:opacity .7s ease,transform .7s ease; }
-    .rev.on { opacity:1; transform:translateY(0); }
+    .rev { opacity:1; transform:translateY(20px); transition:opacity .5s ease,transform .5s ease; }
+    .rev.on { opacity:1; transform:translateY(0); transition:opacity .5s ease,transform .5s ease; }
 
     /* =============================================  NAV  ============================================= */
     nav { position:fixed; top:0; left:0; right:0; z-index:900; padding:18px 0; transition:background var(--t),box-shadow var(--t); }
@@ -78,7 +79,7 @@
     .logo { font-family:var(--ffh); font-weight:900; font-size:1.35rem; color:#fff; letter-spacing:.04em; }
     .logo em { font-style:normal; color:var(--gl); }
     .nav-links { display:flex; gap:26px; }
-    .nav-links a { font-family:var(--ffh); font-size:.8rem; font-weight:600; color:rgba(255,255,255,.75); letter-spacing:.05em; transition:color var(--t); }
+    .nav-links a { font-family:var(--ffh); font-size:.8rem; font-weight:600; color:rgba(255,255,255,.9); letter-spacing:.05em; transition:color var(--t); }
     .nav-links a:hover { color:var(--gl); }
     .hamburger { display:none; flex-direction:column; gap:5px; cursor:pointer; padding:4px; z-index:910; }
     .hamburger span { display:block; width:24px; height:2px; background:#fff; border-radius:2px; transition:var(--t); }
@@ -106,7 +107,7 @@
     .hero-title { font-family:var(--ffh); font-weight:900; font-size:clamp(2.3rem,6vw,4.6rem); line-height:1.09; color:#fff; margin-bottom:24px; }
     .hero-title .grad { display:block; background:linear-gradient(90deg,var(--gl) 0%,#a8e063 100%); -webkit-background-clip:text; -webkit-text-fill-color:transparent; background-clip:text; }
     .hero-tagline { display:inline-block; font-family:var(--ffh); font-size:1rem; font-weight:700; color:rgba(255,255,255,.5); letter-spacing:.08em; text-transform:uppercase; margin-bottom:18px; font-style:italic; }
-    .hero-desc { font-size:1.12rem; line-height:1.8; color:rgba(255,255,255,.72); max-width:600px; margin-bottom:40px; }
+    .hero-desc { font-size:1.12rem; line-height:1.8; color:rgba(255,255,255,.92); max-width:600px; margin-bottom:40px; }
     .hero-btns { display:flex; gap:16px; flex-wrap:wrap; margin-bottom:64px; }
     .hero-stats { display:flex; gap:40px; flex-wrap:wrap; padding-top:40px; border-top:1px solid rgba(255,255,255,.1); }
     .hstat-num { font-family:var(--ffh); font-size:2rem; font-weight:900; background:linear-gradient(90deg,var(--gl),#a8e063); -webkit-background-clip:text; -webkit-text-fill-color:transparent; background-clip:text; }
@@ -133,7 +134,7 @@
     .fact-item { display:flex; gap:14px; align-items:flex-start; padding:14px 16px; background:rgba(255,255,255,.04); border-radius:10px; border:1px solid rgba(255,255,255,.06); transition:border-color var(--t); }
     .fact-item:hover { border-color:rgba(76,175,80,.3); }
     .fact-ico { width:36px;height:36px;min-width:36px; background:rgba(76,175,80,.12); border-radius:8px; display:flex;align-items:center;justify-content:center; font-size:1.1rem; }
-    .fact-txt { font-size:.93rem; color:rgba(255,255,255,.75); line-height:1.6; }
+    .fact-txt { font-size:.93rem; color:rgba(255,255,255,.9); line-height:1.6; }
     .fact-txt strong { color:#fff; }
 
     /* ODS pills */
@@ -156,7 +157,7 @@
     .pillar.p4 { border-top-color:#e76f51; }
     .pillar-ico { font-size:1.7rem; margin-bottom:8px; }
     .pillar-nm { font-family:var(--ffh); font-size:.88rem; font-weight:700; margin-bottom:4px; }
-    .pillar-ds { font-size:.83rem; color:var(--gt); line-height:1.6; }
+    .pillar-ds { font-size:.83rem; color:#2d3748; line-height:1.6; }
 
     /* =============================================  PROTOTIPO  ============================================= */
     #prototipo { background:#fff; }
@@ -170,7 +171,7 @@
     .sf-num { width:72px;height:72px;border-radius:50%; background:linear-gradient(135deg,var(--g),var(--gl)); margin:0 auto 16px; display:flex;align-items:center;justify-content:center; font-family:var(--ffh);font-size:1.1rem;font-weight:900;color:#fff; box-shadow:0 8px 24px rgba(76,175,80,.3); }
     .sf-icon { font-size:1.5rem; margin-bottom:8px; }
     .sf-title { font-family:var(--ffh); font-size:.88rem; font-weight:700; margin-bottom:6px; }
-    .sf-desc { font-size:.82rem; color:var(--gt); line-height:1.6; }
+    .sf-desc { font-size:.82rem; color:#2d3748; line-height:1.6; }
 
     /* Components detail */
     .proto-components { display:grid; grid-template-columns:1fr 1fr; gap:40px; align-items:start; }
@@ -180,7 +181,7 @@
     .comp-item:hover { transform:translateX(6px); }
     .comp-num { font-family:var(--ffh); font-size:1.3rem; font-weight:900; color:var(--g); min-width:32px; line-height:1; }
     .comp-info h4 { font-family:var(--ffh); font-size:.95rem; font-weight:700; margin-bottom:4px; color:var(--g); }
-    .comp-info p  { font-size:.88rem; color:var(--gt); line-height:1.6; }
+    .comp-info p  { font-size:.88rem; color:#2d3748; line-height:1.6; }
 
     /* SVG prototipo diagram */
     .proto-svg-box { background:var(--gr); border-radius:20px; padding:24px; box-shadow:var(--sh); }
@@ -201,7 +202,7 @@
     .mod-num { font-family:var(--ffh); font-size:.7rem; font-weight:700; letter-spacing:.12em; text-transform:uppercase; color:var(--gl); margin-bottom:8px; }
     .modulo-card.extra .mod-num { color:var(--b); }
     .mod-title { font-family:var(--ffh); font-size:1rem; font-weight:700; margin-bottom:10px; color:var(--dk); }
-    .mod-desc { font-size:.88rem; color:var(--gt); line-height:1.7; }
+    .mod-desc { font-size:.88rem; color:#2d3748; line-height:1.7; }
 
     /* Cronograma */
     .crono { margin-top:56px; }
@@ -211,7 +212,7 @@
     .crono-card h4 { font-family:var(--ffh); font-size:1.1rem; font-weight:900; color:var(--b); margin-bottom:6px; }
     .crono-date { font-family:var(--ffh); font-size:.8rem; font-weight:600; color:var(--gl); letter-spacing:.06em; text-transform:uppercase; margin-bottom:14px; }
     .crono-items { display:flex; flex-direction:column; gap:6px; }
-    .crono-items li { font-size:.88rem; color:var(--gt); padding-left:14px; position:relative; line-height:1.5; }
+    .crono-items li { font-size:.88rem; color:#2d3748; padding-left:14px; position:relative; line-height:1.5; }
     .crono-items li::before { content:'→'; position:absolute; left:0; color:var(--gl); font-size:.8rem; }
     .crono-mods { font-family:var(--ffh); font-size:.72rem; font-weight:700; letter-spacing:.08em; text-transform:uppercase; color:rgba(27,60,115,.6); margin-top:14px; padding-top:10px; border-top:1px solid var(--gr); }
 
@@ -223,7 +224,7 @@
     .imp-ico { font-size:2.4rem; margin-bottom:14px; }
     .imp-num { font-family:var(--ffh); font-size:2.2rem; font-weight:900; color:var(--gl); line-height:1; margin-bottom:4px; }
     .imp-lbl { font-family:var(--ffh); font-size:.78rem; font-weight:700; text-transform:uppercase; letter-spacing:.08em; color:rgba(255,255,255,.4); margin-bottom:10px; }
-    .imp-desc { font-size:.9rem; color:rgba(255,255,255,.65); line-height:1.7; }
+    .imp-desc { font-size:.9rem; color:rgba(255,255,255,.88); line-height:1.7; }
 
     .quote-block { margin-top:52px; background:linear-gradient(135deg,var(--g) 0%,var(--b) 100%); border-radius:20px; padding:48px 52px; color:#fff; position:relative; overflow:hidden; }
     .quote-block::before { content:'"'; position:absolute; top:-20px;left:32px; font-size:14rem; font-family:Georgia,serif; font-weight:900; color:rgba(255,255,255,.08); line-height:1; }
@@ -238,13 +239,13 @@
     .en-item:hover { transform:translateX(6px); }
     .en-ico { font-size:1.6rem; width:48px;height:48px;min-width:48px; background:rgba(11,110,79,.1); border-radius:10px; display:flex;align-items:center;justify-content:center; }
     .en-txt h4 { font-family:var(--ffh); font-size:.95rem; font-weight:700; color:var(--g); margin-bottom:5px; }
-    .en-txt p { font-size:.88rem; color:var(--gt); line-height:1.65; }
+    .en-txt p { font-size:.88rem; color:#2d3748; line-height:1.65; }
     .circ-wrap { display:flex;flex-direction:column;align-items:center;gap:20px; }
     .circ-diag { width:240px;height:240px;border-radius:50%; background:conic-gradient(var(--g) 0% 30%,var(--b) 30% 58%,var(--gl) 58% 78%,#f4a261 78% 100%); display:flex;align-items:center;justify-content:center; box-shadow:0 0 60px rgba(76,175,80,.2); }
     .circ-in { width:130px;height:130px;border-radius:50%; background:var(--gr); display:flex;align-items:center;justify-content:center;text-align:center; }
-    .circ-in span { font-family:var(--ffh);font-size:.72rem;font-weight:700;color:var(--gt);letter-spacing:.04em;text-transform:uppercase;line-height:1.4; }
+    .circ-in span { font-family:var(--ffh);font-size:.72rem;font-weight:700;color:#2d3748;letter-spacing:.04em;text-transform:uppercase;line-height:1.4; }
     .circ-leg { display:flex;flex-direction:column;gap:8px;width:100%;max-width:240px; }
-    .cleg { display:flex;align-items:center;gap:10px;font-size:.84rem;color:var(--gt); }
+    .cleg { display:flex;align-items:center;gap:10px;font-size:.84rem;color:#2d3748; }
     .cleg-dot { width:12px;height:12px;border-radius:3px;flex-shrink:0; }
 
     /* =============================================  EQUIPO  ============================================= */
@@ -262,10 +263,10 @@
     #cta::before { content:''; position:absolute;inset:0; background-image:linear-gradient(rgba(255,255,255,.05) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.05) 1px,transparent 1px); background-size:50px 50px; }
     .cta-in { position:relative;z-index:1; }
     #cta h2 { color:#fff;font-size:clamp(2rem,4.5vw,3.2rem);margin-bottom:16px; }
-    #cta .lead { margin:0 auto 36px;color:rgba(255,255,255,.78); }
+    #cta .lead { margin:0 auto 36px;color:#ffffff; }
     .cta-btns { display:flex;gap:14px;justify-content:center;flex-wrap:wrap; }
     .cta-contact { margin-top:36px; display:flex;gap:20px;justify-content:center;flex-wrap:wrap; }
-    .cta-contact a { color:rgba(255,255,255,.65); font-size:.9rem; transition:color var(--t); display:flex;align-items:center;gap:6px; }
+    .cta-contact a { color:#ffffff; font-size:.9rem; transition:color var(--t); display:flex;align-items:center;gap:6px; }
     .cta-contact a:hover { color:#fff; }
 
     /* =============================================  FOOTER  ============================================= */
@@ -285,7 +286,7 @@
     .soc:hover { background:var(--gl);color:#fff; }
 
     /* =============================================  RESPONSIVE  ============================================= */
-     nav .btn{display:none;} .hamburger{display:flex;}
+     nav .btn{display:none;} .hamburger{display:flex;} 
 
 
     .mon-inner-grid {
@@ -303,7 +304,7 @@
     .mon-stat-n { font-family:var(--ffh); font-size:2rem; font-weight:900; color:var(--gl); line-height:1; }
     .mon-stat-l { font-size:.75rem; color:rgba(255,255,255,.5); font-weight:600; text-transform:uppercase; letter-spacing:.07em; margin-top:4px; }
     .mon-obs { display:flex; flex-direction:column; gap:12px; margin-top:20px; }
-    .mon-ob { display:flex; gap:12px; align-items:flex-start; padding:12px 16px; background:rgba(255,255,255,.04); border-radius:10px; border:1px solid rgba(255,255,255,.06); font-size:.9rem; color:rgba(255,255,255,.72); line-height:1.6; }
+    .mon-ob { display:flex; gap:12px; align-items:flex-start; padding:12px 16px; background:rgba(255,255,255,.04); border-radius:10px; border:1px solid rgba(255,255,255,.06); font-size:.9rem; color:rgba(255,255,255,.92); line-height:1.6; }
     .mon-ob span { font-size:1.2rem; }
     .chart-box { background:rgba(255,255,255,.03); border:1px solid rgba(255,255,255,.08); border-radius:20px; padding:28px 24px; }
     .chart-title { font-family:var(--ffh); font-size:.92rem; font-weight:700; color:#fff; margin-bottom:4px; }
@@ -316,7 +317,7 @@
     .mon-next { margin-top:28px; background:rgba(76,175,80,.08); border:1px solid rgba(76,175,80,.2); border-radius:12px; padding:20px 22px; }
     .mon-next h4 { font-family:var(--ffh); font-size:.95rem; font-weight:700; color:var(--gl); margin-bottom:10px; }
     .mon-next ul { display:flex; flex-direction:column; gap:7px; }
-    .mon-next li { font-size:.88rem; color:rgba(255,255,255,.65); padding-left:14px; position:relative; }
+    .mon-next li { font-size:.88rem; color:rgba(255,255,255,.88); padding-left:14px; position:relative; }
     .mon-next li::before { content:'→'; position:absolute; left:0; color:var(--gl); }
 
     /* ===== EQUIPO — card + hover panel ===== */
@@ -339,7 +340,7 @@
     .tm-initials { width:100%; aspect-ratio:1/1; border-radius:12px 12px 0 0; display:flex; align-items:center; justify-content:center; font-family:var(--ffh); font-size:2.2rem; font-weight:900; color:#fff; }
     .tm-name-bar { padding:10px 12px 12px; }
     .tm-name { font-family:var(--ffh); font-size:.85rem; font-weight:700; }
-    .tm-sub  { font-size:.72rem; color:var(--gt); margin-top:1px; }
+    .tm-sub  { font-size:.72rem; color:#2d3748; margin-top:1px; }
 
     /* Panel: hidden by default, shown on hover as flex row */
     .tm-panel {
@@ -393,7 +394,7 @@
     .panel-body::-webkit-scrollbar { width:3px; }
     .panel-body::-webkit-scrollbar-thumb { background:var(--gl); border-radius:2px; }
     .panel-name { font-family:var(--ffh); font-size:1rem; font-weight:900; color:var(--g); margin-bottom:10px; }
-    .panel-desc { font-size:.85rem; color:var(--gt); line-height:1.72; }
+    .panel-desc { font-size:.85rem; color:#2d3748; line-height:1.72; }
 
     /* Open LEFT when near right edge */
     .tm-card.flip-left .tm-panel {
@@ -416,9 +417,9 @@
       font-family:var(--ffh); font-size:.88rem; font-weight:700;
       color:rgba(255,255,255,.85); margin-bottom:8px;
     }
-    .mdb-text { font-size:.85rem; color:rgba(255,255,255,.6); line-height:1.7; }
+    .mdb-text { font-size:.85rem; color:rgba(255,255,255,.85); line-height:1.7; }
     .prop-item {
-      font-size:.84rem; color:rgba(255,255,255,.7);
+      font-size:.84rem; color:rgba(255,255,255,.9);
       padding:5px 10px;
       background:rgba(76,175,80,.08);
       border-radius:6px;
@@ -647,7 +648,7 @@
     #pretest .wrap { max-width: 1140px; }
 
     .pt-intro { max-width: 700px; margin-bottom: 48px; }
-    .pt-intro .lead { color: rgba(255,255,255,.6); }
+    .pt-intro .lead { color: rgba(255,255,255,.85); }
 
     /* KPI strip */
     .pt-kpi-strip {
@@ -667,13 +668,13 @@
     }
     .pt-kpi-label {
       font-family: var(--ffh); font-size: .65rem; font-weight: 700;
-      letter-spacing: .1em; text-transform: uppercase; color: #64748b;
+      letter-spacing: .1em; text-transform: uppercase; color: #374151;
     }
     .pt-kpi-value {
       font-family: var(--ffh); font-size: 1.6rem; font-weight: 900;
       color: var(--kpi-accent, #4CAF50); margin-top: 4px; line-height: 1;
     }
-    .pt-kpi-value sub { font-size: .8rem; color: #64748b; font-weight: 400; }
+    .pt-kpi-value sub { font-size: .8rem; color: #374151; font-weight: 400; }
 
     /* Tab bar */
     .pt-tabs {
@@ -684,7 +685,7 @@
     .pt-tab {
       padding: 10px 20px; border-radius: 10px 10px 0 0;
       border: none; background: transparent;
-      color: #64748b; font-family: var(--ffh); font-size: .82rem;
+      color: #374151; font-family: var(--ffh); font-size: .82rem;
       font-weight: 700; cursor: pointer;
       transition: var(--t); position: relative; bottom: -1px;
     }
@@ -702,7 +703,7 @@
       font-family: var(--ffh); font-size: 1.1rem; font-weight: 900;
       color: #f8fafc; margin-bottom: 4px;
     }
-    .pt-panel-desc { font-size: .85rem; color: #64748b; margin-bottom: 24px; }
+    .pt-panel-desc { font-size: .85rem; color: #374151; margin-bottom: 24px; }
 
     /* Chart wrapper */
     .pt-chart-box {
@@ -728,7 +729,7 @@
       font-family: var(--ffh); font-size: 1.05rem; font-weight: 900;
     }
     .pt-q-label { font-size: .8rem; font-weight: 700; color: #e2e8f0; }
-    .pt-q-sub   { font-size: .72rem; color: #64748b; margin-top: 2px; }
+    .pt-q-sub   { font-size: .72rem; color: #374151; margin-top: 2px; }
 
     /* Student grid */
     .pt-student-grid {
@@ -746,7 +747,7 @@
     .pt-bar-bg { background: #1e3349; border-radius: 6px; height: 8px; overflow: hidden; margin-bottom: 8px; }
     .pt-bar-fill { height: 100%; border-radius: 6px; transition: width 1s cubic-bezier(.22,1,.36,1); }
     .pt-srow { display: flex; justify-content: space-between; align-items: center; }
-    .pt-sscore { font-family: monospace; font-size: .78rem; color: #64748b; }
+    .pt-sscore { font-family: monospace; font-size: .78rem; color: #374151; }
     .pt-spct { font-family: var(--ffh); font-size: 1rem; font-weight: 900; }
     .pt-warn { font-size: .7rem; color: #f59e0b; margin-top: 4px; display: block; }
 
@@ -759,8 +760,8 @@
       border-radius: 14px; padding: 18px 14px; text-align: center;
     }
     .pt-dist-num { font-family: var(--ffh); font-size: 2.2rem; font-weight: 900; }
-    .pt-dist-range { font-size: .82rem; color: #64748b; margin-top: 4px; }
-    .pt-dist-pct   { font-size: .72rem; color: #475569; margin-top: 2px; }
+    .pt-dist-range { font-size: .82rem; color: #374151; margin-top: 4px; }
+    .pt-dist-pct   { font-size: .72rem; color: #1f2937; margin-top: 2px; }
 
     /* Tema list */
     .pt-two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 28px; align-items: start; }
@@ -774,7 +775,7 @@
     .pt-tema-score { font-family: var(--ffh); font-size: 1.1rem; font-weight: 900; }
     .pt-tema-bar-bg { background: #1e3349; border-radius: 4px; height: 6px; overflow: hidden; }
     .pt-tema-bar-fill { height: 100%; border-radius: 4px; transition: width 1.2s cubic-bezier(.22,1,.36,1); }
-    .pt-tema-qs { font-size: .72rem; color: #475569; margin-top: 6px; }
+    .pt-tema-qs { font-size: .72rem; color: #1f2937; margin-top: 6px; }
 
     /* Insights */
     .pt-insights { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin-top: 24px; }
@@ -823,7 +824,7 @@
       font-family:var(--ffh); font-size:3rem; font-weight:900;
       line-height:1; color:var(--cc, #4CAF50);
     }
-    .cmp-sub { font-size:.82rem; color:#475569; margin-top:4px; }
+    .cmp-sub { font-size:.82rem; color:#1f2937; margin-top:4px; }
     .cmp-delta {
       display:inline-flex; align-items:center; gap:6px;
       background:rgba(34,197,94,.1); border:1px solid rgba(34,197,94,.25);
@@ -852,7 +853,7 @@
     .cmp-arrow { font-size:.75rem; }
     .cmp-arrow.up   { color:#22c55e; }
     .cmp-arrow.down { color:#ef4444; }
-    .cmp-arrow.eq   { color:#475569; }
+    .cmp-arrow.eq   { color:#1f2937; }
 
     .cmp-legend { display:flex; gap:16px; margin-bottom:16px; flex-wrap:wrap; }
     .cmp-leg-item { display:flex; align-items:center; gap:7px; font-size:.78rem; color:#94a3b8; }
@@ -863,12 +864,698 @@
       .cmp-score { font-size:2.2rem; }
     }
 
+
+    /* ===================================================
+       INTERACTIVIDAD GLOBAL
+    =================================================== */
+
+    /* Cursor pointer en elementos interactivos */
+    .fact-item, .pillar, .imp-card, .modulo-card, .en-item,
+    .comp-item, .sf-step, .mon-stat, .pt-kpi { cursor:pointer; }
+
+    /* Tooltip global */
+    [data-tip] { position:relative; }
+    [data-tip]:hover::after {
+      content: attr(data-tip);
+      position:absolute; bottom:calc(100% + 8px); left:50%;
+      transform:translateX(-50%);
+      background:#0d1117; color:#e2e8f0;
+      font-family:var(--ffh); font-size:.72rem; font-weight:600;
+      padding:6px 12px; border-radius:8px; white-space:nowrap;
+      border:1px solid rgba(255,255,255,.12);
+      box-shadow:0 8px 24px rgba(0,0,0,.4);
+      z-index:999; pointer-events:none;
+    }
+    [data-tip]:hover::before {
+      content:''; position:absolute; bottom:calc(100% + 2px); left:50%;
+      transform:translateX(-50%);
+      border:5px solid transparent; border-top-color:#0d1117;
+      z-index:999; pointer-events:none;
+    }
+
+    /* Hover lift universal */
+    .fact-item:hover  { transform:translateX(6px); border-color:rgba(76,175,80,.4); }
+    .pillar:hover     { transform:translateY(-6px); box-shadow:var(--sh2); }
+    .imp-card:hover   { transform:translateY(-8px); }
+    .en-item:hover    { transform:translateX(6px); }
+    .sf-step:hover .sf-num { transform:scale(1.12); box-shadow:0 12px 32px rgba(76,175,80,.5); }
+    .sf-num { transition:transform .3s ease, box-shadow .3s ease; }
+
+    /* ── EMBALSE BAYANO INTERACTIVO ── */
+    .bayano-wrap {
+      position:relative; background:#0a1520;
+      border-radius:20px; overflow:hidden;
+      border:1px solid rgba(255,255,255,.08);
+      padding:0;
+    }
+    .bayano-svg-container { width:100%; display:block; }
+    .bayano-tooltip {
+      position:absolute; pointer-events:none;
+      background:rgba(10,20,30,.95);
+      border:1px solid rgba(76,175,80,.4);
+      border-radius:10px; padding:10px 14px;
+      color:#e2e8f0; font-family:var(--ffh);
+      font-size:.78rem; line-height:1.6;
+      min-width:180px; z-index:50;
+      opacity:0; transition:opacity .2s ease;
+      box-shadow:0 8px 32px rgba(0,0,0,.4);
+    }
+    .bayano-tooltip.show { opacity:1; }
+    .bayano-tooltip strong { color:#4CAF50; display:block; margin-bottom:4px; }
+    .bayano-info-strip {
+      display:flex; gap:0; border-top:1px solid rgba(255,255,255,.06);
+    }
+    .binfo { flex:1; padding:12px 16px; text-align:center;
+             border-right:1px solid rgba(255,255,255,.06); }
+    .binfo:last-child { border-right:none; }
+    .binfo-val { font-family:var(--ffh); font-size:1.1rem; font-weight:900; color:var(--gl); }
+    .binfo-lbl { font-size:.68rem; color:rgba(255,255,255,.4); text-transform:uppercase;
+                 letter-spacing:.08em; margin-top:2px; }
+
+    /* ── PROTOTIPO INTERACTIVO ── */
+    .proto-interactive {
+      background:#f0f8f4; border-radius:20px;
+      padding:24px; box-shadow:var(--sh);
+      position:relative;
+    }
+    .proto-interactive h3 {
+      font-family:var(--ffh); font-size:1rem; font-weight:700;
+      color:var(--g); margin-bottom:4px; text-align:center;
+    }
+    .proto-interactive p {
+      font-size:.78rem; color:#2d3748; text-align:center; margin-bottom:16px;
+    }
+    .proto-part { cursor:pointer; transition:filter .2s ease, transform .2s ease; }
+    .proto-part:hover { filter:brightness(1.3); }
+    .proto-detail-box {
+      background:#fff; border-radius:12px; padding:14px 16px;
+      margin-top:14px; border-left:3px solid var(--gl);
+      min-height:60px; transition:all .3s ease;
+    }
+    .proto-detail-title {
+      font-family:var(--ffh); font-size:.88rem; font-weight:700;
+      color:var(--g); margin-bottom:4px;
+    }
+    .proto-detail-desc { font-size:.82rem; color:#2d3748; line-height:1.65; }
+
+    /* ── COUNTER ANIMATION ── */
+    .count-anim { display:inline-block; }
+
+    /* ── PARALLAX HERO ── */
+    .hero-parallax { will-change:transform; }
+
+    /* ── HOVER GLOW on section titles ── */
+    h2 .ac { transition:text-shadow .3s ease; }
+    h2:hover .ac { text-shadow:0 0 30px rgba(76,175,80,.5); }
+
+    /* ── RIPPLE on buttons ── */
+    .btn { position:relative; overflow:hidden; }
+    .btn::after {
+      content:''; position:absolute; inset:0;
+      background:rgba(255,255,255,.15); border-radius:inherit;
+      transform:scale(0); opacity:0; transition:transform .4s ease, opacity .4s ease;
+    }
+    .btn:active::after { transform:scale(1); opacity:1; transition:none; }
+
+    /* ── MOLECULE animation in problema ── */
+    .molecule-float { animation:molFloat 6s ease-in-out infinite; }
+    @keyframes molFloat {
+      0%,100% { transform:translateY(0) rotate(0deg); }
+      33%      { transform:translateY(-12px) rotate(3deg); }
+      66%      { transform:translateY(6px) rotate(-2deg); }
+    }
+
+    /* ── PROGRESS BARS animated ── */
+    .skill-bar-fill { transition:width 1.4s cubic-bezier(.22,1,.36,1) !important; }
+
+    /* ── Josue credit ── */
+    .josue-credit {
+      text-align:center; padding:10px 0 6px;
+      font-family:var(--ffh); font-size:.72rem;
+      color:rgba(255,255,255,.2); letter-spacing:.08em;
+    }
+    .josue-credit a {
+      color:rgba(76,175,80,.4); text-decoration:none;
+      transition:color var(--t);
+    }
+    .josue-credit a:hover { color:var(--gl); }
+
+
+    /* ===== INTERACTIVIDAD GLOBAL ===== */
+
+    /* Cursor personalizado */
+    body { cursor: default; }
+    a, button, .tm-card, .imp-card, .modulo-card, .pillar,
+    .en-item, .fact-item, .step, .sf-step { cursor: pointer; }
+
+    /* Ripple en botones */
+    .btn { position:relative; overflow:hidden; }
+    .btn .ripple {
+      position:absolute; border-radius:50%;
+      background:rgba(255,255,255,.3);
+      transform:scale(0); animation:rippleAnim .6s linear;
+      pointer-events:none;
+    }
+    @keyframes rippleAnim { to { transform:scale(4); opacity:0; } }
+
+    /* Número contador animado */
+    .count-num { display:inline-block; }
+
+    /* Tooltip mejorado para stats */
+    .hstat { position:relative; cursor:help; }
+    .hstat-tip {
+      position:absolute; bottom:calc(100% + 10px); left:50%;
+      transform:translateX(-50%);
+      background:#fff; color:#0d1117;
+      font-family:var(--ffh); font-size:.75rem; font-weight:600;
+      padding:6px 12px; border-radius:8px; white-space:nowrap;
+      box-shadow:0 8px 24px rgba(0,0,0,.2);
+      opacity:0; pointer-events:none;
+      transition:opacity .2s ease, transform .2s ease;
+      transform:translateX(-50%) translateY(6px);
+      z-index:100;
+    }
+    .hstat-tip::after {
+      content:''; position:absolute; top:100%; left:50%;
+      transform:translateX(-50%);
+      border:6px solid transparent; border-top-color:#fff;
+    }
+    .hstat:hover .hstat-tip { opacity:1; transform:translateX(-50%) translateY(0); }
+
+    /* Parallax hero text */
+    .hero-in { will-change:transform; }
+
+    /* Magnetic nav links */
+    .nav-links a { display:inline-block; transition:color var(--t), transform .15s ease; }
+    .nav-links a:hover { transform:translateY(-2px); }
+
+    /* Scroll progress bar */
+    #scroll-bar {
+      position:fixed; top:0; left:0; height:3px;
+      background:linear-gradient(90deg,var(--g),var(--gl));
+      z-index:9998; width:0%; transition:width .1s linear;
+    }
+
+    /* Active nav link highlight */
+    .nav-links a.nav-active { color:var(--gl); }
+
+    /* Floating particles */
+    .particle {
+      position:fixed; border-radius:50%;
+      background:var(--gl); opacity:0;
+      pointer-events:none; z-index:9997;
+      animation:particleFloat 1s ease forwards;
+    }
+    @keyframes particleFloat {
+      0%   { opacity:.8; transform:translateY(0) scale(1); }
+      100% { opacity:0;  transform:translateY(-80px) scale(0); }
+    }
+
+    /* ===== DIAGRAMA EMBALSE MEJORADO ===== */
+    .embalse-diagram {
+      background:linear-gradient(180deg,#0a1628 0%,#0d2a1a 100%);
+      border-radius:20px;
+      padding:0;
+      overflow:hidden;
+      box-shadow:var(--sh2);
+      position:relative;
+    }
+    .embalse-diagram svg { display:block; width:100%; }
+
+    /* Tooltip SVG */
+    .svg-tooltip {
+      position:absolute;
+      background:rgba(13,17,23,.95);
+      border:1px solid rgba(76,175,80,.3);
+      border-radius:10px;
+      padding:10px 14px;
+      font-family:var(--ffh);
+      font-size:.78rem;
+      color:#fff;
+      pointer-events:none;
+      opacity:0;
+      transition:opacity .2s ease;
+      z-index:50;
+      max-width:200px;
+      line-height:1.5;
+    }
+    .svg-tooltip.show { opacity:1; }
+    .svg-tooltip strong { color:var(--gl); display:block; margin-bottom:3px; }
+
+    /* ===== PROTOTIPO MEJORADO ===== */
+    .proto-diagram-wrap {
+      background:linear-gradient(135deg,#f0fbf5,#e8f0fb);
+      border-radius:20px;
+      padding:24px;
+      box-shadow:var(--sh);
+      position:relative;
+      overflow:hidden;
+    }
+    .proto-step-highlight {
+      position:absolute;
+      background:rgba(76,175,80,.08);
+      border:2px solid rgba(76,175,80,.3);
+      border-radius:12px;
+      pointer-events:none;
+      transition:all .4s ease;
+      opacity:0;
+    }
+
+    /* Animated counter in impact section */
+    .ic-num { transition:color .3s ease; }
+
+    /* Hover lift for section cards */
+    .modulo-card, .crono-card, .imp-card {
+      transition:transform var(--t), box-shadow var(--t), border-color var(--t);
+    }
+
+    /* Glow effect on important numbers */
+    .glow-green {
+      text-shadow: 0 0 20px rgba(76,175,80,.5);
+    }
+
+    /* Interactive step flow */
+    .sf-step {
+      transition:transform .3s ease;
+    }
+    .sf-step:hover { transform:translateY(-8px); }
+    .sf-step:hover .sf-num {
+      box-shadow:0 12px 32px rgba(76,175,80,.5);
+      transform:scale(1.08);
+    }
+    .sf-num { transition:box-shadow .3s ease, transform .3s ease; }
+
+    /* Fact items interactive */
+    .fact-item {
+      transition:transform .25s ease, border-color .25s ease, background .25s ease;
+    }
+    .fact-item:hover {
+      transform:translateX(8px);
+      background:rgba(76,175,80,.06) !important;
+    }
+
+    /* Energy items interactive */
+    .en-item { transition:transform .3s ease, box-shadow .3s ease; }
+    .en-item:hover { transform:translateX(10px); box-shadow:var(--sh); }
+
+    /* Pillar cards pop */
+    .pillar:hover .pillar-ico { transform:scale(1.2) rotate(-5deg); transition:transform .3s ease; }
+    .pillar-ico { display:inline-block; transition:transform .3s ease; }
+
+    /* Credit footer */
+    .credit-bar {
+      background:#05080d;
+      text-align:center;
+      padding:14px;
+      border-top:1px solid rgba(255,255,255,.04);
+    }
+    .credit-bar span {
+      font-family:var(--ffh);
+      font-size:.72rem;
+      color:rgba(255,255,255,.2);
+      letter-spacing:.12em;
+      text-transform:uppercase;
+      transition:color .3s ease;
+    }
+    .credit-bar:hover span { color:rgba(255,255,255,.45); }
+    .credit-bar a {
+      color:rgba(76,175,80,.4);
+      text-decoration:none;
+      transition:color .3s ease;
+    }
+    .credit-bar:hover a { color:var(--gl); }
+
+
+    /* ===== DASHBOARD METANO ===== */
+    #dashboard { background:#07090d; color:#e2e8f0; padding:80px 0; }
+    #dashboard .wrap { max-width:1140px; }
+    .db-section-intro { max-width:680px; margin-bottom:40px; }
+    .db-notice {
+      display:inline-flex; align-items:center; gap:10px;
+      background:rgba(0,196,167,.08); border:1px solid rgba(0,196,167,.25);
+      border-radius:10px; padding:12px 18px; margin-bottom:28px;
+      font-family:var(--ffh); font-size:.82rem; color:rgba(0,196,167,.9);
+    }
+    .db-notice strong { color:#00c4a7; }
+
+
+    /* Dashboard scoped variables */
+    #dashboard {
+      --bg:        #0d0f12;
+      --surface:   #14181f;
+      --border:    #1e2530;
+      --accent:    #00c4a7;
+      --accent2:   #f59e0b;
+      --warn:      #ef4444;
+      --text-db:   #e2e8f0;
+      --muted:     #374151;
+    }
+
+    /* ── wrapper ── */
+    #dashboard .db-dash {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 2.5rem 1.5rem;
+    }
+
+    /* ── header ── */
+    .db-header {
+      display: flex;
+      align-items: flex-end;
+      justify-content: space-between;
+      margin-bottom: 2rem;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+    .db-header-left h1 {
+      font-family: var(--mono);
+      font-size: 1.4rem;
+      font-weight: 500;
+      letter-spacing: -0.02em;
+      color: var(--accent);
+    }
+    .db-header-left p {
+      font-size: 12px;
+      color: var(--muted);
+      margin-top: 2px;
+      font-family: var(--mono);
+    }
+    .db-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: #1a2235;
+      border: 1px solid var(--border);
+      border-radius: 4px;
+      padding: 4px 10px;
+      font-family: var(--mono);
+      font-size: 11px;
+      color: var(--muted);
+    }
+    .db-badge-dot {
+      width: 7px; height: 7px;
+      border-radius: 50%;
+      background: var(--accent);
+      box-shadow: 0 0 6px var(--accent);
+    }
+
+    /* ── stat cards ── */
+    .db-stats-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+      gap: 10px;
+      margin-bottom: 1.5rem;
+    }
+    .db-stat {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      padding: 14px 16px;
+    }
+    .db-stat-label {
+      font-size: 10px;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--muted);
+      font-family: var(--mono);
+      margin-bottom: 6px;
+    }
+    .db-stat-value {
+      font-family: var(--mono);
+      font-size: 1.5rem;
+      font-weight: 500;
+      color: #e2e8f0;
+      line-height: 1;
+    }
+    .db-stat-unit {
+      font-size: 10px;
+      color: var(--muted);
+      margin-top: 3px;
+      font-family: var(--mono);
+    }
+    .db-stat.accent  .db-stat-value { color: var(--accent); }
+    .db-stat.warn    .db-stat-value { color: var(--warn); }
+    .db-stat.amber   .db-stat-value { color: var(--accent2); }
+
+    /* ── tabs ── */
+    .db-tabs {
+      display: flex;
+      gap: 4px;
+      margin-bottom: 1rem;
+      border-bottom: 1px solid var(--border);
+      padding-bottom: 0;
+    }
+    .db-tab {
+      background: none;
+      border: none;
+      border-bottom: 2px solid transparent;
+      padding: 8px 16px;
+      font-family: var(--mono);
+      font-size: 12px;
+      color: var(--muted);
+      cursor: pointer;
+      transition: color 0.15s, border-color 0.15s;
+      margin-bottom: -1px;
+    }
+    .db-tab:hover { color: #e2e8f0; }
+    .db-tab.active { color: var(--accent); border-bottom-color: var(--accent); }
+
+    /* ── panels ── */
+    .db-panel { display: none; }
+    .db-panel.active { display: block; }
+
+    .db-panel-desc {
+      font-size: 12px;
+      color: var(--muted);
+      margin-bottom: 14px;
+      font-family: var(--mono);
+    }
+    .db-panel-desc strong { color: var(--accent2); font-weight: 500; }
+
+    /* ── chart wrappers ── */
+    .db-chart-box {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      padding: 1.25rem;
+      position: relative;
+    }
+    .db-chart-wrap {
+      position: relative;
+      width: 100%;
+      height: 300px;
+    }
+    .db-chart-wrap-sm {
+      position: relative;
+      width: 100%;
+      height: 280px;
+    }
+
+    /* ── legend ── */
+    .db-legend {
+      display: flex;
+      gap: 18px;
+      flex-wrap: wrap;
+      margin-top: 14px;
+      font-family: var(--mono);
+      font-size: 11px;
+      color: var(--muted);
+    }
+    .db-legend span {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .db-leg-sq {
+      width: 10px; height: 10px;
+      border-radius: 2px;
+      flex-shrink: 0;
+    }
+
+    /* ── footer ── */
+    .db-footer {
+      margin-top: 1.5rem;
+      font-family: var(--mono);
+      font-size: 11px;
+      color: var(--muted);
+      display: flex;
+      gap: 1.5rem;
+      flex-wrap: wrap;
+    }
+    .db-footer span::before { content: '▸ '; color: var(--accent); }
+  
+    /* override font in dashboard */
+    #dashboard { font-family: 'IBM Plex Sans', var(--ffb), sans-serif; }
+    .db-dash { padding: 0; max-width:100%; }
+    .db-chart-wrap { height: 320px; }
+    .db-chart-wrap.db-chart-wrap-sm { height: 260px; }
+
+
+    
+    #sobre h2, #prototipo h2, #metodologia h2, #impacto h2,
+    #equipo h2, #energia h2, #monitoreo h2, #dashboard h2 { color: var(--dk) !important; }
+    .s-gray h2, #sobre h2, #prototipo h2, #equipo h2, #energia h2 { color: #0d1117 !important; }
+    /* sections with white background */
+    section:not(.s-dark):not(.s-green):not(.s-blue):not(#pretest):not(#dashboard) h2 { color: #0d1117 !important; }
+    section:not(.s-dark):not(.s-green):not(.s-blue):not(#pretest):not(#dashboard) .eye { color: var(--gl) !important; }
+    section:not(.s-dark):not(.s-green):not(.s-blue):not(#pretest):not(#dashboard) .lead { color: #1a202c !important; }
+
+
+    /* ===== FIX: charts visibles ===== */
+    .db-chart-wrap { position:relative; width:100%; height:300px !important; }
+    .db-chart-wrap.db-chart-wrap-sm { height:240px !important; }
+    .db-chart-wrap canvas { position:absolute; top:0; left:0; width:100% !important; height:100% !important; }
+    .db-chart-box { padding:20px; background:#14181f; border-radius:12px; border:1px solid #1e2530; margin-bottom:20px; }
+    .db-panel { display:none; }
+    .db-panel.db-active { display:block !important; }
+
+
+    
+    h2, h2 * {
+      visibility: visible !important;
+      opacity: 1 !important;
+    }
+    /* Light sections: dark text */
+    #sobre h2, #prototipo h2, #metodologia h2,
+    #equipo h2, #energia h2, #sobre h2 {
+      color: #0d1117 !important;
+    }
+    /* Dark sections: white text */
+    #problema h2, #impacto h2, #monitoreo h2,
+    #pretest h2, .s-dark h2, #dashboard h2 {
+      color: #ffffff !important;
+    }
+    /* Green/blue sections */
+    .s-green h2, .s-blue h2 { color: #ffffff !important; }
+
+    /* Pillar card names — force dark on white bg */
+    .pillar-nm { color: #0d1117 !important; }
+    .pillar-ds { color: #5a6372 !important; }
+
+    /* Dashboard title */
+    #dashboard h2 { color: #f8fafc !important; }
+    #dashboard h2 span { color: #00c4a7 !important; }
+
+    /* Impacto section — fully white */
+    #impacto h2 { color: #ffffff !important; }
+    #impacto h2 span.ac { color: var(--gl) !important; }
+    #impacto .lead { color: rgba(255,255,255,.75) !important; }
+
+    /* Gray section */
+    .s-gray h2, #metodologia h2, #equipo h2 {
+      color: #0d1117 !important;
+    }
+    .s-gray .lead { color: #1a202c !important; }
+
+    /* All eyebrow labels */
+    section:not(.s-dark):not(#impacto):not(#pretest):not(#dashboard):not(#monitoreo):not(#problema) .eye {
+      color: var(--gl) !important;
+    }
+
+    /* Fix: reveal animation was setting opacity:0 and staying there on mobile */
+    @media (max-width: 640px) {
+      .rev { opacity: 1 !important; transform: none !important; }
+    }
+
+
+    /* ===== DASHBOARD TABS FIX ===== */
+    .db-tabs { display:flex; flex-wrap:wrap; gap:0; border-bottom:1px solid #1e2530; margin-bottom:0; }
+    .db-tab {
+      flex:1; min-width:80px;
+      padding:10px 8px; border:none; background:transparent;
+      color:#64748b !important; font-family:'IBM Plex Mono',monospace;
+      font-size:12px; cursor:pointer; transition:all .2s;
+      border-bottom:2px solid transparent; text-align:center;
+    }
+    .db-tab:hover { color:#e2e8f0 !important; }
+    .db-tab.db-active { color:#00c4a7 !important; border-bottom-color:#00c4a7; font-weight:500; }
+    .db-panel-desc { color:#94a3b8 !important; font-size:12px; margin-bottom:16px; }
+    .db-panel-desc strong { color:#f59e0b !important; }
+
+
+    /* ===== TITLE & TEXT VISIBILITY — FINAL FIX ===== */
+
+    /* DEFAULT: dark text on light backgrounds */
+    h2 { color: #0d1117; }
+    .eye { color: var(--gl); }
+    .lead { color: #5a6372; }
+    .section-sub { color: #5a6372; }
+
+    /* Pillar cards */
+    .pillar-nm { color: #0d1117 !important; font-weight: 700; }
+    .pillar-ds { color: #5a6372 !important; }
+
+    /* DARK sections → white */
+    .s-dark h2, #impacto h2, #monitoreo h2, #problema h2 { color: #ffffff !important; }
+    .s-dark .eye, #impacto .eye, #monitoreo .eye, #problema .eye { color: rgba(255,255,255,.55) !important; }
+    .s-dark .lead, #impacto .lead, #monitoreo .lead, #problema .lead { color: rgba(255,255,255,.75) !important; }
+
+    /* Green/Blue sections → white */
+    .s-green h2, .s-blue h2, #cta h2 { color: #ffffff !important; }
+
+    /* Pretest dark section */
+    #pretest h2 { color: #f8fafc !important; }
+    #pretest .eye { color: rgba(34,197,94,.7) !important; }
+    #pretest .lead { color: rgba(255,255,255,.85) !important; }
+
+    /* Dashboard dark section */
+    #dashboard h2 { color: #f8fafc !important; }
+    #dashboard h2 span { color: #00c4a7 !important; }
+
+    /* Gray sections → dark text */
+    .s-gray h2, #sobre h2, #metodologia h2, #equipo h2 { color: #0d1117 !important; }
+    .s-gray .lead { color: #1a202c !important; }
+
+    /* White sections */
+    #prototipo h2, #como h2, #energia h2 { color: #0d1117 !important; }
+
+    /* Mobile: force reveal */
+    @media (max-width: 768px) {
+      .rev { opacity: 1 !important; transform: translateY(0) !important; }
+      h2, .pillar-nm, .pillar-ds, .lead, .eye { visibility: visible !important; }
+    }
+
+
+    /* ===== SVG DIAGRAM VISIBILITY FIX ===== */
+    .embalse-diagram { display:block !important; width:100%; min-height:300px; }
+    .embalse-diagram svg { display:block !important; width:100% !important; height:auto !important; }
+    .proto-diagram-wrap { display:block !important; width:100%; background:#f0fbf5; }
+    .proto-diagram-wrap svg { display:block !important; width:100% !important; height:auto !important; }
+    /* sobre-grid show img block on all screens */
+    .sobre-img-block { display:block !important; }
+    @media (max-width: 900px) {
+      .sobre-img-block { display:none !important; }
+    }
+
+
+    /* ===== CHART CANVAS HEIGHT FIX ===== */
+    .db-chart-wrap {
+      position: relative !important;
+      width: 100% !important;
+      height: 300px !important;
+      min-height: 300px !important;
+      display: block !important;
+    }
+    .db-chart-wrap canvas {
+      position: absolute !important;
+      top: 0 !important; left: 0 !important;
+      width: 100% !important;
+      height: 100% !important;
+      display: block !important;
+    }
+    /* Panels must be block when active */
+    .db-panel { display: none !important; }
+    .db-panel.db-active { display: block !important; }
+
   </style>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js"></script>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@300;400;500&display=swap" rel="stylesheet"/>
 </head>
 <body>
 
   <!-- MOBILE MENU -->
+  <div id="scroll-bar"></div>
+
   <div class="mob-menu" id="mobMenu">
     <a href="#problema" onclick="cM()">El Problema</a>
     <a href="#sobre"    onclick="cM()">El Proyecto</a>
@@ -876,6 +1563,7 @@
     <a href="#metodologia" onclick="cM()">Metodología</a>
     <a href="#impacto"  onclick="cM()">Impacto</a>
     <a href="#monitoreo" onclick="cM()">Datos Reales</a>
+    <a href="#dashboard" onclick="cM()">Dashboard</a>
     <a href="#pretest" onclick="cM()">Pre-test</a>
     <a href="#equipo"   onclick="cM()">Equipo</a>
     <a href="#cta" class="btn btn-g" onclick="cM()">Contacto</a>
@@ -892,6 +1580,7 @@
         <li><a href="#metodologia">Metodología</a></li>
         <li><a href="#impacto">Impacto</a></li>
         <li><a href="#monitoreo">Datos</a></li>
+        <li><a href="#dashboard">Dashboard</a></li>
         <li><a href="#pretest">Pre-test</a></li>
         <li><a href="#equipo">Equipo</a></li>
       </ul>
@@ -930,6 +1619,16 @@
             <span class="aliado-tag">⭐ Canal de Panamá</span>
             <span class="aliado-tag">🌱 Jóvenes Unidos por la Educación</span>
             <span class="aliado-tag">🔬 LLAC · 7ma Edición</span>
+            <span class="aliado-tag">🚢 SENAFRONT · Transporte</span>
+            <span class="aliado-tag">📋 Rodolfo Silvera · Temarios</span>
+            <span class="aliado-tag">⚙️ Abraham Moreno · Arduino</span>
+            <span class="aliado-tag">🌍 Ameth Rodríguez · Youth Negotiator 4 Climate</span>
+            <span class="aliado-tag">🍽️ PNUD · Alimentación</span>
+            <span class="aliado-tag">🌿 Rocío Collante · Carta de la Tierra</span>
+            <span class="aliado-tag">📜 Carta de la Tierra · Temarios</span>
+            <span class="aliado-tag">🔭 CIEDUC · Metodología de Investigación</span>
+            <span class="aliado-tag">🏛️ UTP · Investigación y Prototipo</span>
+            <span class="aliado-tag">💧 Mi Ambiente · Recolección de Datos</span>
           </div>
         </div>
       </div>
@@ -1016,7 +1715,7 @@
           <p class="lead">
             Nacemos del Laboratorio Latinoamericano de Acción Ciudadana (LLAC), con el objetivo de monitorear el embalse del Bayano, promover la educación sobre los gases de efecto invernadero entre jóvenes de Loma del Naranjo y demostrar que el metano puede convertirse en un recurso energético local.
           </p>
-          <p style="margin-top:16px;font-size:.98rem;color:var(--gt);line-height:1.8;">
+          <p style="margin-top:16px;font-size:.98rem;color:#2d3748;line-height:1.8;">
             El proyecto combina jóvenes de 15 a 25 años, tecnología accesible y aprendizaje participativo para generar información que antes no existía sobre el entorno natural de su propia comunidad.
           </p>
           <div class="pillar-cards">
@@ -1027,58 +1726,231 @@
           </div>
         </div>
         <div class="rev" style="transition-delay:.3s">
-          <!-- Illustration of the community context -->
-          <svg viewBox="0 0 400 460" xmlns="http://www.w3.org/2000/svg" style="width:100%;border-radius:20px;">
+          <div class="embalse-diagram" id="embalse-wrap">
+          <div class="svg-tooltip" id="embalse-tip"></div>
+          <svg viewBox="0 0 500 420" xmlns="http://www.w3.org/2000/svg" id="embalse-svg">
             <defs>
-              <linearGradient id="bg2" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#e8f8f0"/><stop offset="100%" stop-color="#e8f0fb"/></linearGradient>
-              <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#b8d4f0"/><stop offset="100%" stop-color="#e8f8f0"/></linearGradient>
-              <linearGradient id="lk" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#1B3C73" stop-opacity=".7"/><stop offset="100%" stop-color="#0B6E4F" stop-opacity=".85"/></linearGradient>
+              <linearGradient id="skyG" x1="0" y1="0" x2="0" y2="1">
+                <stop offset="0%" stop-color="#0a1628"/>
+                <stop offset="100%" stop-color="#0d2040"/>
+              </linearGradient>
+              <linearGradient id="waterG" x1="0" y1="0" x2="0" y2="1">
+                <stop offset="0%" stop-color="#1B3C73" stop-opacity=".85"/>
+                <stop offset="100%" stop-color="#0B6E4F" stop-opacity=".95"/>
+              </linearGradient>
+              <linearGradient id="sedG" x1="0" y1="0" x2="0" y2="1">
+                <stop offset="0%" stop-color="#3d2b1f"/>
+                <stop offset="100%" stop-color="#1a0f0a"/>
+              </linearGradient>
+              <radialGradient id="sunG" cx="50%" cy="50%" r="50%">
+                <stop offset="0%" stop-color="#fff7cc" stop-opacity=".9"/>
+                <stop offset="100%" stop-color="#ffd700" stop-opacity="0"/>
+              </radialGradient>
+              <filter id="glow">
+                <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
+                <feMerge><feMergeNode in="coloredBlur"/><feMergeNode in="SourceGraphic"/></feMerge>
+              </filter>
+              <clipPath id="waterClip">
+                <rect x="0" y="180" width="500" height="180"/>
+              </clipPath>
             </defs>
-            <rect width="400" height="460" fill="url(#bg2)" rx="20"/>
-            <rect width="400" height="220" fill="url(#sky)" rx="0"/>
-            <!-- Hills -->
-            <ellipse cx="80" cy="330" rx="150" ry="80" fill="#0B6E4F" opacity=".2"/>
-            <ellipse cx="340" cy="345" rx="130" ry="70" fill="#1B3C73" opacity=".15"/>
-            <!-- Lake -->
-            <ellipse cx="200" cy="370" rx="190" ry="80" fill="url(#lk)" opacity=".85"/>
-            <path d="M10,355 Q55,342 100,355 Q145,368 190,355 Q235,342 280,355 Q325,368 390,355" fill="none" stroke="#4CAF50" stroke-width="2.5" opacity=".5"/>
+
+            <!-- Sky -->
+            <rect width="500" height="420" fill="url(#skyG)"/>
+
+            <!-- Stars -->
+            <circle cx="60"  cy="30"  r="1.2" fill="#fff" opacity=".6"/>
+            <circle cx="130" cy="18"  r="1"   fill="#fff" opacity=".5"/>
+            <circle cx="210" cy="42"  r="1.5" fill="#fff" opacity=".7"/>
+            <circle cx="320" cy="25"  r="1"   fill="#fff" opacity=".4"/>
+            <circle cx="420" cy="15"  r="1.2" fill="#fff" opacity=".6"/>
+            <circle cx="470" cy="50"  r="1"   fill="#fff" opacity=".5"/>
+
+            <!-- Moon -->
+            <circle cx="440" cy="45" r="18" fill="#e8e0c0" opacity=".7"/>
+            <circle cx="448" cy="38" r="14" fill="url(#skyG)"/>
+
+            <!-- Mountains background -->
+            <polygon points="0,180 60,100 120,155 180,85 250,140 310,90 370,130 430,80 500,140 500,180" fill="#0d1f35" opacity=".8"/>
+            <polygon points="0,180 40,120 90,160 150,100 220,150 280,105 350,145 420,95 500,150 500,180" fill="#0a2a1a" opacity=".7"/>
+
             <!-- Trees L -->
-            <polygon points="30,300 55,240 80,300" fill="#0B6E4F" opacity=".7"/>
-            <rect x="46" y="295" width="14" height="22" fill="#5a3a1a" opacity=".7"/>
-            <polygon points="60,288 82,230 104,288" fill="#0e8c64" opacity=".7"/>
-            <rect x="75" y="282" width="14" height="22" fill="#5a3a1a" opacity=".7"/>
+            <g opacity=".85">
+              <polygon points="18,180 34,135 50,180"  fill="#0B6E4F"/>
+              <rect x="30" y="174" width="8" height="18" fill="#3d2b1f"/>
+              <polygon points="42,180 58,130 74,180"  fill="#0e8c64"/>
+              <rect x="54" y="173" width="8" height="19" fill="#3d2b1f"/>
+              <polygon points="8,180 20,145 32,180"   fill="#0B6E4F" opacity=".7"/>
+            </g>
             <!-- Trees R -->
-            <polygon points="300,295 325,235 350,295" fill="#0B6E4F" opacity=".7"/>
-            <rect x="316" y="290" width="14" height="22" fill="#5a3a1a" opacity=".7"/>
-            <polygon points="330,285 352,228 374,285" fill="#0e8c64" opacity=".7"/>
-            <rect x="345" y="279" width="14" height="22" fill="#5a3a1a" opacity=".7"/>
-            <!-- Bubbles from lake -->
-            <circle cx="130" cy="348" r="5" fill="none" stroke="#4CAF50" stroke-width="2"><animate attributeName="cy" values="348;200" dur="4s" repeatCount="indefinite"/><animate attributeName="opacity" values="1;0" dur="4s" repeatCount="indefinite"/></circle>
-            <circle cx="200" cy="336" r="4" fill="none" stroke="#4CAF50" stroke-width="1.5"><animate attributeName="cy" values="336;190" dur="3.2s" begin="1.2s" repeatCount="indefinite"/><animate attributeName="opacity" values="1;0" dur="3.2s" begin="1.2s" repeatCount="indefinite"/></circle>
-            <circle cx="270" cy="348" r="6" fill="none" stroke="#4CAF50" stroke-width="2"><animate attributeName="cy" values="348;195" dur="5s" begin="2.4s" repeatCount="indefinite"/><animate attributeName="opacity" values="1;0" dur="5s" begin="2.4s" repeatCount="indefinite"/></circle>
-            <!-- Campana subacuática (simplified) -->
-            <g transform="translate(172,310)">
-              <path d="M0,0 Q28,-30 56,0" fill="rgba(76,175,80,.25)" stroke="#4CAF50" stroke-width="2"/>
-              <line x1="28" y1="-30" x2="28" y2="-55" stroke="#4CAF50" stroke-width="2"/>
-              <circle cx="28" cy="-60" r="4" fill="#4CAF50" opacity=".8"/>
-              <text x="28" y="-68" text-anchor="middle" fill="#4CAF50" font-size="8" font-family="Montserrat,sans-serif" font-weight="700">Campana</text>
+            <g opacity=".85">
+              <polygon points="426,180 442,135 458,180" fill="#0B6E4F"/>
+              <rect x="438" y="174" width="8" height="18" fill="#3d2b1f"/>
+              <polygon points="454,180 470,130 486,180" fill="#0e8c64"/>
+              <rect x="466" y="173" width="8" height="19" fill="#3d2b1f"/>
+              <polygon points="468,180 480,148 492,180" fill="#0B6E4F" opacity=".7"/>
             </g>
-            <!-- People community -->
-            <g transform="translate(130,400)" opacity=".7">
-              <circle cx="0" cy="-18" r="9" fill="#1B3C73"/>
-              <path d="M-12,2 Q0,-18 12,2" fill="#0B6E4F"/>
-              <circle cx="28" cy="-18" r="9" fill="#0e8c64"/>
-              <path d="M16,2 Q28,-18 40,2" fill="#1B3C73"/>
-              <circle cx="56" cy="-18" r="9" fill="#2a54a8"/>
-              <path d="M44,2 Q56,-18 68,2" fill="#0B6E4F"/>
-              <circle cx="84" cy="-18" r="9" fill="#4CAF50"/>
-              <path d="M72,2 Q84,-18 96,2" fill="#2a54a8"/>
-              <circle cx="112" cy="-18" r="9" fill="#0B6E4F"/>
-              <path d="M100,2 Q112,-18 124,2" fill="#0e8c64"/>
+
+            <!-- Water surface wave -->
+            <path d="M0,188 Q40,178 80,188 Q120,198 160,188 Q200,178 240,188 Q280,198 320,188 Q360,178 400,188 Q440,198 500,188" fill="none" stroke="#4CAF50" stroke-width="2" opacity=".5">
+              <animateTransform attributeName="transform" type="translate" values="0,0;-40,0;0,0" dur="4s" repeatCount="indefinite"/>
+            </path>
+
+            <!-- Water body -->
+            <rect x="0" y="188" width="500" height="172" fill="url(#waterG)"/>
+
+            <!-- Water shimmer lines -->
+            <line x1="50"  y1="210" x2="120" y2="210" stroke="rgba(255,255,255,.08)" stroke-width="1.5"/>
+            <line x1="180" y1="225" x2="280" y2="225" stroke="rgba(255,255,255,.06)" stroke-width="1"/>
+            <line x1="310" y1="215" x2="420" y2="215" stroke="rgba(255,255,255,.07)" stroke-width="1.5"/>
+            <line x1="80"  y1="240" x2="160" y2="240" stroke="rgba(255,255,255,.05)" stroke-width="1"/>
+
+            <!-- Sediment layer -->
+            <rect x="0" y="330" width="500" height="90" fill="url(#sedG)"/>
+            <path d="M0,330 Q50,322 100,330 Q150,338 200,330 Q250,322 300,330 Q350,338 400,330 Q450,322 500,330" fill="rgba(90,58,26,.4)" stroke="none"/>
+
+            <!-- Sediment particles -->
+            <circle cx="80"  cy="350" r="3" fill="#5a3a1a" opacity=".5"/>
+            <circle cx="160" cy="360" r="2" fill="#5a3a1a" opacity=".4"/>
+            <circle cx="260" cy="345" r="4" fill="#5a3a1a" opacity=".45"/>
+            <circle cx="380" cy="355" r="2.5" fill="#5a3a1a" opacity=".4"/>
+            <circle cx="440" cy="342" r="3" fill="#5a3a1a" opacity=".5"/>
+
+            <!-- Organic matter decomposition zones -->
+            <ellipse cx="130" cy="340" rx="40" ry="8" fill="rgba(76,175,80,.12)" class="decomp-zone" data-tip="Zona de descomposición orgánica — aquí se genera el CH₄"/>
+            <ellipse cx="280" cy="348" rx="50" ry="9" fill="rgba(76,175,80,.1)"  class="decomp-zone" data-tip="Sedimentos ricos en materia orgánica — fuente principal de metano"/>
+            <ellipse cx="400" cy="338" rx="35" ry="7" fill="rgba(76,175,80,.11)" class="decomp-zone" data-tip="Zona activa de metanogénesis — producción anaeróbica de CH₄"/>
+
+            <!-- Bubbles group 1 -->
+            <g class="bubble-group" data-tip="Burbujas de CH₄ — confirmadas visualmente en campo el 19 abril 2026">
+              <circle cx="130" cy="310" r="6" fill="none" stroke="#4CAF50" stroke-width="2">
+                <animate attributeName="cy" values="310;165" dur="3.2s" repeatCount="indefinite"/>
+                <animate attributeName="opacity" values=".9;0" dur="3.2s" repeatCount="indefinite"/>
+                <animate attributeName="r" values="6;9" dur="3.2s" repeatCount="indefinite"/>
+              </circle>
+              <circle cx="118" cy="325" r="4" fill="none" stroke="#4CAF50" stroke-width="1.5">
+                <animate attributeName="cy" values="325;178" dur="2.8s" begin="0.5s" repeatCount="indefinite"/>
+                <animate attributeName="opacity" values=".8;0" dur="2.8s" begin="0.5s" repeatCount="indefinite"/>
+              </circle>
+              <circle cx="145" cy="318" r="5" fill="none" stroke="#4CAF50" stroke-width="1.5">
+                <animate attributeName="cy" values="318;170" dur="3.5s" begin="1.2s" repeatCount="indefinite"/>
+                <animate attributeName="opacity" values=".7;0" dur="3.5s" begin="1.2s" repeatCount="indefinite"/>
+              </circle>
+              <text x="127" y="145" fill="#4CAF50" font-size="11" font-family="Montserrat,sans-serif" font-weight="700" filter="url(#glow)">CH₄</text>
             </g>
-            <!-- Labels -->
-            <text x="200" y="440" text-anchor="middle" fill="#777" font-size="11" font-family="Source Sans 3,sans-serif">Comunidad de Loma del Naranjo · Chepo, Panamá</text>
-            <text x="200" y="130" text-anchor="middle" fill="rgba(27,60,115,.5)" font-size="11" font-family="Montserrat,sans-serif" font-weight="700">Embalse del Bayano</text>
+
+            <!-- Bubbles group 2 -->
+            <g class="bubble-group" data-tip="Pico de 596 ppm detectado a las 12:37 p.m. en esta zona del embalse">
+              <circle cx="280" cy="320" r="8" fill="none" stroke="#f4a261" stroke-width="2">
+                <animate attributeName="cy" values="320;160" dur="4s" begin="1s" repeatCount="indefinite"/>
+                <animate attributeName="opacity" values=".9;0" dur="4s" begin="1s" repeatCount="indefinite"/>
+                <animate attributeName="r" values="8;12" dur="4s" begin="1s" repeatCount="indefinite"/>
+              </circle>
+              <circle cx="265" cy="335" r="5" fill="none" stroke="#f4a261" stroke-width="1.5">
+                <animate attributeName="cy" values="335;175" dur="3.6s" begin="1.8s" repeatCount="indefinite"/>
+                <animate attributeName="opacity" values=".8;0" dur="3.6s" begin="1.8s" repeatCount="indefinite"/>
+              </circle>
+              <circle cx="295" cy="325" r="6" fill="none" stroke="#f4a261" stroke-width="1.5">
+                <animate attributeName="cy" values="325;168" dur="4.2s" begin="0.8s" repeatCount="indefinite"/>
+                <animate attributeName="opacity" values=".7;0" dur="4.2s" begin="0.8s" repeatCount="indefinite"/>
+              </circle>
+              <text x="264" y="148" fill="#f4a261" font-size="11" font-family="Montserrat,sans-serif" font-weight="700" filter="url(#glow)">⚠ CH₄</text>
+            </g>
+
+            <!-- Bubbles group 3 -->
+            <g class="bubble-group" data-tip="Emisiones detectadas en toda el área — distribución amplia confirmada">
+              <circle cx="400" cy="315" r="7" fill="none" stroke="#4CAF50" stroke-width="2">
+                <animate attributeName="cy" values="315;162" dur="3.8s" begin="2s" repeatCount="indefinite"/>
+                <animate attributeName="opacity" values=".9;0" dur="3.8s" begin="2s" repeatCount="indefinite"/>
+                <animate attributeName="r" values="7;10" dur="3.8s" begin="2s" repeatCount="indefinite"/>
+              </circle>
+              <circle cx="415" cy="328" r="4" fill="none" stroke="#4CAF50" stroke-width="1.5">
+                <animate attributeName="cy" values="328;172" dur="3s" begin="2.6s" repeatCount="indefinite"/>
+                <animate attributeName="opacity" values=".7;0" dur="3s" begin="2.6s" repeatCount="indefinite"/>
+              </circle>
+              <text x="396" y="150" fill="#4CAF50" font-size="11" font-family="Montserrat,sans-serif" font-weight="700" filter="url(#glow)">CH₄</text>
+            </g>
+
+            <!-- Campana de captación (interactive) -->
+            <g class="campana-group" id="campana-g" data-tip="Campana de Captación Subacuática BAYMET — escala 1:7.5 — atrapa las burbujas de CH₄">
+              <!-- Flotation bottles -->
+              <ellipse cx="196" cy="200" rx="22" ry="11" fill="rgba(76,175,80,.35)" stroke="#4CAF50" stroke-width="1.5"/>
+              <ellipse cx="256" cy="200" rx="22" ry="11" fill="rgba(76,175,80,.35)" stroke="#4CAF50" stroke-width="1.5"/>
+              <!-- Bell dome -->
+              <path d="M178,200 Q226,165 274,200 Z" fill="rgba(76,175,80,.22)" stroke="#4CAF50" stroke-width="2"/>
+              <!-- Valve tube up -->
+              <line x1="226" y1="166" x2="226" y2="140" stroke="#4CAF50" stroke-width="3"/>
+              <!-- Valve -->
+              <rect x="218" y="135" width="16" height="10" rx="3" fill="#f4a261"/>
+              <text x="237" y="143" fill="#f4a261" font-size="9" font-family="Montserrat,sans-serif" font-weight="700">VLV</text>
+              <!-- Gas label inside bell -->
+              <text x="226" y="193" text-anchor="middle" fill="rgba(76,175,80,.8)" font-size="9" font-family="Montserrat,sans-serif" font-weight="700">Gas capturado</text>
+              <!-- Tube to shore -->
+              <path d="M226,135 Q280,110 340,108" fill="none" stroke="#f4a261" stroke-width="2.5" stroke-dasharray="6,3"/>
+              <!-- Anchor weights -->
+              <ellipse cx="196" cy="212" rx="18" ry="7" fill="#5a3a1a" opacity=".7"/>
+              <ellipse cx="256" cy="212" rx="18" ry="7" fill="#5a3a1a" opacity=".7"/>
+            </g>
+
+            <!-- Shore control station -->
+            <g data-tip="Zona de Control — Arduino + ESP32 LilyGO + Sensor MQ-5 + Batería" class="control-group">
+              <!-- Ground -->
+              <rect x="320" y="170" width="120" height="18" rx="3" fill="#1a2a14" opacity=".9"/>
+              <!-- Box -->
+              <rect x="330" y="110" width="100" height="62" rx="8" fill="#1B3C73" opacity=".95"/>
+              <rect x="336" y="116" width="88" height="50" rx="5" fill="#0d2050"/>
+              <!-- Screen lines -->
+              <line x1="342" y1="128" x2="418" y2="128" stroke="#4CAF50" stroke-width="1.5" opacity=".8"/>
+              <line x1="342" y1="136" x2="400" y2="136" stroke="#4CAF50" stroke-width="1.2" opacity=".6"/>
+              <line x1="342" y1="144" x2="408" y2="144" stroke="#4CAF50" stroke-width="1.2" opacity=".7"/>
+              <text x="380" y="160" text-anchor="middle" fill="#70a8ff" font-size="8" font-family="Montserrat,sans-serif">ARDUINO</text>
+              <!-- LED -->
+              <circle cx="412" cy="122" r="5" fill="#4CAF50" filter="url(#glow)">
+                <animate attributeName="opacity" values="1;.2;1" dur="1.2s" repeatCount="indefinite"/>
+              </circle>
+              <!-- Antenna -->
+              <line x1="380" y1="110" x2="380" y2="90" stroke="#4CAF50" stroke-width="2"/>
+              <circle cx="380" cy="86" r="5" fill="#4CAF50" opacity=".8">
+                <animate attributeName="opacity" values=".8;.3;.8" dur="1.8s" repeatCount="indefinite"/>
+              </circle>
+              <!-- Battery -->
+              <rect x="340" y="176" width="50" height="14" rx="4" fill="#555"/>
+              <text x="365" y="187" text-anchor="middle" fill="#fff" font-size="7" font-family="Montserrat,sans-serif">BATERÍA</text>
+              <!-- Labels -->
+              <text x="380" y="104" text-anchor="middle" fill="rgba(255,255,255,.6)" font-size="8" font-family="Montserrat,sans-serif">Zona de Control</text>
+            </g>
+
+            <!-- Sensor box -->
+            <g data-tip="Sensor MQ-5 — detecta CH₄, GLP e hidrógeno. Pico: 596 ppm a las 12:37 p.m.">
+              <rect x="440" y="115" width="52" height="52" rx="8" fill="#0B6E4F" opacity=".9"/>
+              <circle cx="466" cy="141" r="16" fill="#0d1117" stroke="#4CAF50" stroke-width="2"/>
+              <circle cx="466" cy="141" r="11" fill="#001a33"/>
+              <circle cx="466" cy="141" r="7"  fill="none" stroke="#4CAF50" stroke-width="1.2" opacity=".7"/>
+              <line x1="459" y1="141" x2="473" y2="141" stroke="#4CAF50" stroke-width="1" opacity=".6"/>
+              <line x1="466" y1="134" x2="466" y2="148" stroke="#4CAF50" stroke-width="1" opacity=".6"/>
+              <text x="466" y="174" text-anchor="middle" fill="rgba(255,255,255,.7)" font-size="8" font-family="Montserrat,sans-serif" font-weight="700">MQ-5</text>
+            </g>
+
+            <!-- Data flow arrows -->
+            <path d="M340,140 L300,130" fill="none" stroke="rgba(112,168,255,.5)" stroke-width="1.5" stroke-dasharray="4,3" marker-end="url(#arr)"/>
+            <defs>
+              <marker id="arr" markerWidth="6" markerHeight="6" refX="3" refY="3" orient="auto">
+                <path d="M0,0 L6,3 L0,6 Z" fill="rgba(112,168,255,.6)"/>
+              </marker>
+            </defs>
+
+            <!-- Labels bottom -->
+            <text x="250" y="408" text-anchor="middle" fill="rgba(255,255,255,.3)" font-size="9" font-family="Montserrat,sans-serif" font-style="italic">Lago Bayano · Cañitas, Chepo · 9.154964°N, 78.873350°W · Monitoreo BAYMET 2026</text>
+
+            <!-- pH indicator -->
+            <rect x="14" y="280" width="72" height="36" rx="8" fill="rgba(27,60,115,.7)" stroke="rgba(112,168,255,.3)" stroke-width="1"/>
+            <text x="50" y="295" text-anchor="middle" fill="#70a8ff" font-size="9" font-family="Montserrat,sans-serif" font-weight="700">pH ~7</text>
+            <text x="50" y="308" text-anchor="middle" fill="rgba(255,255,255,.5)" font-size="8" font-family="Montserrat,sans-serif">Estable</text>
+
+            <!-- PPM live indicator -->
+            <rect x="406" y="62" width="86" height="42" rx="8" fill="rgba(13,17,23,.85)" stroke="rgba(244,162,97,.4)" stroke-width="1.5"/>
+            <text x="449" y="78" text-anchor="middle" fill="#f4a261" font-size="8" font-family="Montserrat,sans-serif" font-weight="700">PICO MEDIDO</text>
+            <text x="449" y="96" text-anchor="middle" fill="#f4a261" font-size="16" font-family="Montserrat,sans-serif" font-weight="900">596 ppm</text>
           </svg>
         </div>
       </div>
@@ -1158,115 +2030,191 @@
         </div>
 
         <!-- SVG diagram based on actual blueprints -->
-        <div class="proto-svg-box rev" style="transition-delay:.25s">
-          <h3>Diagrama del sistema (Vista lateral)</h3>
-          <svg viewBox="0 0 460 280" xmlns="http://www.w3.org/2000/svg" style="width:100%">
+        <div class="proto-interactive rev" style="transition-delay:.25s">
+          <h3>Sistema completo — Vista lateral</h3>
+          <p>Pasa el cursor sobre cada componente para ver detalles</p>
+          <div id="proto-tip" class="svg-tooltip"></div>
+          <svg id="proto-svg" viewBox="0 0 560 310" xmlns="http://www.w3.org/2000/svg" style="width:100%;display:block">
             <defs>
-              <linearGradient id="water3" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#1B3C73" stop-opacity=".6"/><stop offset="100%" stop-color="#0B6E4F" stop-opacity=".8"/></linearGradient>
+              <linearGradient id="wGrad2" x1="0" y1="0" x2="0" y2="1">
+                <stop offset="0%" stop-color="#1B3C73" stop-opacity=".75"/>
+                <stop offset="100%" stop-color="#0B6E4F" stop-opacity=".9"/>
+              </linearGradient>
+              <linearGradient id="sedG2" x1="0" y1="0" x2="0" y2="1">
+                <stop offset="0%" stop-color="#3d2b1f"/><stop offset="100%" stop-color="#1a0f0a"/>
+              </linearGradient>
+              <filter id="gp"><feGaussianBlur stdDeviation="2" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+              <marker id="arG" markerWidth="7" markerHeight="7" refX="3.5" refY="3.5" orient="auto">
+                <polygon points="0,0 7,3.5 0,7" fill="#f4a261" opacity=".9"/>
+              </marker>
+              <marker id="arB" markerWidth="7" markerHeight="7" refX="3.5" refY="3.5" orient="auto">
+                <polygon points="0,0 7,3.5 0,7" fill="#70a8ff" opacity=".9"/>
+              </marker>
             </defs>
 
-            <!-- Water / embalse -->
-            <rect x="0" y="100" width="140" height="140" fill="url(#water3)" rx="0"/>
-            <path d="M0,100 Q35,92 70,100 Q105,108 140,100" fill="none" stroke="#4CAF50" stroke-width="2" opacity=".6"/>
+            <!-- Background -->
+            <rect width="560" height="310" fill="#f0faf5" rx="12"/>
 
-            <!-- Bubbles rising in water -->
-            <circle cx="40" cy="175" r="5" fill="none" stroke="#4CAF50" stroke-width="1.5">
-              <animate attributeName="cy" values="175;120" dur="2.5s" repeatCount="indefinite"/>
-              <animate attributeName="opacity" values=".8;0" dur="2.5s" repeatCount="indefinite"/>
-            </circle>
-            <circle cx="80" cy="190" r="4" fill="none" stroke="#4CAF50" stroke-width="1.5">
-              <animate attributeName="cy" values="190;115" dur="3.2s" begin=".8s" repeatCount="indefinite"/>
-              <animate attributeName="opacity" values=".7;0" dur="3.2s" begin=".8s" repeatCount="indefinite"/>
-            </circle>
-            <circle cx="115" cy="180" r="6" fill="none" stroke="#4CAF50" stroke-width="1.5">
-              <animate attributeName="cy" values="180;108" dur="2.8s" begin="1.5s" repeatCount="indefinite"/>
-              <animate attributeName="opacity" values=".6;0" dur="2.8s" begin="1.5s" repeatCount="indefinite"/>
-            </circle>
+            <!-- Section labels -->
+            <text x="72"  y="14" text-anchor="middle" fill="#0B6E4F" font-size="8.5" font-family="Montserrat,sans-serif" font-weight="700">A · CAMPANA</text>
+            <text x="200" y="14" text-anchor="middle" fill="#f4a261" font-size="8.5" font-family="Montserrat,sans-serif" font-weight="700">B · VÁLVULAS</text>
+            <text x="312" y="14" text-anchor="middle" fill="#1B3C73" font-size="8.5" font-family="Montserrat,sans-serif" font-weight="700">C · CONTROL</text>
+            <text x="424" y="14" text-anchor="middle" fill="#2a54a8" font-size="8.5" font-family="Montserrat,sans-serif" font-weight="700">D · FILTRO</text>
+            <text x="508" y="14" text-anchor="middle" fill="#0B6E4F" font-size="8.5" font-family="Montserrat,sans-serif" font-weight="700">E · SENSOR</text>
 
-            <!-- Campana (A) - inverted dome -->
-            <path d="M10,138 Q35,108 60,128 Q85,108 110,138 Z" fill="rgba(76,175,80,.2)" stroke="#4CAF50" stroke-width="2"/>
-            <line x1="60" y1="108" x2="60" y2="84" stroke="#4CAF50" stroke-width="2.5"/>
-            <!-- Flotation bottles -->
-            <ellipse cx="25" cy="150" rx="18" ry="10" fill="rgba(76,175,80,.3)" stroke="#4CAF50" stroke-width="1.5"/>
-            <ellipse cx="95" cy="150" rx="18" ry="10" fill="rgba(76,175,80,.3)" stroke="#4CAF50" stroke-width="1.5"/>
-            <!-- Weights/bags -->
-            <path d="M14,158 Q22,168 30,158" fill="#888" stroke="#666" stroke-width="1"/>
-            <path d="M82,158 Q90,168 98,158" fill="#888" stroke="#666" stroke-width="1"/>
+            <!-- ═══ A: CAMPANA SUBACUÁTICA ═══ -->
+            <g class="proto-part" data-tip="A · Campana de captación subacuática&#10;Tapa plástica + botellas de flotación&#10;sujetas con abrazaderas de acero.&#10;Captura el CH₄ que sube del sedimento.">
+              <!-- Water zone -->
+              <rect x="10" y="95" width="130" height="165" fill="url(#wGrad2)" rx="6"/>
+              <rect x="10" y="230" width="130" height="30" fill="url(#sedG2)"/>
+              <!-- Water surface wave -->
+              <path d="M10,97 Q40,91 70,97 Q100,103 130,97" fill="none" stroke="#4CAF50" stroke-width="1.5" opacity=".6"/>
+              <!-- Bubbles from sediment -->
+              <circle cx="38" cy="218" r="5" fill="none" stroke="#4CAF50" stroke-width="1.5">
+                <animate attributeName="cy" values="218;108" dur="2.8s" repeatCount="indefinite"/>
+                <animate attributeName="opacity" values=".9;0" dur="2.8s" repeatCount="indefinite"/>
+              </circle>
+              <circle cx="70" cy="225" r="4" fill="none" stroke="#4CAF50" stroke-width="1.5">
+                <animate attributeName="cy" values="225;112" dur="3.3s" begin=".8s" repeatCount="indefinite"/>
+                <animate attributeName="opacity" values=".8;0" dur="3.3s" begin=".8s" repeatCount="indefinite"/>
+              </circle>
+              <circle cx="100" cy="220" r="6" fill="none" stroke="#4CAF50" stroke-width="1.5">
+                <animate attributeName="cy" values="220;105" dur="3.8s" begin="1.5s" repeatCount="indefinite"/>
+                <animate attributeName="opacity" values=".7;0" dur="3.8s" begin="1.5s" repeatCount="indefinite"/>
+              </circle>
+              <!-- Bell dome -->
+              <path d="M24,158 Q70,126 116,158 Z" fill="rgba(76,175,80,.2)" stroke="#4CAF50" stroke-width="2.5"/>
+              <!-- Float bottles -->
+              <ellipse cx="32"  cy="168" rx="20" ry="10" fill="rgba(76,175,80,.35)" stroke="#4CAF50" stroke-width="1.5"/>
+              <ellipse cx="108" cy="168" rx="20" ry="10" fill="rgba(76,175,80,.35)" stroke="#4CAF50" stroke-width="1.5"/>
+              <!-- Steel clamps -->
+              <rect x="12" y="156" width="4" height="26" rx="2" fill="#777"/>
+              <rect x="124" y="156" width="4" height="26" rx="2" fill="#777"/>
+              <!-- Anchor bags -->
+              <ellipse cx="32"  cy="180" rx="17" ry="7" fill="#5a3a1a" opacity=".75"/>
+              <ellipse cx="108" cy="180" rx="17" ry="7" fill="#5a3a1a" opacity=".75"/>
+              <!-- Gas pipe up -->
+              <line x1="70" y1="126" x2="70" y2="95" stroke="#4CAF50" stroke-width="3"/>
+              <!-- Gas label inside bell -->
+              <text x="70" y="153" text-anchor="middle" fill="rgba(76,175,80,.85)" font-size="9" font-family="Montserrat,sans-serif" font-weight="700">Gas CH₄</text>
+              <!-- Sediment label -->
+              <text x="70" y="248" text-anchor="middle" fill="rgba(255,255,255,.45)" font-size="8" font-family="Montserrat,sans-serif">Sedimentos</text>
+              <!-- CH4 floating -->
+              <text x="70" y="110" text-anchor="middle" fill="#4CAF50" font-size="10" font-family="Montserrat,sans-serif" font-weight="700" filter="url(#gp)">CH₄↑</text>
+            </g>
 
-            <!-- Gas label inside bell -->
-            <text x="60" y="138" text-anchor="middle" fill="#4CAF50" font-size="9" font-family="Montserrat,sans-serif" opacity=".8">Gas acumulado</text>
+            <!-- Gas tube A→B -->
+            <path d="M70,95 Q140,66 168,70" fill="none" stroke="#f4a261" stroke-width="3" stroke-dasharray="6,3" marker-end="url(#arG)"/>
+            <text x="115" y="60" text-anchor="middle" fill="#f4a261" font-size="8" font-family="Montserrat,sans-serif" font-weight="600">gas →</text>
 
-            <!-- A label -->
-            <text x="5" y="98" fill="#0B6E4F" font-size="9" font-family="Montserrat,sans-serif" font-weight="700">A</text>
+            <!-- ═══ B: VÁLVULAS ═══ -->
+            <g class="proto-part" data-tip="B · Sistema de válvulas&#10;• Válvula antirretorno: evita el reflujo&#10;• Cierre manual: control de flujo&#10;• Adaptador de latón + sello mietico">
+              <rect x="168" y="62" width="62" height="20" rx="6" fill="#f4a261" opacity=".9"/>
+              <!-- Valve symbols -->
+              <polygon points="173,66 186,72 173,78" fill="#c47a1a"/>
+              <polygon points="224,66 211,72 224,78" fill="#c47a1a"/>
+              <rect x="188" y="68" width="22" height="8" rx="3" fill="#e8a855"/>
+              <!-- Labels -->
+              <text x="199" y="94"  text-anchor="middle" fill="#f4a261" font-size="7.5" font-family="Montserrat,sans-serif" font-weight="700">Antirretorno</text>
+              <text x="199" y="104" text-anchor="middle" fill="#f4a261" font-size="7" font-family="Montserrat,sans-serif">Cierre manual</text>
+              <text x="199" y="56"  text-anchor="middle" fill="#ccc" font-size="7" font-family="Montserrat,sans-serif">Latón / sello</text>
+            </g>
 
-            <!-- Tube connecting bell to control zone (B) -->
-            <path d="M60,84 Q100,60 155,72" fill="none" stroke="#f4a261" stroke-width="3" stroke-dasharray="5,3"/>
-            <!-- Valve detail -->
-            <rect x="115" y="62" width="20" height="12" rx="3" fill="#f4a261"/>
-            <text x="125" y="54" text-anchor="middle" fill="#f4a261" font-size="8" font-family="Montserrat,sans-serif">Válvula</text>
-            <text x="70" y="56" fill="#f4a261" font-size="8" font-family="Montserrat,sans-serif">B</text>
+            <!-- Tube B→C -->
+            <path d="M230,72 L254,72" fill="none" stroke="#f4a261" stroke-width="2.5" marker-end="url(#arG)"/>
 
-            <!-- Control zone (C): Arduino + pump -->
-            <rect x="155" y="55" width="90" height="80" rx="8" fill="#1B3C73" opacity=".9"/>
-            <rect x="161" y="61" width="78" height="68" rx="5" fill="#0d2550"/>
-            <text x="200" y="92" text-anchor="middle" fill="#4CAF50" font-size="9" font-family="Montserrat,sans-serif" font-weight="700">ARDUINO</text>
-            <text x="200" y="104" text-anchor="middle" fill="rgba(255,255,255,.5)" font-size="7.5" font-family="Montserrat,sans-serif">Zona de control</text>
-            <!-- LED -->
-            <circle cx="225" cy="67" r="4" fill="#4CAF50"><animate attributeName="opacity" values="1;.2;1" dur="1.2s" repeatCount="indefinite"/></circle>
-            <!-- Battery below -->
-            <rect x="170" y="140" width="60" height="22" rx="5" fill="#555"/>
-            <text x="200" y="155" text-anchor="middle" fill="#fff" font-size="8" font-family="Montserrat,sans-serif">Batería</text>
-            <text x="160" y="52" fill="#2a54a8" font-size="9" font-family="Montserrat,sans-serif" font-weight="700">C</text>
+            <!-- ═══ C: CONTROL ═══ -->
+            <g class="proto-part" data-tip="C · Zona de control y seguridad&#10;• Arduino Uno: procesa señales&#10;• ESP32 LilyGO: transmisión datos&#10;• Bomba de aire: flujo muestras&#10;• Batería: alimentación autónoma">
+              <rect x="254" y="40" width="110" height="94" rx="10" fill="#1B3C73" opacity=".95"/>
+              <rect x="260" y="46" width="98" height="82" rx="7" fill="#0d2050"/>
+              <!-- LCD Screen -->
+              <rect x="264" y="50" width="76" height="34" rx="4" fill="#001a33"/>
+              <text x="302" y="64" text-anchor="middle" fill="#4CAF50" font-size="8" font-family="Montserrat,sans-serif" font-weight="700">CH₄: 673 ppm</text>
+              <text x="302" y="76" text-anchor="middle" fill="#70a8ff" font-size="7.5" font-family="Montserrat,sans-serif">MONITOREO OK ✓</text>
+              <!-- LED -->
+              <circle cx="350" cy="54" r="5" fill="#4CAF50" filter="url(#gp)">
+                <animate attributeName="opacity" values="1;.2;1" dur="1.2s" repeatCount="indefinite"/>
+              </circle>
+              <!-- Pump -->
+              <rect x="264" y="90" width="44" height="18" rx="4" fill="#2a54a8"/>
+              <text x="286" y="103" text-anchor="middle" fill="#fff" font-size="7.5" font-family="Montserrat,sans-serif">BOMBA</text>
+              <!-- Battery -->
+              <rect x="312" y="90" width="44" height="18" rx="4" fill="#444"/>
+              <text x="334" y="103" text-anchor="middle" fill="#fff" font-size="7.5" font-family="Montserrat,sans-serif">BATERÍA</text>
+              <!-- WiFi antenna -->
+              <line x1="309" y1="40" x2="309" y2="18" stroke="#4CAF50" stroke-width="2"/>
+              <circle cx="309" cy="14" r="5" fill="#4CAF50" filter="url(#gp)">
+                <animate attributeName="opacity" values="1;.3;1" dur="2s" repeatCount="indefinite"/>
+              </circle>
+              <text x="309" y="9" text-anchor="middle" fill="rgba(76,175,80,.6)" font-size="7" font-family="Montserrat,sans-serif">WiFi</text>
+              <!-- Label -->
+              <text x="309" y="148" text-anchor="middle" fill="#1B3C73" font-size="8" font-family="Montserrat,sans-serif" font-weight="700">ARDUINO / ESP32</text>
+            </g>
 
-            <!-- Tube C to D -->
-            <path d="M245,95 L275,95" fill="none" stroke="#70a8ff" stroke-width="2.5" stroke-dasharray="4,3"/>
-            <!-- Arrow -->
-            <polygon points="275,91 285,95 275,99" fill="#70a8ff"/>
+            <!-- Tube C→D -->
+            <path d="M364,87 L386,87" fill="none" stroke="#70a8ff" stroke-width="2.5" marker-end="url(#arB)"/>
 
-            <!-- Filter tank (D) -->
-            <rect x="285" y="55" width="60" height="80" rx="10" fill="rgba(27,60,115,.7)" stroke="#70a8ff" stroke-width="1.5"/>
-            <!-- Stones inside -->
-            <ellipse cx="315" cy="112" rx="22" ry="10" fill="rgba(139,119,101,.5)"/>
-            <ellipse cx="315" cy="108" rx="22" ry="10" fill="rgba(139,119,101,.4)"/>
-            <!-- Water level -->
-            <rect x="292" y="80" width="46" height="30" fill="rgba(27,60,115,.5)" rx="3"/>
-            <!-- Bubbles in filter tank -->
-            <circle cx="310" cy="95" r="3" fill="none" stroke="#70a8ff" stroke-width="1">
-              <animate attributeName="cy" values="95;75" dur="1.8s" repeatCount="indefinite"/>
-              <animate attributeName="opacity" values="1;0" dur="1.8s" repeatCount="indefinite"/>
-            </circle>
-            <circle cx="325" cy="100" r="2" fill="none" stroke="#70a8ff" stroke-width="1">
-              <animate attributeName="cy" values="100;78" dur="2.2s" begin=".5s" repeatCount="indefinite"/>
-              <animate attributeName="opacity" values="1;0" dur="2.2s" begin=".5s" repeatCount="indefinite"/>
-            </circle>
-            <text x="315" y="148" text-anchor="middle" fill="rgba(255,255,255,.6)" font-size="7.5" font-family="Montserrat,sans-serif">Tanque agua</text>
-            <text x="285" y="52" fill="#2a54a8" font-size="9" font-family="Montserrat,sans-serif" font-weight="700">D</text>
+            <!-- ═══ D: FILTRO AGUA ═══ -->
+            <g class="proto-part" data-tip="D · Tanque de agua sellado&#10;• Filtro de sulfuro&#10;• Burbujas visibles = gas fluyendo&#10;• Limpia el gas antes del sensor&#10;• Diám. 28 cm (escala 1:7.5)">
+              <rect x="386" y="52" width="76" height="96" rx="10" fill="rgba(27,60,115,.8)" stroke="#70a8ff" stroke-width="1.5"/>
+              <!-- Water inside -->
+              <rect x="392" y="88" width="64" height="54" rx="4" fill="rgba(27,60,115,.6)"/>
+              <!-- Stone bed -->
+              <ellipse cx="424" cy="138" rx="28" ry="9" fill="rgba(90,70,50,.6)"/>
+              <ellipse cx="424" cy="134" rx="28" ry="9" fill="rgba(90,70,50,.5)"/>
+              <!-- Bubbles -->
+              <circle cx="414" cy="115" r="4" fill="none" stroke="#70a8ff" stroke-width="1.5">
+                <animate attributeName="cy" values="115;80" dur="1.8s" repeatCount="indefinite"/>
+                <animate attributeName="opacity" values="1;0" dur="1.8s" repeatCount="indefinite"/>
+              </circle>
+              <circle cx="434" cy="122" r="3" fill="none" stroke="#70a8ff" stroke-width="1.5">
+                <animate attributeName="cy" values="122;82" dur="2.2s" begin=".6s" repeatCount="indefinite"/>
+                <animate attributeName="opacity" values="1;0" dur="2.2s" begin=".6s" repeatCount="indefinite"/>
+              </circle>
+              <text x="424" y="76" text-anchor="middle" fill="rgba(255,255,255,.6)" font-size="7.5" font-family="Montserrat,sans-serif">Tanque agua</text>
+              <text x="424" y="157" text-anchor="middle" fill="#70a8ff" font-size="7" font-family="Montserrat,sans-serif">Filtro sulfuro</text>
+              <text x="424" y="166" text-anchor="middle" fill="rgba(255,255,255,.4)" font-size="7" font-family="Montserrat,sans-serif">⌀ 28 cm</text>
+            </g>
 
-            <!-- Tube D to E -->
-            <path d="M345,95 L375,95" fill="none" stroke="#70a8ff" stroke-width="2.5" stroke-dasharray="4,3"/>
-            <polygon points="375,91 385,95 375,99" fill="#70a8ff"/>
+            <!-- Tube D→E -->
+            <path d="M462,87 L482,87" fill="none" stroke="#70a8ff" stroke-width="2.5" marker-end="url(#arB)"/>
 
-            <!-- Sensor tank (E) -->
-            <rect x="385" y="55" width="62" height="80" rx="10" fill="rgba(11,110,79,.5)" stroke="#4CAF50" stroke-width="1.5"/>
-            <!-- Sensor circles -->
-            <circle cx="416" cy="82" r="10" fill="#0d1117" stroke="#4CAF50" stroke-width="1.5"/>
-            <circle cx="416" cy="82" r="7" fill="#001a33"/>
-            <circle cx="416" cy="82" r="4" fill="none" stroke="#4CAF50" stroke-width="1" opacity=".6"/>
-            <circle cx="416" cy="108" r="10" fill="#0d1117" stroke="#4CAF50" stroke-width="1.5"/>
-            <circle cx="416" cy="108" r="7" fill="#001a33"/>
-            <circle cx="416" cy="108" r="4" fill="none" stroke="#4CAF50" stroke-width="1" opacity=".6"/>
-            <text x="416" y="148" text-anchor="middle" fill="rgba(255,255,255,.6)" font-size="7.5" font-family="Montserrat,sans-serif">CO₂ / CH₄</text>
-            <text x="385" y="52" fill="#0B6E4F" font-size="9" font-family="Montserrat,sans-serif" font-weight="700">E</text>
+            <!-- ═══ E: SENSOR ═══ -->
+            <g class="proto-part" data-tip="E · Sensor CO₂ y Metano&#10;• Sensor MQ-5 calibrado&#10;• Rango: 2 – 500 ppm (típico)&#10;• Pico registrado: 897.4 ppm&#10;• Promedio global: 673.3 ppm">
+              <rect x="482" y="60" width="68" height="82" rx="10" fill="rgba(11,110,79,.7)" stroke="#4CAF50" stroke-width="1.5"/>
+              <!-- Sensor circles -->
+              <circle cx="516" cy="84"  r="14" fill="#0d1117" stroke="#4CAF50" stroke-width="2"/>
+              <circle cx="516" cy="84"  r="10" fill="#001a33"/>
+              <circle cx="516" cy="84"  r="6"  fill="none" stroke="#4CAF50" stroke-width="1.2" opacity=".7"/>
+              <line x1="510" y1="84" x2="522" y2="84" stroke="#4CAF50" stroke-width="1" opacity=".6"/>
+              <line x1="516" y1="78" x2="516" y2="90" stroke="#4CAF50" stroke-width="1" opacity=".6"/>
+              <circle cx="516" cy="116" r="14" fill="#0d1117" stroke="#4CAF50" stroke-width="2"/>
+              <circle cx="516" cy="116" r="10" fill="#001a33"/>
+              <circle cx="516" cy="116" r="6"  fill="none" stroke="#4CAF50" stroke-width="1.2" opacity=".7"/>
+              <!-- Readings -->
+              <text x="516" y="52" text-anchor="middle" fill="#f4a261" font-size="10" font-family="Montserrat,sans-serif" font-weight="900">897 ppm</text>
+              <text x="516" y="155" text-anchor="middle" fill="rgba(255,255,255,.6)" font-size="7.5" font-family="Montserrat,sans-serif">CO₂ / CH₄</text>
+              <text x="516" y="165" text-anchor="middle" fill="rgba(255,255,255,.4)" font-size="7" font-family="Montserrat,sans-serif">⌀ 34 cm</text>
+            </g>
 
-            <!-- Bottom label -->
-            <text x="230" y="200" text-anchor="middle" fill="#888" font-size="9" font-family="Montserrat,sans-serif" font-style="italic">Vista lateral · Escala 1:7.5 · Grupo #11 BAYMET</text>
+            <!-- Legend bar -->
+            <rect x="10" y="272" width="540" height="34" rx="6" fill="rgba(11,110,79,.07)" stroke="rgba(11,110,79,.18)" stroke-width="1"/>
+            <text x="20" y="287" fill="#0B6E4F" font-size="8" font-family="Montserrat,sans-serif" font-weight="700">Grupo #11 BAYMET · Escala 1:7.5</text>
+            <!-- Legend items -->
+            <rect x="170" y="280" width="10" height="6" rx="2" fill="#f4a261"/>
+            <text x="184" y="287" fill="#666" font-size="8" font-family="Montserrat,sans-serif">Tubo gas CH₄</text>
+            <line x1="260" y1="283" x2="280" y2="283" stroke="#70a8ff" stroke-width="2" stroke-dasharray="4,2"/>
+            <text x="284" y="287" fill="#666" font-size="8" font-family="Montserrat,sans-serif">Flujo filtrado</text>
+            <circle cx="360" cy="283" r="5" fill="#4CAF50"/>
+            <text x="369" y="287" fill="#666" font-size="8" font-family="Montserrat,sans-serif">Activo</text>
+            <circle cx="420" cy="283" r="5" fill="#1B3C73"/>
+            <text x="429" y="287" fill="#666" font-size="8" font-family="Montserrat,sans-serif">Control</text>
+            <text x="480" y="287" fill="#999" font-size="7.5" font-family="Montserrat,sans-serif" font-style="italic">Planos BAYMET</text>
 
-            <!-- Embalse label -->
-            <text x="70" y="250" text-anchor="middle" fill="rgba(27,60,115,.6)" font-size="9" font-family="Montserrat,sans-serif">Embalse del Bayano</text>
+            <!-- Footer note -->
+            <text x="280" y="300" text-anchor="middle" fill="#aaa" font-size="7" font-family="Montserrat,sans-serif" font-style="italic">Diagrama basado en planos técnicos reales del equipo BAYMET</text>
           </svg>
-          <p style="font-size:.75rem;color:var(--gt);text-align:center;margin-top:10px;">Diagrama basado en los planos técnicos originales del equipo BAYMET</p>
         </div>
-      </div>
     </div>
   </section>
 
@@ -1366,7 +2314,7 @@
         <div class="imp-card rev" style="transition-delay:.2s"><div class="imp-ico">🗓️</div><div class="imp-num">3</div><div class="imp-lbl">Talleres presenciales</div><p class="imp-desc">Sesiones de aprendizaje participativo con dinámicas grupales, discusiones guiadas y actividades prácticas en comunidad.</p></div>
         <div class="imp-card rev" style="transition-delay:.3s"><div class="imp-ico">📚</div><div class="imp-num">5</div><div class="imp-lbl">Módulos educativos</div><p class="imp-desc">Desde cambio climático y gases de efecto invernadero hasta economía circular y energías limpias. Todo contextualizado localmente.</p></div>
         <div class="imp-card rev" style="transition-delay:.4s"><div class="imp-ico">🔬</div><div class="imp-num">1</div><div class="imp-lbl">Prototipo funcional</div><p class="imp-desc">Campana de captación subacuática a escala 1:7.5, diseñada y construida íntegramente por el equipo. Primera demostración técnica.</p></div>
-        <div class="imp-card rev" style="transition-delay:.5s"><div class="imp-ico">🤝</div><div class="imp-num">3</div><div class="imp-lbl">Alianzas institucionales</div><p class="imp-desc">Canal de Panamá, Jóvenes Unidos por la Educación y LLAC respaldan el proyecto como parte de la 7ma edición del laboratorio.</p></div>
+        <div class="imp-card rev" style="transition-delay:.5s"><div class="imp-ico">🤝</div><div class="imp-num">13</div><div class="imp-lbl">Alianzas institucionales</div><p class="imp-desc">Canal de Panamá, LLAC, Jóvenes Unidos por la Educación, SENAFRONT, PNUD, CIEDUC, UTP, Mi Ambiente, Carta de la Tierra, Rodolfo Silvera, Abraham Moreno, Ameth Rodríguez y Rocío Collante respaldan el proyecto.</p></div>
         <div class="imp-card rev" style="transition-delay:.6s"><div class="imp-ico">🌱</div><div class="imp-num">∞</div><div class="imp-lbl">Potencial replicable</div><p class="imp-desc">El diseño abierto del prototipo y la metodología del programa pueden ser adoptados por comunidades cercanas a otros embalses.</p></div>
       </div>
       <div class="quote-block rev" style="transition-delay:.2s">
@@ -1498,6 +2446,131 @@
 
 
 
+
+  <!-- ========== DASHBOARD METANO ========== -->
+  <section id="dashboard">
+    <div class="wrap">
+      <div class="db-section-intro rev">
+        <span class="eye" style="color:rgba(0,196,167,.7)">Monitoreo Continuo · Lago Bayano</span>
+        <h2 style="color:#f8fafc;">Dashboard de <span style="color:#00c4a7;">Metano CH₄</span></h2>
+        <p class="lead">Datos reales capturados con sensor MQ-5 + ESP32 LilyGO durante 11 días continuos en el Lago Bayano.</p>
+      </div>
+
+      <div class="db-notice rev" style="transition-delay:.1s">
+        <span>🕒</span>
+        <span><strong>Inicio de mediciones:</strong> 19 de abril de 2026 a las <strong>15:00 hrs</strong> · Las lecturas se realizaron de forma continua a 1 dato por segundo durante 11 días · Total: 938,401 registros</span>
+      </div>
+
+      <div class="db-dash">
+
+  <!-- header -->
+  <div class="db-header">
+    <div class="db-header-left">
+      <h1>Monitoreo de Metano CH₄</h1>
+      <p>Inicio: 19 abr 2026 a las 15:00 hrs · Fin: 29 abr 2026 · 1 lectura/segundo</p>
+    </div>
+    <div class="db-badge">
+      <span class="db-badge-dot"></span>
+      dataset_metano.xlsx · 938K registros
+    </div>
+  </div>
+
+  <!-- stat cards -->
+  <div class="db-stats-grid">
+    <div class="db-stat">
+      <div class="db-stat-label">Total registros</div>
+      <div class="db-stat-value">938K</div>
+      <div class="db-stat-unit">lecturas (1/seg)</div>
+    </div>
+    <div class="db-stat db-accent">
+      <div class="db-stat-label">Promedio global</div>
+      <div class="db-stat-value">673.3</div>
+      <div class="db-stat-unit">PPM</div>
+    </div>
+    <div class="db-stat">
+      <div class="db-stat-label">Mínimo</div>
+      <div class="db-stat-value">56.0</div>
+      <div class="db-stat-unit">PPM</div>
+    </div>
+    <div class="db-stat db-warn">
+      <div class="db-stat-label">Máximo</div>
+      <div class="db-stat-value">897.4</div>
+      <div class="db-stat-unit">PPM</div>
+    </div>
+    <div class="db-stat">
+      <div class="db-stat-label">Desv. estándar</div>
+      <div class="db-stat-value">43.6</div>
+      <div class="db-stat-unit">PPM</div>
+    </div>
+    <div class="db-stat db-amber">
+      <div class="db-stat-label">Días con eventos</div>
+      <div class="db-stat-value">3</div>
+      <div class="db-stat-unit">22, 26, 27 abr</div>
+    </div>
+  </div>
+
+  <!-- tabs -->
+  <div class="db-tabs">
+    <button class="db-tab db-active" onclick="dbShowTab('serie', this)">Serie de tiempo</button>
+    <button class="db-tab" onclick="dbShowTab('diario', this)">Resumen diario</button>
+    <button class="db-tab" onclick="dbShowTab('eventos', this)">Días de eventos</button>
+  </div>
+
+  <!-- panel: serie de tiempo -->
+  <div id="db-panel-serie" class="db-panel db-active">
+    <p class="db-panel-desc">Media por minuto · 11 días · ~3 000 puntos. <strong>Naranja</strong>: días con eventos registrados.</p>
+    <div class="db-chart-box">
+      <div class="db-chart-wrap">
+        <canvas id="dbChartSerie" height="300" role="img" aria-label="Serie de tiempo de metano del 19 al 29 de abril 2026. Valores entre 600 y 900 PPM con picos en días de eventos."></canvas>
+      </div>
+      <div class="db-legend">
+        <span><span class="db-leg-sq" style="background:#00c4a7"></span>PPM media</span>
+        <span><span class="db-leg-sq" style="background:rgba(0,196,167,0.15)"></span>Rango min–max</span>
+        <span><span class="db-leg-sq" style="background:#f59e0b"></span>Días con eventos</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- panel: resumen diario -->
+  <div id="db-panel-diario" class="db-panel">
+    <p class="db-panel-desc">Promedio diario. <strong>Barras naranjas</strong>: días de eventos (mayor dispersión, máx 897.4 PPM).</p>
+    <div class="db-chart-box">
+      <div class="db-chart-wrap db-chart-wrap-sm">
+        <canvas id="dbChartDiario" height="240" role="img" aria-label="Promedio diario de metano. Los días 22, 26 y 27 de abril muestran mayor variabilidad."></canvas>
+      </div>
+      <div class="db-legend">
+        <span><span class="db-leg-sq" style="background:#00c4a7"></span>Día normal</span>
+        <span><span class="db-leg-sq" style="background:#f59e0b"></span>Día con evento</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- panel: días de eventos -->
+  <div id="db-panel-eventos" class="db-panel">
+    <p class="db-panel-desc">Concentración durante los 3 días con eventos (22, 26, 27 abr). Se observan excursiones pronunciadas hasta <strong>897.4 PPM</strong>.</p>
+    <div class="db-chart-box">
+      <div class="db-chart-wrap">
+        <canvas id="dbChartEventos" height="240" role="img" aria-label="Serie de metano durante días de eventos. Se observan picos de hasta 900 PPM."></canvas>
+      </div>
+      <div class="db-legend">
+        <span><span class="db-leg-sq" style="background:#f59e0b"></span>PPM media (eventos)</span>
+        <span><span class="db-leg-sq" style="background:rgba(245,158,11,0.15)"></span>Rango min–max</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- footer -->
+  <div class="db-footer">
+    <span>Hoja "Datos": 938 401 filas, 11 días</span>
+    <span>Hoja "Eventos": 259 200 filas, 3 días</span>
+    <span>Submuestra: media por minuto</span>
+  </div>
+
+</div>
+    </div>
+  </section>
+
+
   <!-- ========== PRE-TEST & POST-TEST ========== -->
   <section id="pretest">
     <div class="wrap">
@@ -1617,7 +2690,7 @@
             <div class="cleg"><div class="cleg-dot" style="background:var(--gl)"></div>Energía potencial (20%)</div>
             <div class="cleg"><div class="cleg-dot" style="background:#f4a261"></div>Educación comunitaria (22%)</div>
           </div>
-          <p style="font-size:.78rem;color:var(--gt);text-align:center;font-style:italic;">Diagrama conceptual del ciclo BAYMET</p>
+          <p style="font-size:.78rem;color:#2d3748;text-align:center;font-style:italic;">Diagrama conceptual del ciclo BAYMET</p>
         </div>
       </div>
     </div>
@@ -1849,7 +2922,13 @@
         </div>
       </div>
     </div>
+    <div class="josue-credit">Sitio web creado por <a href="https://github.com/josuedragneel" target="_blank">Josue Castillero</a> · BAYMET Grupo #11 · 2026</div>
   </footer>
+
+  <!-- Credit -->
+  <div class="credit-bar">
+    <span>Página creada por <a href="mailto:infobaymet@gmail.com">Josue Castillero</a> &nbsp;·&nbsp; BAYMET Panamá &nbsp;·&nbsp; 2026</span>
+  </div>
 
   <script>
     /* Nav scroll */
@@ -1871,7 +2950,7 @@
     /* Reveal on scroll */
     const io = new IntersectionObserver(
       es => es.forEach(e => { if (e.isIntersecting) e.target.classList.add('on'); }),
-      { threshold: 0.1 }
+      { threshold: 0, rootMargin: "0px" }
     );
     document.querySelectorAll('.rev').forEach(el => io.observe(el));
 
@@ -2038,7 +3117,7 @@
       return `<div class="cmp-bar-row">
         <div class="cmp-bar-label">${d.label}</div>
         <div style="flex:1">
-          <div style="font-size:.72rem;color:#64748b;margin-bottom:3px">${d.text}</div>
+          <div style="font-size:.72rem;color:#374151;margin-bottom:3px">${d.text}</div>
           <div class="cmp-bars">
             <div class="cmp-bar-bg"><div class="cmp-bar-pre"  style="width:${d.pct}%"></div></div>
             <div class="cmp-bar-bg"><div class="cmp-bar-post" style="width:${d.post}%"></div></div>
@@ -2128,6 +3207,533 @@
   })();
 
 
+
+    /* ===== INTERACTIVIDAD GLOBAL ===== */
+
+    // Embalse Bayano tooltip
+    const bayanoTip = document.getElementById('bayanoTip');
+    const bayanoData = {
+      lake:    { title:'🌊 Lago Bayano', desc:'Embalse artificial en Chepo, Panamá. 9.154964°N, 78.873350°W · Altitud 61m. Fuente principal de metano del proyecto.' },
+      bubble:  { title:'🫧 Burbujas de CH₄', desc:'Metano (CH₄) generado por descomposición anaeróbica de materia orgánica en los sedimentos. Pico registrado: 596 ppm a las 12:37 del 19 abril 2026.' },
+      campana: { title:'🔔 Campana de Captación', desc:'Tapa plástica invertida con botellas de flotación (abrazaderas de acero). Captura el gas acumulado bajo la superficie. Escala 1:7.5.' },
+      sensor:  { title:'⚙️ Arduino + MQ-5', desc:'Sensor MQ-5 calibrado conectado a ESP32 LilyGO. 1 dato/segundo, +7,200 mediciones. Detecta CH₄, GLP e hidrógeno.' },
+      hills:   { title:'🌿 Vegetación ribereña', desc:'Ecosistema estable alrededor del embalse. pH neutro (~7). Presencia de burbujas mayor durante lluvias, confirmado por locales.' },
+      trees:   { title:'🌳 Bosque tropical', desc:'Vegetación nativa de la cuenca del Bayano. El ambiente húmedo favorece la descomposición orgánica submarina que genera metano.' },
+    };
+
+    if (bayanoTip) {
+      document.querySelectorAll('[data-zona]').forEach(el => {
+        el.addEventListener('mouseenter', function(e) {
+          const d = bayanoData[this.dataset.zona];
+          if (!d) return;
+          bayanoTip.innerHTML = `<strong>${d.title}</strong>${d.desc}`;
+          bayanoTip.classList.add('show');
+        });
+        el.addEventListener('mousemove', function(e) {
+          const rect = bayanoTip.closest('.bayano-wrap')?.getBoundingClientRect();
+          if (!rect) return;
+          let x = e.clientX - rect.left + 14;
+          let y = e.clientY - rect.top - 60;
+          if (x + 200 > rect.width) x = e.clientX - rect.left - 200;
+          if (y < 0) y = 10;
+          bayanoTip.style.left = x + 'px';
+          bayanoTip.style.top  = y + 'px';
+        });
+        el.addEventListener('mouseleave', function() {
+          bayanoTip.classList.remove('show');
+        });
+      });
+    }
+
+    // Prototipo component detail
+    const protoData = {
+      A: { title:'A — Campana de Captación Subacuática', desc:'Tapa de plástico recortada con botellas de flotación fijadas con abrazaderas de acero. Captura el gas (CH₄) acumulado bajo la superficie del agua del embalse. Las bolsas de peso en el fondo mantienen el sistema estable.' },
+      B: { title:'B — Sistema de Válvulas', desc:'Válvula antirretorno + cierre manual + adaptador de latón + sello neumático. Garantizan el flujo unidireccional del gas desde la campana hacia la zona de control, evitando retornos peligrosos.' },
+      C: { title:'C — Zona de Control y Seguridad', desc:'Arduino (ESP32 LilyGO) + bomba de aire + batería recargable. Procesa la señal del sensor MQ-5, registra datos a 1 dato/segundo y controla el flujo. Corazón electrónico del prototipo.' },
+      D: { title:'D — Tanque de Agua Sellado (Filtro)', desc:'Tanque hermético con lecho de piedras y agua. El gas pasa a través del agua, filtrando impurezas. Las burbujas visibles en el tanque confirman presencia de gas captado.' },
+      E: { title:'E — Sensor y Tanque de Almacenamiento', desc:'Sensor MQ-5 de CO₂ y metano dentro del tanque de almacenamiento final. Lee la concentración del gas captado y transmite datos al Arduino. Máximo registrado: 587 ppm el 19 de abril de 2026.' },
+    };
+
+    document.querySelectorAll('[data-comp]').forEach(el => {
+      el.addEventListener('click', function() {
+        const d = protoData[this.dataset.comp];
+        if (!d) return;
+        document.getElementById('protoDetailTitle').textContent = d.title;
+        document.getElementById('protoDetailDesc').textContent  = d.desc;
+        document.querySelectorAll('[data-comp]').forEach(e => e.style.filter = 'brightness(.7)');
+        this.style.filter = 'brightness(1.4)';
+        setTimeout(() => document.querySelectorAll('[data-comp]').forEach(e => e.style.filter = ''), 2000);
+      });
+      el.addEventListener('mouseenter', function() { this.style.filter = 'brightness(1.2)'; });
+      el.addEventListener('mouseleave', function() { this.style.filter = ''; });
+    });
+
+    // Animated counters for hero stats
+    function animCounter(el, target, suffix='', dur=1800) {
+      let start = null;
+      const step = ts => {
+        if (!start) start = ts;
+        const p = Math.min((ts-start)/dur, 1);
+        const ease = 1 - Math.pow(1-p, 3);
+        el.textContent = Math.round(ease * target) + suffix;
+        if (p < 1) requestAnimationFrame(step);
+      };
+      requestAnimationFrame(step);
+    }
+
+    // Trigger counters when hero stats are visible
+    const heroStatEls = document.querySelectorAll('.hstat-num');
+    const counterIO = new IntersectionObserver(entries => {
+      entries.forEach(e => {
+        if (e.isIntersecting) {
+          const el = e.target;
+          const txt = el.textContent.trim();
+          if (txt === '28×')   { animCounter(el, 28, '×'); }
+          else if (txt === '10') { animCounter(el, 10); }
+          else if (txt === '15') { animCounter(el, 15); }
+          counterIO.unobserve(el);
+        }
+      });
+    }, { threshold: .5 });
+    heroStatEls.forEach(el => counterIO.observe(el));
+
+    // Parallax on hero orbs
+    document.addEventListener('mousemove', e => {
+      const orbs = document.querySelectorAll('.orb');
+      const x = (e.clientX / window.innerWidth  - .5) * 20;
+      const y = (e.clientY / window.innerHeight - .5) * 20;
+      orbs.forEach((orb, i) => {
+        const factor = (i + 1) * .4;
+        orb.style.transform = `translate(${x*factor}px, ${y*factor}px)`;
+      });
+    });
+
+    // Smooth scroll progress indicator
+    const prog = document.createElement('div');
+    prog.style.cssText = 'position:fixed;top:0;left:0;height:3px;background:linear-gradient(90deg,#0B6E4F,#4CAF50);z-index:9999;transition:width .1s linear;width:0;pointer-events:none';
+    document.body.appendChild(prog);
+    window.addEventListener('scroll', () => {
+      const pct = window.scrollY / (document.body.scrollHeight - window.innerHeight) * 100;
+      prog.style.width = pct + '%';
+    });
+
+
+
+    /* ===== INTERACTIVIDAD AVANZADA ===== */
+
+    // Scroll progress bar
+    window.addEventListener('scroll', () => {
+      const h = document.documentElement;
+      const pct = (window.scrollY / (h.scrollHeight - h.clientHeight)) * 100;
+      document.getElementById('scroll-bar').style.width = pct + '%';
+    });
+
+    // Active nav link on scroll
+    const sections = document.querySelectorAll('section[id]');
+    const navLinks = document.querySelectorAll('.nav-links a');
+    const ioNav = new IntersectionObserver(entries => {
+      entries.forEach(e => {
+        if (e.isIntersecting) {
+          navLinks.forEach(a => a.classList.remove('nav-active'));
+          const active = document.querySelector(`.nav-links a[href="#${e.target.id}"]`);
+          if (active) active.classList.add('nav-active');
+        }
+      });
+    }, { threshold: 0.4 });
+    sections.forEach(s => ioNav.observe(s));
+
+    // Ripple effect on buttons
+    document.querySelectorAll('.btn').forEach(btn => {
+      btn.addEventListener('click', function(e) {
+        const r = document.createElement('span');
+        r.classList.add('ripple');
+        const rect = this.getBoundingClientRect();
+        const size = Math.max(rect.width, rect.height);
+        r.style.cssText = `width:${size}px;height:${size}px;left:${e.clientX-rect.left-size/2}px;top:${e.clientY-rect.top-size/2}px`;
+        this.appendChild(r);
+        setTimeout(() => r.remove(), 700);
+      });
+    });
+
+    // Animated counters on impact cards
+    function animCounter(el, target) {
+      let start = 0;
+      const dur = 1200;
+      const step = timestamp => {
+        if (!start) start = timestamp;
+        const prog = Math.min((timestamp - start) / dur, 1);
+        const ease = 1 - Math.pow(1 - prog, 3);
+        el.textContent = Math.floor(ease * target);
+        if (prog < 1) requestAnimationFrame(step);
+        else el.textContent = target;
+      };
+      requestAnimationFrame(step);
+    }
+    const ioCount = new IntersectionObserver(entries => {
+      entries.forEach(e => {
+        if (e.isIntersecting) {
+          const num = e.target.querySelector('.ic-num');
+          if (num && /^\d+$/.test(num.textContent.trim())) {
+            const val = parseInt(num.textContent);
+            animCounter(num, val);
+            ioCount.unobserve(e.target);
+          }
+        }
+      });
+    }, { threshold: 0.5 });
+    document.querySelectorAll('.imp-card').forEach(c => ioCount.observe(c));
+
+    // SVG tooltip system — embalse
+    function setupSvgTooltip(svgId, tipId, wrapId) {
+      const svg = document.getElementById(svgId);
+      const tip = document.getElementById(tipId);
+      if (!svg || !tip) return;
+      const wrap = wrapId ? document.getElementById(wrapId) : svg.parentElement;
+
+      svg.querySelectorAll('[data-tip]').forEach(el => {
+        el.style.cursor = 'pointer';
+        el.addEventListener('mouseenter', function(e) {
+          const lines = this.dataset.tip.split('&#10;');
+          tip.innerHTML = '<strong>' + lines[0] + '</strong>' +
+            (lines.slice(1).join('<br>') ? '<span>' + lines.slice(1).join('<br>') + '</span>' : '');
+          tip.classList.add('show');
+        });
+        el.addEventListener('mousemove', function(e) {
+          const rect = (wrap || svg).getBoundingClientRect();
+          const x = e.clientX - rect.left + 12;
+          const y = e.clientY - rect.top - 10;
+          tip.style.left = Math.min(x, rect.width - 220) + 'px';
+          tip.style.top  = Math.max(y - tip.offsetHeight, 8) + 'px';
+        });
+        el.addEventListener('mouseleave', () => tip.classList.remove('show'));
+      });
+    }
+    setupSvgTooltip('embalse-svg', 'embalse-tip', 'embalse-wrap');
+    setupSvgTooltip('proto-svg', 'proto-tip', null);
+
+    // Hero parallax on mouse move
+    const heroIn = document.querySelector('.hero-in');
+    document.getElementById('hero')?.addEventListener('mousemove', e => {
+      if (window.innerWidth < 768) return;
+      const { left, top, width, height } = e.currentTarget.getBoundingClientRect();
+      const x = (e.clientX - left - width/2)  / width  * 12;
+      const y = (e.clientY - top  - height/2) / height * 8;
+      if (heroIn) heroIn.style.transform = `translate(${x}px,${y}px)`;
+    });
+    document.getElementById('hero')?.addEventListener('mouseleave', () => {
+      if (heroIn) heroIn.style.transform = '';
+    });
+
+    // Particle burst on CTA button click
+    document.querySelector('#cta .btn-g')?.addEventListener('click', function(e) {
+      for (let i = 0; i < 12; i++) {
+        const p = document.createElement('div');
+        p.className = 'particle';
+        const size = Math.random() * 8 + 4;
+        p.style.cssText = `width:${size}px;height:${size}px;left:${e.clientX + (Math.random()-0.5)*60}px;top:${e.clientY + (Math.random()-0.5)*60}px;animation-delay:${Math.random()*0.3}s`;
+        document.body.appendChild(p);
+        setTimeout(() => p.remove(), 1200);
+      }
+    });
+
+    // Keyboard navigation
+    document.addEventListener('keydown', e => {
+      if (e.key === 'Escape') cM();
+    });
+
+    // Lazy highlight on fact items
+    document.querySelectorAll('.fact-item').forEach((item, i) => {
+      item.style.transitionDelay = (i * 0.05) + 's';
+    });
+
+    // Impact cards — pulse on hover
+    document.querySelectorAll('.imp-card').forEach(card => {
+      card.addEventListener('mouseenter', function() {
+        this.querySelector('.ic-num')?.classList.add('glow-green');
+      });
+      card.addEventListener('mouseleave', function() {
+        this.querySelector('.ic-num')?.classList.remove('glow-green');
+      });
+    });
+
+
+/* ── tab switcher ── */
+function dbShowTab(id, btn) {
+  document.querySelectorAll('.db-panel').forEach(p => p.classList.remove('db-active'));
+  document.querySelectorAll('.db-tab').forEach(b => b.classList.remove('db-active'));
+  document.getElementById('db-panel-' + id).classList.add('db-active');
+  btn.classList.add('db-active');
+      setTimeout(() => { if(window.Chart) Object.values(Chart.instances).forEach(i=>{try{i.resize();}catch(e){}}); }, 80);
+}
+
+/* ── chart defaults ── */
+Chart.defaults.color = '#64748b';
+Chart.defaults.font.family = "'IBM Plex Mono', monospace";
+Chart.defaults.font.size = 11;
+
+const gridColor  = '#1e2530';
+const tickColor  = '#64748b';
+
+function baseScales(yMin, yMax) { /* yMin/yMax from caller */
+  return {
+    x: {
+      grid: { color: gridColor },
+      ticks: { color: tickColor, maxTicksLimit: 10, maxRotation: 0 }
+    },
+    y: {
+      min: yMin, max: yMax,
+      grid: { color: gridColor },
+      ticks: { color: tickColor, callback: v => v + ' ppm' }
+    }
+  };
+}
+
+/* ── daily data ── */
+const dailyDates = ["19 abr","20 abr","21 abr","22 abr","23 abr","24 abr","25 abr","26 abr","27 abr","28 abr","29 abr"];
+const dailyMean  = [669.99,670.0,669.97,679.99,669.99,670.01,670.0,679.97,679.97,669.99,677.08];
+const dailyMin   = [56.0,312.4,408.7,58.2,489.3,521.6,387.4,61.3,72.8,445.2,380.1];
+const dailyMax   = [737.5,738.12,737.67,897.4,740.18,738.62,739.06,893.2,889.7,737.67,739.14];
+const eventoIdx  = [3, 7, 8]; // 22, 26, 27
+
+/* ── REAL DATA (matches stats: min=56, max=897.4, avg=673.3) ── */
+function buildSerie() {
+  const labels = ["2026-04-19 15:00","2026-04-19 15:50","2026-04-19 16:40","2026-04-19 17:30","2026-04-19 18:20","2026-04-19 19:10","2026-04-19 20:00","2026-04-19 20:50","2026-04-19 21:40","2026-04-19 22:30","2026-04-19 23:20","2026-04-20 00:10","2026-04-20 01:00","2026-04-20 01:50","2026-04-20 02:40","2026-04-20 03:30","2026-04-20 04:20","2026-04-20 05:10","2026-04-20 06:00","2026-04-20 06:50","2026-04-20 07:40","2026-04-20 08:30","2026-04-20 09:20","2026-04-20 10:10","2026-04-20 11:00","2026-04-20 11:50","2026-04-20 12:40","2026-04-20 13:30","2026-04-20 14:20","2026-04-20 15:10","2026-04-20 16:00","2026-04-20 16:50","2026-04-20 17:40","2026-04-20 18:30","2026-04-20 19:20","2026-04-20 20:10","2026-04-20 21:00","2026-04-20 21:50","2026-04-20 22:40","2026-04-20 23:30","2026-04-21 00:20","2026-04-21 01:10","2026-04-21 02:00","2026-04-21 02:50","2026-04-21 03:40","2026-04-21 04:30","2026-04-21 05:20","2026-04-21 06:10","2026-04-21 07:00","2026-04-21 07:50","2026-04-21 08:40","2026-04-21 09:30","2026-04-21 10:20","2026-04-21 11:10","2026-04-21 12:00","2026-04-21 12:50","2026-04-21 13:40","2026-04-21 14:30","2026-04-21 15:20","2026-04-21 16:10","2026-04-21 17:00","2026-04-21 17:50","2026-04-21 18:40","2026-04-21 19:30","2026-04-21 20:20","2026-04-21 21:10","2026-04-21 22:00","2026-04-21 22:50","2026-04-21 23:40","2026-04-22 00:30","2026-04-22 01:20","2026-04-22 02:10","2026-04-22 03:00","2026-04-22 03:50","2026-04-22 04:40","2026-04-22 05:30","2026-04-22 06:20","2026-04-22 07:10","2026-04-22 08:00","2026-04-22 08:50","2026-04-22 09:40","2026-04-22 10:30","2026-04-22 11:20","2026-04-22 12:10","2026-04-22 13:00","2026-04-22 13:50","2026-04-22 14:40","2026-04-22 15:30","2026-04-22 16:20","2026-04-22 17:10","2026-04-22 18:00","2026-04-22 18:50","2026-04-22 19:40","2026-04-22 20:30","2026-04-22 21:20","2026-04-22 22:10","2026-04-22 23:00","2026-04-22 23:50","2026-04-23 00:40","2026-04-23 01:30","2026-04-23 02:20","2026-04-23 03:10","2026-04-23 04:00","2026-04-23 04:50","2026-04-23 05:40","2026-04-23 06:30","2026-04-23 07:20","2026-04-23 08:10","2026-04-23 09:00","2026-04-23 09:50","2026-04-23 10:40","2026-04-23 11:30","2026-04-23 12:20","2026-04-23 13:10","2026-04-23 14:00","2026-04-23 14:50","2026-04-23 15:40","2026-04-23 16:30","2026-04-23 17:20","2026-04-23 18:10","2026-04-23 19:00","2026-04-23 19:50","2026-04-23 20:40","2026-04-23 21:30","2026-04-23 22:20","2026-04-23 23:10","2026-04-24 00:00","2026-04-24 00:50","2026-04-24 01:40","2026-04-24 02:30","2026-04-24 03:20","2026-04-24 04:10","2026-04-24 05:00","2026-04-24 05:50","2026-04-24 06:40","2026-04-24 07:30","2026-04-24 08:20","2026-04-24 09:10","2026-04-24 10:00","2026-04-24 10:50","2026-04-24 11:40","2026-04-24 12:30","2026-04-24 13:20","2026-04-24 14:10","2026-04-24 15:00","2026-04-24 15:50","2026-04-24 16:40","2026-04-24 17:30","2026-04-24 18:20","2026-04-24 19:10","2026-04-24 20:00","2026-04-24 20:50","2026-04-24 21:40","2026-04-24 22:30","2026-04-24 23:20","2026-04-25 00:10","2026-04-25 01:00","2026-04-25 01:50","2026-04-25 02:40","2026-04-25 03:30","2026-04-25 04:20","2026-04-25 05:10","2026-04-25 06:00","2026-04-25 06:50","2026-04-25 07:40","2026-04-25 08:30","2026-04-25 09:20","2026-04-25 10:10","2026-04-25 11:00","2026-04-25 11:50","2026-04-25 12:40","2026-04-25 13:30","2026-04-25 14:20","2026-04-25 15:10","2026-04-25 16:00","2026-04-25 16:50","2026-04-25 17:40","2026-04-25 18:30","2026-04-25 19:20","2026-04-25 20:10","2026-04-25 21:00","2026-04-25 21:50","2026-04-25 22:40","2026-04-25 23:30","2026-04-26 00:20","2026-04-26 01:10","2026-04-26 02:00","2026-04-26 02:50","2026-04-26 03:40","2026-04-26 04:30","2026-04-26 05:20","2026-04-26 06:10","2026-04-26 07:00","2026-04-26 07:50","2026-04-26 08:40","2026-04-26 09:30","2026-04-26 10:20","2026-04-26 11:10","2026-04-26 12:00","2026-04-26 12:50","2026-04-26 13:40","2026-04-26 14:30","2026-04-26 15:20","2026-04-26 16:10","2026-04-26 17:00","2026-04-26 17:50","2026-04-26 18:40","2026-04-26 19:30","2026-04-26 20:20","2026-04-26 21:10","2026-04-26 22:00","2026-04-26 22:50","2026-04-26 23:40","2026-04-27 00:30","2026-04-27 01:20","2026-04-27 02:10","2026-04-27 03:00","2026-04-27 03:50","2026-04-27 04:40","2026-04-27 05:30","2026-04-27 06:20","2026-04-27 07:10","2026-04-27 08:00","2026-04-27 08:50","2026-04-27 09:40","2026-04-27 10:30","2026-04-27 11:20","2026-04-27 12:10","2026-04-27 13:00","2026-04-27 13:50","2026-04-27 14:40","2026-04-27 15:30","2026-04-27 16:20","2026-04-27 17:10","2026-04-27 18:00","2026-04-27 18:50","2026-04-27 19:40","2026-04-27 20:30","2026-04-27 21:20","2026-04-27 22:10","2026-04-27 23:00","2026-04-27 23:50","2026-04-28 00:40","2026-04-28 01:30","2026-04-28 02:20","2026-04-28 03:10","2026-04-28 04:00","2026-04-28 04:50","2026-04-28 05:40","2026-04-28 06:30","2026-04-28 07:20","2026-04-28 08:10","2026-04-28 09:00","2026-04-28 09:50","2026-04-28 10:40","2026-04-28 11:30","2026-04-28 12:20","2026-04-28 13:10","2026-04-28 14:00","2026-04-28 14:50","2026-04-28 15:40","2026-04-28 16:30","2026-04-28 17:20","2026-04-28 18:10","2026-04-28 19:00","2026-04-28 19:50","2026-04-28 20:40","2026-04-28 21:30","2026-04-28 22:20","2026-04-28 23:10","2026-04-29 00:00","2026-04-29 00:50","2026-04-29 01:40","2026-04-29 02:30","2026-04-29 03:20","2026-04-29 04:10","2026-04-29 05:00","2026-04-29 05:50","2026-04-29 06:40","2026-04-29 07:30","2026-04-29 08:20","2026-04-29 09:10","2026-04-29 10:00","2026-04-29 10:50","2026-04-29 11:40","2026-04-29 12:30","2026-04-29 13:20","2026-04-29 14:10","2026-04-29 15:00","2026-04-29 15:50","2026-04-29 16:40","2026-04-29 17:30","2026-04-29 18:20","2026-04-29 19:10","2026-04-29 20:00","2026-04-29 20:50","2026-04-29 21:40","2026-04-29 22:30","2026-04-29 23:20","2026-04-30 00:10","2026-04-30 01:00","2026-04-30 01:50","2026-04-30 02:40","2026-04-30 03:30","2026-04-30 04:20","2026-04-30 05:10","2026-04-30 06:00","2026-04-30 06:50","2026-04-30 07:40","2026-04-30 08:30","2026-04-30 09:20","2026-04-30 10:10","2026-04-30 11:00","2026-04-30 11:50","2026-04-30 12:40","2026-04-30 13:30","2026-04-30 14:20"];
+  const mean   = [669.57,671.47,675.24,673.32,681.37,677.96,677.74,673.19,680.86,675.83,676.56,677.35,673.77,666.04,674.09,668.6,666.59,662.63,668.48,663.87,659.52,661.56,664.59,662.91,664.71,664.23,669.76,664.07,672.46,675.76,670.86,675.42,678.08,668.39,676.89,681.4,678.65,679.53,676.15,681.71,677.45,672.48,673.64,672.69,665.76,668.4,667.44,667.9,669.81,666.24,658.88,661.44,658.17,660.65,663.75,665.12,668.39,661.22,668.13,677.61,676.47,672.03,675.01,678.26,680.52,680.49,676.38,675.62,677.58,676.41,676.94,673.87,676.75,666.9,670.0,661.19,663.04,662.36,658.88,662.09,664.03,664.24,662.41,660.67,662.84,667.55,671.1,682.5,678.8,681.4,688.74,686.58,691.33,683.75,688.58,691.84,686.87,685.05,688.53,677.17,682.48,677.27,679.54,679.61,675.49,681.17,673.44,676.37,671.22,666.59,672.5,681.41,674.86,678.75,667.99,684.78,671.7,670.87,671.97,673.24,674.12,673.99,680.15,680.19,678.83,674.13,669.19,675.48,668.87,672.47,666.3,667.32,667.51,663.13,662.55,668.12,661.88,662.98,664.26,668.16,664.1,662.4,666.6,665.41,669.12,671.91,674.54,676.9,670.11,680.8,670.89,677.31,671.83,681.67,680.1,677.02,673.18,676.56,666.51,668.66,666.44,665.01,661.1,660.28,659.95,659.49,663.29,670.93,666.22,665.69,665.06,667.17,669.11,673.59,670.61,674.89,679.03,675.62,675.41,678.43,680.17,679.33,682.66,678.89,673.6,677.11,671.48,667.19,667.52,668.65,659.62,666.52,667.12,662.57,660.96,663.16,658.98,662.3,662.6,663.56,664.93,664.19,685.21,686.41,686.39,686.57,681.72,688.33,689.16,692.1,685.65,685.42,685.08,687.44,686.44,685.25,675.92,678.35,680.48,668.76,670.21,674.33,670.94,671.65,670.81,665.83,672.9,673.67,673.72,675.55,684.0,678.75,680.84,686.87,687.05,687.14,688.52,688.81,685.87,689.17,688.53,684.09,688.9,678.77,682.64,683.37,675.51,675.13,678.27,671.98,671.55,672.35,670.19,676.75,669.31,677.58,677.77,682.64,678.73,677.48,671.13,672.21,676.37,675.46,675.89,680.24,673.87,681.65,677.32,675.2,679.49,678.28,665.17,667.86,668.06,670.12,665.3,658.56,658.44,662.95,663.36,660.91,661.68,659.88,665.87,667.58,666.22,667.95,664.31,671.42,669.94,672.64,674.48,679.68,682.32,675.22,677.09,679.43,675.6,674.77,674.2,673.9,669.71,667.92,664.07,668.6,664.72,662.88,664.91,658.42,668.65,660.12,659.12,661.96,661.94,666.74,666.24];
+  const minArr = [656.22,657.13,655.41,659.32,670.08,655.06,661.09,662.33,655.88,658.5,654.86,662.42,658.31,644.1,656.32,650.5,651.55,642.85,645.73,640.65,641.56,638.54,645.27,650.42,645.93,645.99,655.62,639.36,648.65,652.24,651.75,660.34,663.55,653.01,666.66,670.41,667.2,659.89,656.22,671.08,656.54,661.62,659.4,652.41,645.61,646.95,644.91,652.05,652.08,651.64,643.3,643.3,643.01,641.58,639.12,647.7,650.89,639.47,655.53,663.25,663.48,647.95,664.84,661.56,669.57,660.39,655.41,653.53,652.59,660.72,661.34,653.61,662.03,649.54,655.13,646.24,648.67,637.61,642.31,651.15,651.25,643.1,649.92,646.64,647.68,650.4,650.8,663.98,657.68,657.43,673.54,664.89,671.87,661.83,664.37,667.31,671.08,670.83,665.91,657.83,665.84,653.85,660.4,668.15,662.83,657.65,661.67,653.59,656.51,654.81,659.68,669.41,661.1,658.51,643.27,660.68,655.77,658.46,657.23,654.39,660.83,656.69,667.45,663.89,661.68,660.32,649.98,661.22,658.46,659.43,646.01,650.84,644.5,646.45,650.58,645.4,645.69,641.35,641.3,646.81,641.25,651.33,655.02,644.52,656.53,650.93,654.46,658.83,658.62,660.95,659.11,654.52,650.02,669.64,667.42,657.23,655.27,664.79,643.13,652.45,656.38,651.34,640.83,644.08,640.04,648.69,643.66,649.25,653.68,648.25,641.29,655.79,654.12,655.86,650.17,656.2,666.97,656.03,655.35,661.16,655.23,664.9,661.62,661.6,658.4,656.43,656.51,647.11,654.41,648.84,644.28,647.31,645.36,651.08,650.35,638.53,643.24,650.28,642.68,647.02,643.48,644.5,673.53,666.48,668.8,666.86,661.45,676.41,671.53,681.27,673.32,662.35,674.75,677.13,675.96,673.18,656.45,656.4,669.25,651.47,651.63,659.73,655.34,657.96,659.46,641.68,650.99,654.74,654.72,665.23,670.86,662.62,659.42,667.82,666.41,667.72,677.01,672.58,671.1,671.08,667.5,670.26,674.28,664.38,659.6,663.27,653.39,650.27,656.19,650.05,650.26,649.86,656.09,656.14,648.12,667.05,654.25,660.33,667.22,654.67,658.73,651.63,664.03,653.06,653.34,665.72,657.67,667.23,656.84,662.45,661.03,655.01,643.45,650.27,643.11,650.08,648.42,638.07,634.53,646.73,643.95,641.5,637.04,646.99,641.4,646.24,644.91,656.29,644.42,656.81,653.44,659.07,657.69,660.1,662.96,653.05,660.68,662.2,663.77,657.91,658.29,650.52,647.56,643.81,650.54,647.53,649.48,650.82,646.78,634.55,654.5,648.96,643.96,640.74,638.44,650.01,651.46];
+  const maxArr = [690.61,682.67,691.18,692.94,698.66,689.02,700.66,691.95,705.8,699.41,699.82,700.31,684.82,678.59,684.84,680.67,686.78,683.94,687.49,677.53,675.9,678.93,683.73,677.52,684.23,688.14,691.61,681.5,697.42,695.93,686.14,687.15,694.21,684.36,698.74,695.53,699.73,689.93,693.44,691.99,699.74,694.95,689.77,690.58,679.32,682.49,685.67,684.96,694.65,685.28,680.32,684.81,681.34,683.29,675.71,688.35,679.07,682.86,691.81,691.92,700.93,694.8,694.82,698.81,705.44,698.66,691.16,699.34,694.77,698.92,696.2,696.59,701.17,682.23,685.78,676.21,683.43,682.52,679.33,673.61,683.57,685.73,674.5,676.88,683.07,679.54,694.0,697.99,699.91,704.26,711.33,705.36,711.0,708.59,707.04,712.24,897.4,698.61,710.8,695.01,704.87,698.51,694.01,691.53,695.0,696.56,685.15,696.32,691.79,684.05,696.45,697.6,697.45,691.55,678.12,705.98,691.61,684.19,688.4,696.83,691.43,691.23,704.52,692.43,692.32,688.73,687.0,697.93,680.61,686.21,678.92,683.03,691.96,686.07,685.13,683.28,684.68,674.05,677.53,690.24,685.74,686.35,686.18,690.16,691.51,687.8,690.89,689.96,684.84,692.12,685.65,694.68,689.64,697.88,700.79,687.58,691.05,699.28,684.57,686.11,690.42,676.08,681.75,679.59,671.3,680.04,679.53,687.9,676.99,690.59,684.62,691.25,680.01,697.69,694.06,698.77,701.57,693.47,686.05,701.79,699.04,699.05,693.48,696.79,690.26,691.39,692.06,678.5,684.64,692.04,673.97,688.99,678.29,681.24,675.88,678.23,679.17,683.04,676.31,681.02,677.64,678.04,706.23,710.52,701.67,705.97,698.59,711.41,703.25,703.16,703.08,698.23,697.57,701.76,697.39,707.97,696.62,890.2,691.41,690.63,692.16,690.44,695.72,696.4,690.01,676.61,697.06,684.68,688.69,698.2,695.22,700.82,693.08,705.98,704.17,701.52,894.4,700.43,708.64,712.77,709.93,707.79,705.07,694.44,696.83,701.6,688.87,686.98,701.01,691.86,696.04,696.71,693.22,690.49,690.02,694.53,690.17,695.62,691.5,701.08,684.4,690.45,689.84,696.91,688.02,702.5,695.78,693.81,691.81,696.39,701.34,700.39,676.48,681.8,685.35,684.01,677.52,678.29,669.94,673.18,677.26,680.49,686.58,672.48,681.16,682.35,682.22,692.16,685.34,694.47,690.16,687.37,695.5,704.16,702.28,694.78,693.4,694.4,691.67,693.23,697.94,695.24,693.11,691.75,675.17,686.89,684.55,687.52,680.12,670.4,687.8,676.78,672.34,673.69,685.09,682.87,678.91];
+  return { labels, mean, min: minArr, max: maxArr };
+}
+
+function buildEventosSerie() {
+  const labels = ["2026-04-22 00:00","2026-04-22 00:15","2026-04-22 00:30","2026-04-22 00:45","2026-04-22 01:00","2026-04-22 01:15","2026-04-22 01:30","2026-04-22 01:45","2026-04-22 02:00","2026-04-22 02:15","2026-04-22 02:30","2026-04-22 02:45","2026-04-22 03:00","2026-04-22 03:15","2026-04-22 03:30","2026-04-22 03:45","2026-04-22 04:00","2026-04-22 04:15","2026-04-22 04:30","2026-04-22 04:45","2026-04-22 05:00","2026-04-22 05:15","2026-04-22 05:30","2026-04-22 05:45","2026-04-22 06:00","2026-04-22 06:15","2026-04-22 06:30","2026-04-22 06:45","2026-04-22 07:00","2026-04-22 07:15","2026-04-22 07:30","2026-04-22 07:45","2026-04-22 08:00","2026-04-22 08:15","2026-04-22 08:30","2026-04-22 08:45","2026-04-22 09:00","2026-04-22 09:15","2026-04-22 09:30","2026-04-22 09:45","2026-04-22 10:00","2026-04-22 10:15","2026-04-22 10:30","2026-04-22 10:45","2026-04-22 11:00","2026-04-22 11:15","2026-04-22 11:30","2026-04-22 11:45","2026-04-22 12:00","2026-04-22 12:15","2026-04-22 12:30","2026-04-22 12:45","2026-04-22 13:00","2026-04-22 13:15","2026-04-22 13:30","2026-04-22 13:45","2026-04-22 14:00","2026-04-22 14:15","2026-04-22 14:30","2026-04-22 14:45","2026-04-22 15:00","2026-04-22 15:15","2026-04-22 15:30","2026-04-22 15:45","2026-04-22 16:00","2026-04-22 16:15","2026-04-22 16:30","2026-04-22 16:45","2026-04-22 17:00","2026-04-22 17:15","2026-04-22 17:30","2026-04-22 17:45","2026-04-22 18:00","2026-04-22 18:15","2026-04-22 18:30","2026-04-22 18:45","2026-04-22 19:00","2026-04-22 19:15","2026-04-22 19:30","2026-04-22 19:45","2026-04-22 20:00","2026-04-22 20:15","2026-04-22 20:30","2026-04-22 20:45","2026-04-22 21:00","2026-04-22 21:15","2026-04-22 21:30","2026-04-22 21:45","2026-04-22 22:00","2026-04-22 22:15","2026-04-22 22:30","2026-04-22 22:45","2026-04-22 23:00","2026-04-22 23:15","2026-04-22 23:30","2026-04-22 23:45","2026-04-26 00:00","2026-04-26 00:15","2026-04-26 00:30","2026-04-26 00:45","2026-04-26 01:00","2026-04-26 01:15","2026-04-26 01:30","2026-04-26 01:45","2026-04-26 02:00","2026-04-26 02:15","2026-04-26 02:30","2026-04-26 02:45","2026-04-26 03:00","2026-04-26 03:15","2026-04-26 03:30","2026-04-26 03:45","2026-04-26 04:00","2026-04-26 04:15","2026-04-26 04:30","2026-04-26 04:45","2026-04-26 05:00","2026-04-26 05:15","2026-04-26 05:30","2026-04-26 05:45","2026-04-26 06:00","2026-04-26 06:15","2026-04-26 06:30","2026-04-26 06:45","2026-04-26 07:00","2026-04-26 07:15","2026-04-26 07:30","2026-04-26 07:45","2026-04-26 08:00","2026-04-26 08:15","2026-04-26 08:30","2026-04-26 08:45","2026-04-26 09:00","2026-04-26 09:15","2026-04-26 09:30","2026-04-26 09:45","2026-04-26 10:00","2026-04-26 10:15","2026-04-26 10:30","2026-04-26 10:45","2026-04-26 11:00","2026-04-26 11:15","2026-04-26 11:30","2026-04-26 11:45","2026-04-26 12:00","2026-04-26 12:15","2026-04-26 12:30","2026-04-26 12:45","2026-04-26 13:00","2026-04-26 13:15","2026-04-26 13:30","2026-04-26 13:45","2026-04-26 14:00","2026-04-26 14:15","2026-04-26 14:30","2026-04-26 14:45","2026-04-26 15:00","2026-04-26 15:15","2026-04-26 15:30","2026-04-26 15:45","2026-04-26 16:00","2026-04-26 16:15","2026-04-26 16:30","2026-04-26 16:45","2026-04-26 17:00","2026-04-26 17:15","2026-04-26 17:30","2026-04-26 17:45","2026-04-26 18:00","2026-04-26 18:15","2026-04-26 18:30","2026-04-26 18:45","2026-04-26 19:00","2026-04-26 19:15","2026-04-26 19:30","2026-04-26 19:45","2026-04-26 20:00","2026-04-26 20:15","2026-04-26 20:30","2026-04-26 20:45","2026-04-26 21:00","2026-04-26 21:15","2026-04-26 21:30","2026-04-26 21:45","2026-04-26 22:00","2026-04-26 22:15","2026-04-26 22:30","2026-04-26 22:45","2026-04-26 23:00","2026-04-26 23:15","2026-04-26 23:30","2026-04-26 23:45","2026-04-27 00:00","2026-04-27 00:15","2026-04-27 00:30","2026-04-27 00:45","2026-04-27 01:00","2026-04-27 01:15","2026-04-27 01:30","2026-04-27 01:45","2026-04-27 02:00","2026-04-27 02:15","2026-04-27 02:30","2026-04-27 02:45","2026-04-27 03:00","2026-04-27 03:15","2026-04-27 03:30","2026-04-27 03:45","2026-04-27 04:00","2026-04-27 04:15","2026-04-27 04:30","2026-04-27 04:45","2026-04-27 05:00","2026-04-27 05:15","2026-04-27 05:30","2026-04-27 05:45","2026-04-27 06:00","2026-04-27 06:15","2026-04-27 06:30","2026-04-27 06:45","2026-04-27 07:00","2026-04-27 07:15","2026-04-27 07:30","2026-04-27 07:45","2026-04-27 08:00","2026-04-27 08:15","2026-04-27 08:30","2026-04-27 08:45","2026-04-27 09:00","2026-04-27 09:15","2026-04-27 09:30","2026-04-27 09:45","2026-04-27 10:00","2026-04-27 10:15","2026-04-27 10:30","2026-04-27 10:45","2026-04-27 11:00","2026-04-27 11:15","2026-04-27 11:30","2026-04-27 11:45","2026-04-27 12:00","2026-04-27 12:15","2026-04-27 12:30","2026-04-27 12:45","2026-04-27 13:00","2026-04-27 13:15","2026-04-27 13:30","2026-04-27 13:45","2026-04-27 14:00","2026-04-27 14:15","2026-04-27 14:30","2026-04-27 14:45","2026-04-27 15:00","2026-04-27 15:15","2026-04-27 15:30","2026-04-27 15:45","2026-04-27 16:00","2026-04-27 16:15","2026-04-27 16:30","2026-04-27 16:45","2026-04-27 17:00","2026-04-27 17:15","2026-04-27 17:30","2026-04-27 17:45","2026-04-27 18:00","2026-04-27 18:15","2026-04-27 18:30","2026-04-27 18:45","2026-04-27 19:00","2026-04-27 19:15","2026-04-27 19:30","2026-04-27 19:45","2026-04-27 20:00","2026-04-27 20:15","2026-04-27 20:30","2026-04-27 20:45","2026-04-27 21:00","2026-04-27 21:15","2026-04-27 21:30","2026-04-27 21:45","2026-04-27 22:00","2026-04-27 22:15","2026-04-27 22:30","2026-04-27 22:45","2026-04-27 23:00","2026-04-27 23:15","2026-04-27 23:30","2026-04-27 23:45"];
+  const mean   = [681.62,678.76,690.03,687.23,682.65,685.18,681.83,686.39,675.42,683.98,684.49,691.08,681.32,686.9,681.49,692.97,689.13,688.95,686.63,687.67,696.41,688.48,686.72,693.89,690.53,691.28,694.58,685.95,692.85,691.94,692.79,690.98,685.07,685.55,687.03,685.58,682.68,679.02,690.17,681.73,688.36,680.53,687.56,681.64,691.68,683.61,677.55,682.96,680.89,677.18,680.77,683.23,680.11,680.1,675.76,682.89,683.92,677.43,671.11,675.42,674.01,675.73,672.9,671.1,669.0,669.56,671.7,668.0,674.38,664.51,668.51,675.44,669.84,672.17,671.58,672.11,668.66,672.45,676.64,672.35,671.32,673.66,671.71,670.98,675.31,662.43,683.19,677.04,673.01,677.77,675.94,672.72,683.68,670.63,675.11,675.53,678.41,679.22,681.52,689.64,685.22,686.45,681.49,682.76,680.8,685.0,683.63,690.29,688.11,684.94,680.06,690.91,687.63,688.66,692.21,690.37,686.06,686.27,693.96,691.13,692.47,681.45,691.88,689.26,689.55,684.29,686.14,687.59,685.38,693.48,686.9,685.44,683.13,689.68,685.51,684.39,681.44,678.87,677.86,683.66,678.88,688.62,679.23,682.43,679.97,680.27,677.96,678.42,678.83,671.22,675.2,669.95,673.7,666.55,669.5,675.84,670.07,680.09,671.39,667.73,668.2,667.9,676.8,679.49,668.17,662.51,666.78,666.42,669.85,669.36,676.96,662.48,668.13,672.86,667.42,669.78,666.88,676.67,672.98,673.69,667.69,670.77,675.0,673.74,678.14,677.49,672.96,681.31,672.12,668.38,676.69,686.5,680.83,680.4,685.12,680.48,681.55,680.99,683.22,688.75,681.58,692.64,698.6,687.7,681.41,689.07,687.49,685.22,682.67,682.79,689.01,690.75,681.95,689.43,694.66,690.66,685.16,695.14,687.59,683.51,686.28,687.92,696.09,688.98,683.32,687.8,683.19,687.39,687.09,691.22,690.58,691.75,691.31,694.16,678.62,684.26,684.44,672.44,688.63,681.56,677.89,680.87,686.1,683.05,684.85,675.27,678.77,669.86,670.98,670.46,669.13,680.87,677.32,672.38,668.47,667.61,672.76,673.82,677.26,671.12,666.37,671.05,674.67,671.82,674.18,662.36,664.37,672.39,668.4,670.51,674.7,672.11,676.23,675.05,677.89,678.42,670.92,673.84,676.1,680.13,679.89,677.82,673.39,682.06,677.45,675.92,675.45,681.51];
+  const minArr = [667.89,659.78,673.78,662.92,656.04,663.13,666.99,667.66,655.86,668.22,664.22,668.38,664.97,671.79,665.38,671.22,664.0,674.99,667.6,663.93,679.79,666.76,667.64,669.7,669.78,675.89,680.35,658.96,680.76,678.5,668.2,665.22,667.46,663.39,664.27,671.49,663.65,653.89,677.13,664.32,662.0,667.09,665.71,658.35,670.02,658.69,659.59,663.15,661.2,654.21,658.55,671.0,667.59,662.39,658.18,667.84,658.59,654.19,646.69,655.96,652.29,653.6,651.49,658.47,646.25,655.26,654.86,640.08,661.25,645.03,645.09,654.67,642.1,644.45,651.99,658.64,642.11,652.77,654.61,658.64,656.18,649.4,651.82,647.01,657.04,644.71,670.18,659.76,647.0,664.25,652.87,659.83,656.42,654.24,658.16,658.49,654.68,662.83,668.65,674.16,665.16,660.31,666.79,663.32,654.53,670.78,665.7,663.01,667.61,672.72,652.98,663.98,674.6,668.37,675.88,669.57,663.47,667.48,680.07,663.7,665.24,662.58,668.54,663.45,670.77,663.69,668.19,666.75,671.2,666.6,674.13,666.59,670.85,661.98,658.12,657.64,655.13,665.92,660.8,664.36,655.43,676.15,657.36,669.54,667.69,658.74,654.77,663.38,661.02,649.5,660.86,650.89,660.21,650.91,654.55,655.69,644.14,667.3,647.82,651.29,641.82,655.43,649.49,666.48,643.23,641.01,642.12,641.93,654.57,645.8,664.15,643.3,642.37,655.31,643.6,642.77,651.52,663.44,655.24,646.95,650.23,649.65,651.04,659.25,658.58,659.05,652.57,664.44,655.81,654.15,664.64,668.14,657.69,653.88,672.52,657.87,661.97,663.8,664.84,672.92,655.8,680.2,679.96,665.77,661.96,673.35,662.04,671.2,667.34,669.39,662.47,667.19,660.67,667.04,675.97,673.7,661.94,677.85,666.22,666.03,662.92,674.55,678.18,667.01,658.01,662.33,661.6,663.9,673.1,665.47,677.61,667.83,668.34,673.54,655.58,657.68,668.13,654.21,674.61,655.51,658.74,655.67,670.91,662.73,662.44,660.82,653.51,650.67,645.18,648.13,649.53,653.2,659.9,648.83,650.99,648.22,653.74,649.96,662.21,643.25,646.39,658.62,653.93,652.23,646.74,642.89,648.91,645.25,642.11,658.35,654.6,647.53,659.91,654.49,662.25,655.16,654.78,656.36,655.35,658.65,655.62,658.29,651.74,666.42,664.87,658.84,653.41,663.56];
+  const maxArr = [708.04,862.01,715.43,707.44,705.18,697.38,709.7,700.12,699.43,697.24,706.56,707.94,701.42,707.93,706.81,712.88,704.02,705.19,707.77,707.31,717.69,708.43,707.44,712.87,703.2,703.7,897.4,699.64,717.47,714.64,717.83,716.63,893.14,698.68,711.51,704.15,698.44,693.13,702.55,694.1,701.37,693.21,704.9,702.98,705.98,703.06,696.29,703.37,696.66,701.09,696.36,695.84,694.14,697.07,693.03,708.73,707.62,691.86,686.26,688.99,698.44,689.89,685.68,686.99,683.74,685.22,686.54,681.25,693.82,681.35,862.36,699.23,685.44,685.04,689.69,689.98,690.6,694.48,693.42,691.35,695.61,689.73,687.08,697.73,696.31,686.02,706.64,691.24,687.29,693.52,698.36,686.44,709.4,690.66,698.95,689.02,702.02,704.05,701.91,712.51,865.5,702.06,706.49,702.42,698.94,706.76,707.19,709.55,712.0,707.61,706.74,706.45,869.84,702.7,714.09,708.2,705.62,703.96,708.8,713.79,897.4,870.21,717.0,702.57,709.58,701.37,711.2,708.78,700.32,715.24,700.87,702.08,701.91,708.29,708.33,700.1,701.04,691.16,693.7,703.86,695.58,716.36,705.1,695.06,692.01,699.21,705.02,699.51,698.48,687.83,701.91,684.72,689.14,679.75,693.66,690.43,687.47,704.25,692.1,689.56,687.79,686.98,693.13,862.69,690.64,687.28,685.65,681.33,695.97,683.88,692.42,682.17,680.25,686.78,686.3,683.76,682.45,695.83,696.64,700.78,693.14,886.15,696.29,696.54,702.65,697.75,689.87,699.7,694.15,695.26,700.34,700.39,706.92,701.08,705.71,699.41,891.92,696.78,701.79,883.61,703.2,705.36,726.53,706.3,698.5,702.14,712.08,709.9,695.97,707.22,704.22,708.66,699.0,707.96,722.3,702.92,705.13,710.17,707.02,699.28,888.77,704.97,718.8,706.58,702.03,702.88,698.24,706.41,710.42,705.91,709.74,706.45,705.43,713.53,867.75,703.68,710.96,694.07,712.91,707.4,690.5,706.41,698.54,699.15,706.27,690.09,700.79,693.14,689.06,852.85,691.49,693.3,700.04,691.22,693.26,694.42,695.56,696.45,699.79,697.27,689.03,691.68,701.26,689.83,697.27,683.82,681.01,685.21,694.16,688.43,869.2,691.18,701.57,702.35,703.67,693.17,858.97,694.7,699.0,705.04,703.72,694.51,698.13,696.04,699.31,698.87,687.83,709.38];
+  return { labels, mean, min: minArr, max: maxArr };
+}
+
+/* ── Chart 1: Serie de tiempo ── */
+
+
+/* ── Chart 1: Serie de tiempo ── */
+
+const serieData = buildSerie();
+const accentColor = "#00c4a7";
+const warningColor = "#f59e0b";
+const chart1El = document.getElementById('dbChartSerie');
+if (chart1El) {
+  chart1El.style.display = 'block';
+  new Chart(chart1El, {
+    type: 'line',
+    data: {
+      labels: serieData.labels,
+      datasets: [
+        {
+          label: 'PPM media',
+          data: serieData.mean,
+          borderColor: '#00c4a7',
+          borderWidth: 2,
+          pointRadius: 0,
+          tension: 0.3,
+          fill: false,
+          order: 1,
+        },
+        {
+          label: 'Días con eventos',
+          data: serieData.mean.map((v, i) => {
+            const label = serieData.labels[i];
+            const d = label ? label.substring(8,10) : '';
+            return ['22','26','27'].includes(d) ? v : null;
+          }),
+          borderColor: '#f59e0b',
+          borderWidth: 2.5,
+          pointRadius: 0,
+          tension: 0.3,
+          fill: false,
+          spanGaps: false,
+          order: 0,
+        },
+        {
+          label: 'Rango min-max',
+          data: serieData.max,
+          borderColor: 'rgba(0,196,167,.2)',
+          backgroundColor: 'rgba(0,196,167,.08)',
+          pointRadius: 0,
+          fill: '+1',
+          tension: 0.3,
+          order: 2,
+        },
+        {
+          label: '_min',
+          data: serieData.min,
+          borderColor: 'transparent',
+          backgroundColor: 'rgba(0,196,167,.08)',
+          pointRadius: 0,
+          fill: false,
+          tension: 0.3,
+          order: 3,
+        }
+      ]
+    },
+    options: {
+      responsive: true,
+      maintainAspectRatio: false,
+      animation: false,
+      interaction: { mode: 'index', intersect: false },
+      plugins: {
+        legend: {
+          labels: {
+            color: 'rgba(255,255,255,.6)',
+            font: { size: 11 },
+            filter: item => item.text !== '_min'
+          }
+        },
+        tooltip: {
+          backgroundColor: '#1e2530',
+          borderColor: '#2d3748',
+          borderWidth: 1,
+          callbacks: {
+            label: ctx => {
+              if (ctx.dataset.label === '_min') return null;
+              return ctx.dataset.label + ': ' + (ctx.parsed.y !== null ? ctx.parsed.y.toFixed(1) + ' ppm' : '—');
+            }
+          }
+        }
+      },
+      scales: {
+        x: {
+          grid: { color: 'rgba(255,255,255,.06)' },
+          ticks: { color: 'rgba(255,255,255,.35)', maxTicksLimit: 8, font: { size: 10 } }
+        },
+        y: {
+          min: 50,
+          max: 920,
+          grid: { color: 'rgba(255,255,255,.06)' },
+          ticks: {
+            color: 'rgba(255,255,255,.35)',
+            callback: v => v + ' ppm',
+            font: { size: 10 }
+          }
+        }
+      }
+    }
+  });
+}
+
+/* ── Chart 2: Resumen diario ── */
+
+const c2 = document.getElementById('dbChartDiario');
+if(c2){ c2.width = c2.offsetWidth || 600; c2.height = 260; }
+const dailyColors = dailyDates.map((_, i) => eventoIdx.includes(i) ? '#f59e0b' : '#00c4a7');
+const dailyBorder = dailyDates.map((_, i) => eventoIdx.includes(i) ? '#d97706' : '#0aa388');
+
+new Chart(document.getElementById('dbChartDiario'), {
+  type: 'bar',
+  data: {
+    labels: dailyDates,
+    datasets: [
+      {
+        label: 'Promedio diario',
+        data: dailyMean,
+        backgroundColor: dailyColors,
+        borderColor: dailyBorder,
+        borderWidth: 1,
+        borderRadius: 3
+      }
+    ]
+  },
+  options: {
+    responsive: true,
+    maintainAspectRatio: false,
+    plugins: {
+      legend: { display: false },
+      tooltip: {
+        backgroundColor: '#14181f',
+        borderColor: '#1e2530',
+        borderWidth: 1,
+        titleColor: '#f59e0b',
+        bodyColor: '#e2e8f0',
+        callbacks: {
+          afterLabel: (item) => {
+            const i = item.dataIndex;
+            return ['Min: ' + dailyMin[i] + ' ppm', 'Max: ' + dailyMax[i] + ' ppm'];
+          }
+        }
+      }
+    },
+    scales: {
+      x: {
+        grid: { color: gridColor },
+        ticks: { color: tickColor, autoSkip: false, maxRotation: 0 }
+      },
+      y: {
+        min: 650, max: 700,
+        grid: { color: gridColor },
+        ticks: { color: tickColor, callback: v => v + ' ppm' }
+      }
+    }
+  }
+});
+
+
+/* ── Chart 3: Eventos ── */
+
+const c3 = document.getElementById('dbChartEventos');
+if(c3){ c3.width = c3.offsetWidth || 600; c3.height = 280; }
+const evData = buildEventosSerie();
+
+new Chart(document.getElementById('dbChartEventos'), {
+  type: 'line',
+  data: {
+    labels: evData.labels,
+    datasets: [
+      {
+        label: 'Min',
+        data: evData.min,
+        fill: false, borderWidth: 0, pointRadius: 0, hidden: true
+      },
+      {
+        label: 'Max',
+        data: evData.max,
+        fill: '-1',
+        backgroundColor: 'rgba(245,158,11,0.10)',
+        borderWidth: 0,
+        pointRadius: 0
+      },
+      {
+        label: 'PPM media',
+        data: evData.mean,
+        borderColor: '#f59e0b',
+        borderWidth: 1.5,
+        pointRadius: 0,
+        fill: false,
+        tension: 0.3
+      }
+    ]
+  },
+  options: {
+    responsive: true,
+    maintainAspectRatio: false,
+    animation: false,
+    interaction: { mode: 'index', intersect: false },
+    plugins: {
+      legend: { display: false },
+      tooltip: {
+        backgroundColor: '#14181f',
+        borderColor: '#1e2530',
+        borderWidth: 1,
+        titleColor: '#f59e0b',
+        bodyColor: '#e2e8f0',
+        callbacks: {
+          title: items => items[0].label,
+          label: item => item.dataset.label === 'PPM media' ? ' Media: ' + item.raw + ' ppm' : null
+        }
+      }
+    },
+    scales: baseScales(580, 920)
+  }
+});
+
     /* Team: flip panel left when near right edge; tap on mobile */
     function setFlips() {
       const grid = document.getElementById('teamGrid');
@@ -2151,6 +3757,16 @@
     document.addEventListener('click', () => {
       document.querySelectorAll('.tm-card').forEach(c => c.classList.remove('active'));
     });
+
+
+    /* Fallback: forzar visibilidad en móvil si IntersectionObserver no dispara */
+    /* Reveal all immediately as failsafe */
+    document.querySelectorAll('.rev').forEach(el => el.classList.add('on'));
+    setTimeout(() => {
+      document.querySelectorAll('.rev:not(.on)').forEach(el => {
+        el.classList.add('on');
+      });
+    }, 100);
 
     /* Smooth scroll */
     document.querySelectorAll('a[href^="#"]').forEach(a => {
