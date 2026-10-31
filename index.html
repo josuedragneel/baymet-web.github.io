@@ -1569,6 +1569,36 @@
   </style>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js"></script>
   <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@300;400;500&display=swap" rel="stylesheet"/>
+
+  <style>
+    /* ===== SIMULACIÓN TERREMOTO + METANO ===== */
+    #simulacion { background:var(--dk); color:#fff; }
+    #simulacion .sim-head { max-width:760px; margin-bottom:28px; }
+    #simulacion h2 { color:#fff !important; }
+    #simulacion h2 span { color:#f59e0b; }
+    #simulacion .lead { color:rgba(255,255,255,.85) !important; }
+    #simulacion .sim-aviso { display:flex; gap:12px; background:rgba(245,158,11,.10); border:1px solid rgba(245,158,11,.35); border-left:4px solid #f59e0b; border-radius:var(--r); padding:14px 18px; font-size:.93rem; line-height:1.6; color:rgba(255,255,255,.9); margin-bottom:28px; }
+    #simulacion .sim-aviso strong { color:#f59e0b; }
+    #simulacion .sim-stats { display:grid; grid-template-columns:repeat(auto-fit,minmax(210px,1fr)); gap:14px; margin-bottom:24px; }
+    #simulacion .sim-stat { background:#14181f; border:1px solid #1e2530; border-radius:var(--r); padding:18px; }
+    #simulacion .sim-stat b { display:block; font-family:var(--ffh); font-size:1.9rem; font-weight:900; color:#f59e0b; line-height:1.1; margin-bottom:6px; }
+    #simulacion .sim-stat span { font-size:.82rem; color:rgba(255,255,255,.6); }
+    #simulacion .sim-box { background:#14181f; border:1px solid #1e2530; border-radius:var(--r); padding:18px 18px 14px; margin-bottom:20px; }
+    #simulacion .sim-box h3 { font-family:var(--ffh); font-size:1rem; font-weight:700; margin-bottom:4px; color:#fff; }
+    #simulacion .sim-box p { font-size:.82rem; color:rgba(255,255,255,.55); margin-bottom:12px; }
+    #simulacion .sim-chart { position:relative; height:340px; }
+    #simulacion .sim-chart.sm { height:250px; }
+    #simulacion .sim-grid { display:grid; grid-template-columns:1.2fr 1fr; gap:20px; }
+    #simulacion .sim-tbl { overflow-x:auto; }
+    #simulacion table { width:100%; border-collapse:collapse; font-size:.83rem; }
+    #simulacion th { text-align:left; font-weight:600; color:rgba(255,255,255,.5); padding:6px 8px; border-bottom:1px solid #1e2530; }
+    #simulacion td { padding:7px 8px; border-bottom:1px solid #1e2530; color:rgba(255,255,255,.85); }
+    #simulacion .sim-how { margin:0; padding:0; }
+    #simulacion .sim-how li { font-size:.86rem; line-height:1.6; color:rgba(255,255,255,.75); padding:7px 0 7px 18px; position:relative; border-bottom:1px solid #1e2530; }
+    #simulacion .sim-how li:last-child { border-bottom:0; }
+    #simulacion .sim-how li::before { content:''; position:absolute; left:0; top:15px; width:7px; height:7px; border-radius:50%; background:#00c4a7; }
+    @media (max-width:820px){ #simulacion .sim-grid { grid-template-columns:1fr; } #simulacion .sim-chart { height:280px; } }
+  </style>
 </head>
 <body>
 
@@ -1583,6 +1613,7 @@
     <a href="#impacto"  onclick="cM()">Impacto</a>
     <a href="#monitoreo" onclick="cM()">Datos Reales</a>
     <a href="#dashboard" onclick="cM()">Dashboard</a>
+    <a href="#simulacion" onclick="cM()">Simulación</a>
     <a href="#pretest" onclick="cM()">Pre-test</a>
     <a href="#equipo"   onclick="cM()">Equipo</a>
     <a href="#cta" class="btn btn-g" onclick="cM()">Contacto</a>
@@ -1600,6 +1631,7 @@
         <li><a href="#impacto">Impacto</a></li>
         <li><a href="#monitoreo">Datos</a></li>
         <li><a href="#dashboard">Dashboard</a></li>
+        <li><a href="#simulacion">Simulación</a></li>
         <li><a href="#pretest">Pre-test</a></li>
         <li><a href="#equipo">Equipo</a></li>
       </ul>
@@ -2589,6 +2621,59 @@
     </div>
   </section>
 
+
+
+  <!-- ========== SIMULACIÓN TERREMOTO + METANO ========== -->
+  <section id="simulacion" class="s-dark">
+    <div class="wrap">
+      <div class="sim-head rev">
+        <span class="eye" style="color:rgba(245,158,11,.8)">Simulación · Octubre 2026</span>
+        <h2>El terremoto del 9 de octubre y el <span>metano del Bayano</span></h2>
+        <p class="lead">Modelo de 13 días (5 al 17 de octubre) que estima cómo pudo cambiar la concentración de metano en el embalse después del terremoto M7.7 de Azuero y sus réplicas.</p>
+      </div>
+
+      <div class="sim-aviso rev">
+        <span>⚠️</span>
+        <span><strong>Esto es una simulación, no una medición.</strong> Parte del promedio real de nuestros 11 días de monitoreo (673 ppm) y de los sismos reportados el 9 y 12 de octubre. Que el sismo libere metano del fondo es una hipótesis que modelamos: solo nuestro sensor puede confirmarla.</span>
+      </div>
+
+      <div class="sim-stats rev" id="simStats"></div>
+
+      <div class="sim-box rev">
+        <h3>Concentración simulada, hora por hora</h3>
+        <p>Las líneas punteadas marcan el sismo principal y las réplicas fuertes. La banda azul es el rango de incertidumbre.</p>
+        <div class="sim-chart"><canvas id="simSerie"></canvas></div>
+      </div>
+
+      <div class="sim-grid rev">
+        <div class="sim-box">
+          <h3>Promedio diario simulado</h3>
+          <p>El día del sismo aparece en naranja.</p>
+          <div class="sim-chart sm"><canvas id="simDiario"></canvas></div>
+        </div>
+        <div class="sim-box">
+          <h3>Sismos usados en el modelo</h3>
+          <p>Hora local de Panamá.</p>
+          <div class="sim-tbl">
+            <table>
+              <thead><tr><th>Fecha y hora</th><th>Mag.</th><th>Descripción</th></tr></thead>
+              <tbody id="simTabla"></tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+
+      <div class="sim-box rev">
+        <h3>Cómo funciona el modelo</h3>
+        <ul class="sim-how">
+          <li><strong>Línea base:</strong> 673 ppm, el promedio real del monitoreo de abril, con una variación diaria suave por temperatura y ruido de sensor.</li>
+          <li><strong>Pulso por sismo:</strong> cada sismo suma un aumento de metano que decae con las horas, porque el movimiento puede liberar burbujas atrapadas en los sedimentos. Mientras mayor la magnitud, mayor el pulso.</li>
+          <li><strong>Réplicas:</strong> los más de 400 sismos menores reportados hasta el 12 de octubre se modelan como un fondo continuo que baja día a día.</li>
+          <li><strong>Distancia:</strong> el epicentro estuvo en Azuero, lejos del Bayano, así que el efecto simulado es moderado y se muestra como rango.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
 
   <!-- ========== PRE-TEST & POST-TEST ========== -->
   <section id="pretest">
@@ -3861,5 +3946,69 @@ new Chart(document.getElementById('dbChartEventos'), {
     </div>
     <div class="ai-fab-dot"></div>
   </a>
+
+  <script>
+  (function(){
+    if(typeof Chart==='undefined'||!document.getElementById('simSerie')) return;
+    var s=20261009;function rnd(){s=(s*1664525+1013904223)%4294967296;return s/4294967296}
+    function gauss(){return (rnd()+rnd()+rnd()+rnd()-2)*1.7}
+    var start=new Date(2026,9,5,0,0),H=13*24,BASE=673;
+    var fmt=function(d){return d.toLocaleString('es-PA',{day:'2-digit',month:'short',hour:'2-digit',minute:'2-digit'})};
+    var h=function(d,hh,mm){return (d-5)*24+hh+mm/60};
+    var quakes=[
+      [h(9,12,56),7.7,'Sismo principal, península de Azuero'],
+      [h(9,13,37),5.8,'Réplica fuerte'],
+      [h(9,13,47),5.5,'Réplica cerca de Soná/Tonosí'],
+      [h(9,15,25),6.9,'Réplica mayor, cerca de Coiba'],
+      [h(12,12,0),6.1,'Réplica reportada por USGS (hora aproximada)']
+    ];
+    var tau=function(m){return m>=7?22:14};
+    var amp=function(m){return Math.pow(10,0.9*(m-6))*38};
+    var t=[],y=[],lo=[],hi=[];
+    for(var i=0;i<H;i++){
+      var hora=i%24;
+      var v=BASE+22*Math.sin((hora-9)/24*2*Math.PI)+gauss()*9;
+      var extra=0;
+      quakes.forEach(function(q){var dt=i-q[0];if(dt>=0)extra+=amp(q[1])*Math.exp(-dt/tau(q[1]))});
+      var dm=i-quakes[0][0];if(dm>=0)extra+=14*Math.exp(-dm/70);
+      t.push(fmt(new Date(start.getTime()+i*3600000)));
+      y.push(Math.round((v+extra)*10)/10);
+      lo.push(Math.round((v+extra*0.5)*10)/10);
+      hi.push(Math.round((v+extra*1.5)*10)/10);
+    }
+    var i0=Math.floor(quakes[0][0]);
+    var avg=function(a){return a.reduce(function(p,c){return p+c},0)/a.length};
+    var pre=y.slice(0,i0),post=y.slice(i0);
+    var peak=Math.max.apply(null,post),pi=y.indexOf(peak);
+    var st=[
+      [Math.round(avg(pre))+' ppm','Promedio simulado antes del sismo'],
+      [Math.round(peak)+' ppm','Pico simulado, '+t[pi]],
+      ['+'+Math.round(avg(y.slice(i0,i0+48))-avg(pre))+' ppm','Aumento medio en las primeras 48 h'],
+      [Math.round(Math.max.apply(null,y.slice(i0+120))-BASE)+' ppm','Exceso sobre la línea base desde la hora 120']
+    ];
+    document.getElementById('simStats').innerHTML=st.map(function(a){return '<div class="sim-stat"><b>'+a[0]+'</b><span>'+a[1]+'</span></div>'}).join('');
+    document.getElementById('simTabla').innerHTML=quakes.map(function(q){return '<tr><td>'+t[Math.round(q[0])]+'</td><td>M'+q[1]+'</td><td>'+q[2]+'</td></tr>'}).join('');
+    var AMB='#f59e0b',TEAL='#00c4a7',MU='#94a3b8',GR='rgba(148,163,184,.15)';
+    var marks={id:'simMarks',afterDraw:function(c){
+      var x=c.scales.x,ctx=c.ctx;ctx.save();ctx.strokeStyle=AMB;ctx.setLineDash([4,4]);ctx.lineWidth=1;
+      quakes.forEach(function(q){var px=x.getPixelForValue(Math.round(q[0]));ctx.beginPath();ctx.moveTo(px,c.chartArea.top);ctx.lineTo(px,c.chartArea.bottom);ctx.stroke()});
+      ctx.restore()}};
+    new Chart(document.getElementById('simSerie'),{type:'line',
+      data:{labels:t,datasets:[
+        {label:'Simulación (ppm)',data:y,borderColor:AMB,borderWidth:1.6,pointRadius:0,tension:.2},
+        {label:'Rango bajo',data:lo,borderColor:'#4a90e2',borderWidth:1,borderDash:[3,3],pointRadius:0,fill:false},
+        {label:'Rango alto',data:hi,borderColor:'#4a90e2',borderWidth:1,borderDash:[3,3],pointRadius:0,fill:'-1',backgroundColor:'rgba(74,144,226,.12)'}]},
+      options:{responsive:true,maintainAspectRatio:false,interaction:{mode:'index',intersect:false},
+        scales:{x:{ticks:{color:MU,maxTicksLimit:8},grid:{color:GR}},y:{title:{display:true,text:'CH₄ (ppm)',color:MU},ticks:{color:MU},grid:{color:GR}}},
+        plugins:{legend:{labels:{color:MU}}}},plugins:[marks]});
+    var d=[],dl=[];
+    for(var k=0;k<13;k++){d.push(Math.round(avg(y.slice(k*24,k*24+24))));dl.push((5+k)+' oct')}
+    new Chart(document.getElementById('simDiario'),{type:'bar',
+      data:{labels:dl,datasets:[{label:'Promedio diario (ppm)',data:d,backgroundColor:d.map(function(v,i){return i===4?AMB:TEAL})}]},
+      options:{responsive:true,maintainAspectRatio:false,
+        scales:{x:{ticks:{color:MU},grid:{display:false}},y:{min:600,ticks:{color:MU},grid:{color:GR}}},
+        plugins:{legend:{display:false}}}});
+  })();
+  </script>
 </body>
 </html>
